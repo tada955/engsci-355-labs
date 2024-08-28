@@ -1,0 +1,78 @@
+project:
+  type: book
+
+book:
+  title: "ENGSCI 355 Labs"
+  author: "Thomas Adams"
+  date: "17/05/2024"
+  chapters:
+    - index.qmd
+    - chapters/lab_1/lab_1.qmd
+    - chapters/lab_1_cm/lab_1_cm.qmd
+    - chapters/lab_2/lab_2.qmd
+    # - summary.qmd
+    # - references.qmd
+
+bibliography: references.bib
+
+pdf-engine: pdflatex
+
+reference-location: margin
+citation-location: margin
+# tbl-cap-location: bottom
+# fig-cap-location: margin
+
+latex-auto-install: true
+
+callout-icon: false
+
+filters:
+  - diagram
+  - parse-latex
+  - highlight-text
+  - pseudocode
+  
+      
+# diagram:
+#   engine:
+#     tikz:
+#       include-headers: activity_diagram_styles.tex
+
+format:
+  html:
+    # theme: cosmo
+    code-line-numbers: true
+    default-image-extension: svg
+    css: styles.css
+  pdf:
+    documentclass: scrreprt
+    papersize: a4paper
+    fontsize: 10pt
+    include-in-header: preamble.tex
+    fig-pos: htbp
+    tbl-pos: htbp
+    geometry:
+      # - showframe
+      - top=10mm
+      - left=17.5mm
+      - right=82.5mm
+      - marginparsep=10mm
+      - marginparwidth=55mm
+    include-before-body:
+      text: |
+        \RecustomVerbatimEnvironment{verbatim}{Verbatim}{
+          showspaces = false,
+          showtabs = false,
+          breaksymbolleft={},
+          breaklines,
+        }
+    code-line-numbers: true
+    default-image-extension: pdf
+
+crossref:
+  custom:
+    - kind: float
+      reference-prefix: Control Policy
+      key: cntrlplcy
+      latex-env: cntrlplcy
+

@@ -1,0 +1,7 @@
+\multirow{2}{1.5cm}{Scan} & Patient(p), CT Machine(c) & Start & Controlled & \parbox{\lastcol}{\raggedright\begin{algorithmic}[1]
+      \State SCHEDULE Scan.End at $\simTime$ + ScanTime()
+\end{algorithmic}} \\ \cmidrule{3-5}
+& & End & Scheduled & \parbox{\lastcol}{\raggedright\begin{algorithmic}[1]
+      \State TRANSITION 5 WITH p
+      \State TRANSITION 12 WITH c
+\end{algorithmic}}\\ \midrule

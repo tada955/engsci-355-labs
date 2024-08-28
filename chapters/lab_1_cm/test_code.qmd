@@ -1,0 +1,3 @@
+```{.default}
+TRIGGER OnStartWaitForCheckIn WITH p
+```

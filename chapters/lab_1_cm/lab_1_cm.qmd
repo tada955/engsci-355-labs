@@ -1,0 +1,137 @@
+# Radiology Clinic Lab -- Conceptual Model
+
+## Data
+
+::: {#tbl-var_lab1 .sm .column-page-right .borderless}
+
+```{=latex}
+{{< include tables\variable_table.tex >}}
+```
+
+List of Global Variables
+
+:::
+
+::: {#tbl-data_lab1 .sm .column-page-right .borderless}
+
+```{=latex}
+{{< include tables\data_table.tex >}}
+```
+
+List of Data Modules
+
+:::
+
+## Components
+
+::: {#tbl-entities_lab1 .sm .borderless}
+
+```{=latex}
+{{< include tables\entity_table.tex >}}
+```
+
+List of Entities
+
+:::
+
+::: {#tbl-transitions_lab1 .sm .column-page-right .borderless}
+
+```{=latex}
+{{< include tables\transition_table.tex >}}
+```
+
+List of Transitions
+
+:::
+
+<!-- ::: {#tbl-activites_lab1 .sm .column-page-right .borderless}
+
+```{=latex}
+{{< include tables\activity_table.tex >}}
+```
+
+List of Activities
+
+::: -->
+
+<!-- ::: {#tbl-wait_check_in_lab1 .sm .column-page-right .borderless}
+
+```{=latex}
+{{< include tables\ActivityTables\wait_for_check_in.tex >}}
+```
+
+Wait For Check In
+
+::: -->
+
+<!-- ::: {#tbl-check_in_lab1 .sm .column-page-right .borderless}
+
+```{=latex}
+{{< include tables\ActivityTables\check_in.tex >}}
+```
+
+Check In
+
+::: -->
+
+::: {#tbl-check_in_lab1 .sm .column-page-right .borderless}
+
+```{=latex}
+{{< include tables\ActivityTables\wait_for_scan.tex >}}
+```
+
+Wait For Scan
+
+:::
+
+<!-- ::: {#tbl-test_lab1 .sm .column-page-right .borderless}
+
+| Activity          | Participants | Event | Type       | State Change |
+|-------------------|--------------|-------|------------|--------------|
+| Wait for check in | Patient (p)  | Start | Scheduled  |              |
+|                   |              | End   | Controlled | {{< include test_code.qmd >}}             |
+
+Wait For Scan
+
+::: -->
+
+::: {.output}
+This is a test of the css.
+:::
+
+## Activity Diagrams
+
+::: {#fig-pat_act}
+![](figures/patient_activity){width=155mm}
+
+Patient Activity Diagram
+
+:::
+
+::: {#fig-recep_act}
+![](figures/receptionist_activity){width=76mm}
+
+Receptionist Activity Diagram
+
+:::
+
+::: {#fig-ct_act}
+![](figures/CT_activity){width=76mm}
+
+CT Activity Diagram
+
+:::
+
+## Control Policies
+
+:::{#cntrlplcy-start_wait_check_in .callout-note}
+
+## OnStartWaitForCheckIn
+
+Triggered by: Patient p
+
+```{.default}
+TRIGGER OnStartWaitForCheckIn WITH p
+```
+
+:::
