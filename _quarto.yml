@@ -8,9 +8,13 @@ book:
   date: "08/29/2024"
   chapters:
     - index.qmd
-    - chapters/lab_1/lab_1.qmd
-    - chapters/lab_1_cm/lab_1_cm.qmd
-    - chapters/lab_2/lab_2.qmd
+    - part: "Jaamsim Labs"
+      chapters:
+        - chapters/lab_1/lab_1.qmd
+        - chapters/lab_2/lab_2.qmd
+    - part: "Conceptual Models"
+      chapters:
+        - chapters/lab_1_cm/lab_1_cm.qmd
     # - summary.qmd
     # - references.qmd
 
@@ -41,7 +45,7 @@ filters:
 
 format:
   html:
-    # theme: cosmo
+    theme: lumen
     code-line-numbers: true
     default-image-extension: svg
     css: styles.css

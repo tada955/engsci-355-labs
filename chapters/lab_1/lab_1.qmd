@@ -1,4 +1,4 @@
-# Jaamsim -- Radiology Clinic Lab
+# Radiology Clinic
 
 In this lab you will be introduced to the basics of creating a simulation model using the discrete event simulation software Jaamsim and the HCCM module.
 To do this we will use the CT service of a radiology clinic as an example.

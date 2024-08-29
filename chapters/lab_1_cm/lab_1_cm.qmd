@@ -1,4 +1,4 @@
-# Radiology Clinic Lab -- Conceptual Model
+# Radiology Clinic
 
 ## Data
 
