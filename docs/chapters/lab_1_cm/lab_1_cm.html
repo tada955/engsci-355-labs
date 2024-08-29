@@ -344,10 +344,11 @@ Table&nbsp;2.2: List of Data Modules
 </div>
 </figure>
 </div>
+<div style="page-break-after: always;"></div>
 </section>
 <section id="components" class="level2 page-columns page-full" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="components"><span class="header-section-number">2.2</span> Components</h2>
-<div id="tbl-entities_lab1" class="sm borderless quarto-float anchored">
+<div id="tbl-entities_lab1" class="sm column-page-right borderless quarto-float anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-entities_lab1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;2.3: List of Entities
@@ -509,98 +510,12 @@ Table&nbsp;2.4: List of Transitions
 </div>
 </figure>
 </div>
-<!-- ::: {#tbl-activites_lab1 .sm .column-page-right .borderless}
-
-
-
-```{=latex}
-\setlength{\lastcol}{8cm}
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}p{2cm}>{\raggedright\arraybackslash}p{0.9cm}>{\raggedright\arraybackslash}p{1.6cm}>{\raggedright\arraybackslash}p{\lastcol}@{}}
-  \toprule
-  Activity             & Participants        & Event & Type & State Change \\ \midrule 
-  Wait for check in & Patient(p) & Start & Scheduled &
-  \begin{Verbatim}[numbers=left]
-Item 1 which is much much $\hat{c}$
-Item 2
-Item 3
-  \end{Verbatim}
-  \\ \cmidrule{3-5}
-  & & End & Controlled & \\ \midrule
-  Check in & Patient(p), Receptionist(r) & Start & Controlled &
-    % \input{ActivityTables/wait_for_scan.tex}
-    % \input{ActivityTables/scan.tex}
-    % \input{ActivityTables/wait_for_task_r.tex}
-    % \input{ActivityTables/wait_for_task_c.tex}
-  \end{tabular}
-
-```
-
-
-
-List of Activities
-
-::: -->
-<!-- ::: {#tbl-wait_check_in_lab1 .sm .column-page-right .borderless}
-
-
-
-```{=latex}
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{4.5cm}>{\raggedright\arraybackslash}p{12.5cm}@{}}
-  \toprule
-  Participants  & Patient (p) \\
-  Start Type & Scheduled \\
-  Start State Changes &
-  \begin{Verbatim}[numbers=left]
-TRIGGER On Start Wait For Check In WITH p
-  \end{Verbatim}
-  \\
- End Type& Controlled \\
- End State Changes & --\\ \bottomrule
-  \end{tabular}
-
-```
-
-
-
-Wait For Check In
-
-::: -->
-<!-- ::: {#tbl-check_in_lab1 .sm .column-page-right .borderless}
-
-
-
-```{=latex}
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{4.5cm}>{\raggedright\arraybackslash}p{12.5cm}@{}}
-      \toprule
-      Participants  & Patient (p), Receptionist (r) \\
-      Start Type & Controlled \\
-      Start State Changes &
-\begin{Verbatim}[numbers=left]
-SCHEDULE Check in.End at TIME + CheckInTime()
-\end{Verbatim}
-      \\
-     End Type& Scheduled \\
-     End State Changes &
-\begin{Verbatim}[numbers=left]
-TRANSITION 3 WITH p
-TRANSITION 8 WITH r
-\end{Verbatim}
-      \\ \bottomrule
-      \end{tabular}
-
-```
-
-
-
-Check In
-
-::: -->
-<div id="tbl-check_in_lab1" class="sm column-page-right borderless quarto-float anchored">
+<div id="tbl-activities_lab1" class="sm column-page-right borderless quarto-float anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-check_in_lab1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2.5: Wait For Scan
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-activities_lab1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.5: Activities
 </figcaption>
-<div aria-describedby="tbl-check_in_lab1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="tbl-activities_lab1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table-sm table-borderless small table">
 <thead>
 <tr class="header">
@@ -617,14 +532,14 @@ Table&nbsp;2.5: Wait For Scan
 <td style="text-align: left;">Patient (p)</td>
 <td style="text-align: left;">Start</td>
 <td style="text-align: left;">Scheduled</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb1" data-numbers="left"><pre class="sourceCode numberSource numberLines number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>TRIGGER OnStartWaitForCheckIn WITH p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">End</td>
 <td style="text-align: left;">Controlled</td>
-<td style="text-align: left;"><div class="sourceCode" id="cb1" data-numbers="left"><pre class="sourceCode numberSource numberLines number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>TRIGGER On Start Wait For Check In WITH p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Check in</td>
@@ -641,24 +556,148 @@ Table&nbsp;2.5: Wait For Scan
 <td style="text-align: left;"><div class="sourceCode" id="cb3" data-numbers="left"><pre class="sourceCode numberSource numberLines number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href="#cb3-1"></a>TRANSITION 3 WITH p</span>
 <span id="cb3-2"><a href="#cb3-2"></a>TRANSITION 8 WITH r</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;">Wait for Scan</td>
+<td style="text-align: left;">Patient (p)</td>
+<td style="text-align: left;">Start</td>
+<td style="text-align: left;">Scheduled</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">End</td>
+<td style="text-align: left;">Controlled</td>
+<td style="text-align: left;"><div class="sourceCode" id="cb4" data-numbers="left"><pre class="sourceCode numberSource numberLines number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a href="#cb4-1"></a>TRIGGER OnStartWaitForScan WITH p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Scan</td>
+<td style="text-align: left;">Patient (p), CTMachine (c)</td>
+<td style="text-align: left;">Start</td>
+<td style="text-align: left;">Controlled</td>
+<td style="text-align: left;"><div class="sourceCode" id="cb5" data-numbers="left"><pre class="sourceCode numberSource numberLines number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a href="#cb5-1"></a>SCHEDULE Scan.End at TIME + ScanTime()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">End</td>
+<td style="text-align: left;">Scheduled</td>
+<td style="text-align: left;"><div class="sourceCode" id="cb6" data-numbers="left"><pre class="sourceCode numberSource numberLines number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a href="#cb6-1"></a>TRANSITION 5 WITH p</span>
+<span id="cb6-2"><a href="#cb6-2"></a>TRANSITION 12 WITH c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Wait for Task (R)</td>
+<td style="text-align: left;">Receptionist (r)</td>
+<td style="text-align: left;">Start</td>
+<td style="text-align: left;">Scheduled</td>
+<td style="text-align: left;"><div class="sourceCode" id="cb7" data-numbers="left"><pre class="sourceCode numberSource numberLines number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href="#cb7-1"></a>TRIGGER OnStartWaitForTaskR WITH r</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">End</td>
+<td style="text-align: left;">Controlled</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Wait for Task (CT)</td>
+<td style="text-align: left;">CTMachine (c)</td>
+<td style="text-align: left;">Start</td>
+<td style="text-align: left;">Scheduled</td>
+<td style="text-align: left;"><div class="sourceCode" id="cb8" data-numbers="left"><pre class="sourceCode numberSource numberLines number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a href="#cb8-1"></a>TRIGGER OnStartWaitForTaskCT WITH c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">End</td>
+<td style="text-align: left;">Controlled</td>
+<td style="text-align: left;"></td>
+</tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-<!-- ::: {#tbl-test_lab1 .sm .column-page-right .borderless}
-
-| Activity          | Participants | Event | Type       | State Change |
-|-------------------|--------------|-------|------------|--------------|
-| Wait for check in | Patient (p)  | Start | Scheduled  |              |
-|                   |              | End   | Controlled | {{< include test_code.qmd >}}             |
-
-Wait For Scan
-
-::: -->
-<div class="output">
-<p>This is a test of the css.</p>
+<div id="tbl-events_lab1" class="sm column-page-right borderless quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-events_lab1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.6: Events
+</figcaption>
+<div aria-describedby="tbl-events_lab1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table-sm table-borderless small table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Activity</th>
+<th style="text-align: left;">Participants</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">State Change</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Simulation Start</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Scheduled</td>
+<td style="text-align: left;"><div class="sourceCode" id="cb9" data-numbers="left"><pre class="sourceCode numberSource numberLines number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a href="#cb9-1"></a>SCHEDULE Arrival (R) at TIME</span>
+<span id="cb9-2"><a href="#cb9-2"></a>SCHEDULE Arrival (CT) at TIME</span>
+<span id="cb9-3"><a href="#cb9-3"></a>SCHEDULE Arrival (P) at TIME + PatientInterArrival()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Arrival (P)</td>
+<td style="text-align: left;">Patient (p)</td>
+<td style="text-align: left;">Scheduled</td>
+<td style="text-align: left;"><div class="sourceCode" id="cb10" data-numbers="left"><pre class="sourceCode numberSource numberLines number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a href="#cb10-1"></a>p.ID = NextPatIDNum</span>
+<span id="cb10-2"><a href="#cb10-2"></a>p.Priority = PatientPriority()</span>
+<span id="cb10-3"><a href="#cb10-3"></a>NextPatIDNum = NextPatIDNum + 1</span>
+<span id="cb10-4"><a href="#cb10-4"></a>SCHEDULE Arrival (P) at TIME + PatientInterArrival()</span>
+<span id="cb10-5"><a href="#cb10-5"></a>TRANSITION 1 WITH p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Leave (P)</td>
+<td style="text-align: left;">Patient (p)</td>
+<td style="text-align: left;">Scheduled</td>
+<td style="text-align: left;"><div class="sourceCode" id="cb11" data-numbers="left"><pre class="sourceCode numberSource numberLines number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a href="#cb11-1"></a>Calculate statistics for p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Arrival (R)</td>
+<td style="text-align: left;">Receptionist (r)</td>
+<td style="text-align: left;">Scheduled</td>
+<td style="text-align: left;"><div class="sourceCode" id="cb12" data-numbers="left"><pre class="sourceCode numberSource numberLines number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a href="#cb12-1"></a>r.ID = NextReceptionistIDNum</span>
+<span id="cb12-2"><a href="#cb12-2"></a>NextReceptionistIDNum = NextReceptionistIDNum + 1</span>
+<span id="cb12-3"><a href="#cb12-3"></a>IF NextReceptionistIDNum &lt;= NumReceptionists THEN</span>
+<span id="cb12-4"><a href="#cb12-4"></a>    SCHEDULE Arrival (R) at TIME</span>
+<span id="cb12-5"><a href="#cb12-5"></a>END IF</span>
+<span id="cb12-6"><a href="#cb12-6"></a>TRANSITION 6 WITH r</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Leave (R)</td>
+<td style="text-align: left;">Receptionist (r)</td>
+<td style="text-align: left;">Scheduled</td>
+<td style="text-align: left;"><div class="sourceCode" id="cb13" data-numbers="left"><pre class="sourceCode numberSource numberLines number-lines code-with-copy"><code class="sourceCode"><span id="cb13-1"><a href="#cb13-1"></a>Calculate statistics for r</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Arrival (CT)</td>
+<td style="text-align: left;">CTMachine (c)</td>
+<td style="text-align: left;">Scheduled</td>
+<td style="text-align: left;"><div class="sourceCode" id="cb14" data-numbers="left"><pre class="sourceCode numberSource numberLines number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a href="#cb14-1"></a>c.ID = NextCTMachineIDNum</span>
+<span id="cb14-2"><a href="#cb14-2"></a>NextCTMachineIDNum = NextCTMachineIDNum + 1</span>
+<span id="cb14-3"><a href="#cb14-3"></a>IF NextCTMachineIDNum &lt;= NumCTMachines THEN</span>
+<span id="cb14-4"><a href="#cb14-4"></a>    SCHEDULE Arrival (CT) at TIME</span>
+<span id="cb14-5"><a href="#cb14-5"></a>END IF</span>
+<span id="cb14-6"><a href="#cb14-6"></a>TRANSITION 10 WITH c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Leave (P)</td>
+<td style="text-align: left;">CTMachine (c)</td>
+<td style="text-align: left;">Scheduled</td>
+<td style="text-align: left;"><div class="sourceCode" id="cb15" data-numbers="left"><pre class="sourceCode numberSource numberLines number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a href="#cb15-1"></a>Calculate statistics for c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+</tr>
+</tbody>
+</table>
 </div>
+</figure>
+</div>
+<div style="page-break-after: always;"></div>
 </section>
 <section id="activity-diagrams" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="activity-diagrams"><span class="header-section-number">2.3</span> Activity Diagrams</h2>
@@ -692,22 +731,121 @@ Figure&nbsp;2.3: CT Activity Diagram
 </figcaption>
 </figure>
 </div>
+<div style="page-break-after: always;"></div>
 </section>
-<section id="control-policies" class="level2" data-number="2.4">
+<section id="control-policies" class="level2 page-columns page-full" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="control-policies"><span class="header-section-number">2.4</span> Control Policies</h2>
-<div id="cntrlplcy-start_wait_check_in" class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<div id="tbl-start_wait_check_in" class="sm column-page-right borderless quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-start_wait_check_in-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.7: OnStartWaitForCheckIn
+</figcaption>
+<div aria-describedby="tbl-start_wait_check_in-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table-sm table-borderless small table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Triggered by: Patient p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb16" data-numbers="left"><pre class="sourceCode numberSource numberLines number-lines code-with-copy"><code class="sourceCode"><span id="cb16-1"><a href="#cb16-1"></a>receps = {r FOR r IN R IF r.State = "Wait for task (R)"}</span>
+<span id="cb16-2"><a href="#cb16-2"></a>IF receps != {} THEN </span>
+<span id="cb16-3"><a href="#cb16-3"></a>    r_hat = argmin{r.CurrentStart FOR r in receps}</span>
+<span id="cb16-4"><a href="#cb16-4"></a>    TRANSITION 2 with p</span>
+<span id="cb16-5"><a href="#cb16-5"></a>    TRANSITION 7 with r_hat</span>
+<span id="cb16-6"><a href="#cb16-6"></a>END IF</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="callout-title-container flex-fill">
-Control Policy&nbsp;2.1: OnStartWaitForCheckIn
+</figure>
 </div>
+<div id="tbl-start_wait_check_in" class="sm column-page-right borderless quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-start_wait_check_in-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.8: OnStartWaitForScan
+</figcaption>
+<div aria-describedby="tbl-start_wait_check_in-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table-sm table-borderless small table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Triggered by: Patient p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb17" data-numbers="left"><pre class="sourceCode numberSource numberLines number-lines code-with-copy"><code class="sourceCode"><span id="cb17-1"><a href="#cb17-1"></a>cts = {c FOR c IN C IF c.State = "Wait for task (C)"}</span>
+<span id="cb17-2"><a href="#cb17-2"></a>IF cts != {} THEN </span>
+<span id="cb17-3"><a href="#cb17-3"></a>    c_hat = argmin{c.CurrentStart FOR c in cts}</span>
+<span id="cb17-4"><a href="#cb17-4"></a>    TRANSITION 4 with p</span>
+<span id="cb17-5"><a href="#cb17-5"></a>    TRANSITION 11 with c_hat</span>
+<span id="cb17-6"><a href="#cb17-6"></a>END IF</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="callout-body-container callout-body">
-<p>Triggered by: Patient p</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1"></a>TRIGGER OnStartWaitForCheckIn WITH p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</figure>
 </div>
+<div id="tbl-start_wait_check_in" class="sm column-page-right borderless quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-start_wait_check_in-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.9: OnStartWaitForTaskR
+</figcaption>
+<div aria-describedby="tbl-start_wait_check_in-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table-sm table-borderless small table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Triggered by: Receptionist r</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb18" data-numbers="left"><pre class="sourceCode numberSource numberLines number-lines code-with-copy"><code class="sourceCode"><span id="cb18-1"><a href="#cb18-1"></a>patients = {p FOR p IN P IF p.State = "Wait for Check In"}</span>
+<span id="cb18-2"><a href="#cb18-2"></a>IF patients != {} THEN </span>
+<span id="cb18-3"><a href="#cb18-3"></a>    p_hat = argmin{p.CurrentStart FOR p in patients}</span>
+<span id="cb18-4"><a href="#cb18-4"></a>    TRANSITION 2 with p_hat</span>
+<span id="cb18-5"><a href="#cb18-5"></a>    TRANSITION 7 with r</span>
+<span id="cb18-6"><a href="#cb18-6"></a>END IF</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="tbl-start_wait_check_in" class="sm column-page-right borderless quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-start_wait_check_in-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.10: OnStartWaitForTaskCT
+</figcaption>
+<div aria-describedby="tbl-start_wait_check_in-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table-sm table-borderless small table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Triggered by: CTMachine c</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb19" data-numbers="left"><pre class="sourceCode numberSource numberLines number-lines code-with-copy"><code class="sourceCode"><span id="cb19-1"><a href="#cb19-1"></a>patients = {p FOR p IN P IF p.State = "Wait for Scan"}</span>
+<span id="cb19-2"><a href="#cb19-2"></a>IF patients != {} THEN </span>
+<span id="cb19-3"><a href="#cb19-3"></a>    p_hat = argmin{p.CurrentStart FOR p in patients}</span>
+<span id="cb19-4"><a href="#cb19-4"></a>    TRANSITION 4 with p_hat</span>
+<span id="cb19-5"><a href="#cb19-5"></a>    TRANSITION 11 with c</span>
+<span id="cb19-6"><a href="#cb19-6"></a>END IF</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
 </div>
 
 

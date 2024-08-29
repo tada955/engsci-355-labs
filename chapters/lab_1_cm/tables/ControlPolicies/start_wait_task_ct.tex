@@ -1,0 +1,15 @@
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25cm}>{\raggedright\arraybackslash}p{13cm}@{}}
+  \toprule
+   & Triggered by: CTMachine c\\ \midrule 
+  &
+\vspace{-12pt}
+\begin{Verbatim}[numbers=left]
+patients = {p FOR p IN P IF p.State = "Wait for Scan"}
+IF patients != {} THEN 
+    p_hat = argmin{p.CurrentStart FOR p in patients}
+    TRANSITION 4 with p_hat
+    TRANSITION 11 with c
+END IF
+  \end{Verbatim}
+  \\ \bottomrule
+  \end{tabular}

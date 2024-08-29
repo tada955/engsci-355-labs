@@ -77,3 +77,6 @@ crossref:
       key: cntrlplcy
       latex-env: cntrlplcy
 
+# syntax-definitions: 
+#   - pseudocode.xml
+

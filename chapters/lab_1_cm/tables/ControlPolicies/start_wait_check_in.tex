@@ -1,0 +1,15 @@
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25cm}>{\raggedright\arraybackslash}p{13cm}@{}}
+  \toprule
+   & Triggered by: Patient p\\ \midrule 
+  &
+\vspace{-12pt}
+\begin{Verbatim}[numbers=left]
+receps = {r FOR r IN R IF r.State = "Wait for task (R)"}
+IF receps != {} THEN 
+    r_hat = argmin{r.CurrentStart FOR r in receps}
+    TRANSITION 2 with p
+    TRANSITION 7 with r_hat
+END IF
+  \end{Verbatim}
+  \\ \bottomrule
+  \end{tabular}

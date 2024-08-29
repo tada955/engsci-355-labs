@@ -22,9 +22,11 @@ List of Data Modules
 
 :::
 
+{{< pagebreak >}}
+
 ## Components
 
-::: {#tbl-entities_lab1 .sm .borderless}
+::: {#tbl-entities_lab1 .sm .column-page-right .borderless}
 
 ```{=latex}
 {{< include tables\entity_table.tex >}}
@@ -44,60 +46,27 @@ List of Transitions
 
 :::
 
-<!-- ::: {#tbl-activites_lab1 .sm .column-page-right .borderless}
+::: {#tbl-activities_lab1 .sm .column-page-right .borderless}
 
 ```{=latex}
 {{< include tables\activity_table.tex >}}
 ```
 
-List of Activities
-
-::: -->
-
-<!-- ::: {#tbl-wait_check_in_lab1 .sm .column-page-right .borderless}
-
-```{=latex}
-{{< include tables\ActivityTables\wait_for_check_in.tex >}}
-```
-
-Wait For Check In
-
-::: -->
-
-<!-- ::: {#tbl-check_in_lab1 .sm .column-page-right .borderless}
-
-```{=latex}
-{{< include tables\ActivityTables\check_in.tex >}}
-```
-
-Check In
-
-::: -->
-
-::: {#tbl-check_in_lab1 .sm .column-page-right .borderless}
-
-```{=latex}
-{{< include tables\ActivityTables\wait_for_scan.tex >}}
-```
-
-Wait For Scan
+Activities
 
 :::
 
-<!-- ::: {#tbl-test_lab1 .sm .column-page-right .borderless}
+::: {#tbl-events_lab1 .sm .column-page-right .borderless}
 
-| Activity          | Participants | Event | Type       | State Change |
-|-------------------|--------------|-------|------------|--------------|
-| Wait for check in | Patient (p)  | Start | Scheduled  |              |
-|                   |              | End   | Controlled | {{< include test_code.qmd >}}             |
+```{=latex}
+{{< include tables\event_table.tex >}}
+```
 
-Wait For Scan
+Events
 
-::: -->
-
-::: {.output}
-This is a test of the css.
 :::
+
+{{< pagebreak >}}
 
 ## Activity Diagrams
 
@@ -122,16 +91,46 @@ CT Activity Diagram
 
 :::
 
+{{< pagebreak >}}
+
 ## Control Policies
 
-:::{#cntrlplcy-start_wait_check_in .callout-note}
+::: {#tbl-start_wait_check_in .sm .column-page-right .borderless}
 
-## OnStartWaitForCheckIn
-
-Triggered by: Patient p
-
-```{.default}
-TRIGGER OnStartWaitForCheckIn WITH p
+```{=latex}
+{{< include tables\ControlPolicies\start_wait_check_in.tex >}}
 ```
+
+OnStartWaitForCheckIn
+
+:::
+
+::: {#tbl-start_wait_check_in .sm .column-page-right .borderless}
+
+```{=latex}
+{{< include tables\ControlPolicies\start_wait_for_scan.tex >}}
+```
+
+OnStartWaitForScan
+
+:::
+
+::: {#tbl-start_wait_check_in .sm .column-page-right .borderless}
+
+```{=latex}
+{{< include tables\ControlPolicies\start_wait_task_r.tex >}}
+```
+
+OnStartWaitForTaskR
+
+:::
+
+::: {#tbl-start_wait_check_in .sm .column-page-right .borderless}
+
+```{=latex}
+{{< include tables\ControlPolicies\start_wait_task_ct.tex >}}
+```
+
+OnStartWaitForTaskCT
 
 :::

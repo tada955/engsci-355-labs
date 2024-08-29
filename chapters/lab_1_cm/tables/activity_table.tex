@@ -1,18 +1,63 @@
-\setlength{\lastcol}{8cm}
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}p{2cm}>{\raggedright\arraybackslash}p{0.9cm}>{\raggedright\arraybackslash}p{1.6cm}>{\raggedright\arraybackslash}p{\lastcol}@{}}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}p{0.9cm}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{8cm}@{}}
   \toprule
-  Activity             & Participants        & Event & Type & State Change \\ \midrule 
-  Wait for check in & Patient(p) & Start & Scheduled &
+  Activity          & Participants & Event & Type       & State Change \\ \midrule
+  Wait for check in & Patient (p)  & Start & Scheduled  & 
+  \vspace{-12pt}
   \begin{Verbatim}[numbers=left]
-Item 1 which is much much $\hat{c}$
-Item 2
-Item 3
+TRIGGER OnStartWaitForCheckIn WITH p
   \end{Verbatim}
   \\ \cmidrule{3-5}
-  & & End & Controlled & \\ \midrule
-  Check in & Patient(p), Receptionist(r) & Start & Controlled &
-    % \input{ActivityTables/wait_for_scan.tex}
-    % \input{ActivityTables/scan.tex}
-    % \input{ActivityTables/wait_for_task_r.tex}
-    % \input{ActivityTables/wait_for_task_c.tex}
+                    &              & End   & Controlled &
+  
+  \\ \midrule
+  Check in & Patient (p), Receptionist (r)  & Start & Controlled  & 
+  \vspace{-12pt}
+  \begin{Verbatim}[numbers=left]
+SCHEDULE Check in.End at TIME + CheckInTime()
+  \end{Verbatim}
+  \\ \cmidrule{3-5}
+                    &              & End   & Scheduled &
+  \vspace{-12pt}
+  \begin{Verbatim}[numbers=left]
+TRANSITION 3 WITH p
+TRANSITION 8 WITH r
+  \end{Verbatim}          
+  \\ \midrule
+  Wait for Scan & Patient (p)  & Start & Scheduled  &              \\ \cmidrule{3-5}
+                &              & End   & Controlled &
+  \vspace{-12pt}
+  \begin{Verbatim}[numbers=left]
+TRIGGER OnStartWaitForScan WITH p
+  \end{Verbatim}
+  \\ \midrule
+  Scan & Patient (p), CTMachine (c)  & Start & Controlled  & 
+  \vspace{-12pt}
+  \begin{Verbatim}[numbers=left]
+SCHEDULE Scan.End at TIME + ScanTime()
+  \end{Verbatim}
+  \\ \cmidrule{3-5}
+                    &              & End   & Scheduled &
+  \vspace{-12pt}
+  \begin{Verbatim}[numbers=left]
+TRANSITION 5 WITH p
+TRANSITION 12 WITH c
+  \end{Verbatim}          
+  \\ \midrule
+  Wait for Task (R) & Receptionist (r)  & Start & Scheduled  &
+  \vspace{-12pt}
+  \begin{Verbatim}[numbers=left]
+TRIGGER OnStartWaitForTaskR WITH r
+  \end{Verbatim}
+  \\ \cmidrule{3-5}
+                    &              & End   & Controlled &
+  
+  \\ \midrule
+  Wait for Task (CT) & CTMachine (c)  & Start & Scheduled  &
+  \vspace{-12pt}
+  \begin{Verbatim}[numbers=left]
+TRIGGER OnStartWaitForTaskCT WITH c
+  \end{Verbatim}
+  \\ \cmidrule{3-5}
+                    &              & End   & Controlled &
+  \\ \bottomrule
   \end{tabular}
