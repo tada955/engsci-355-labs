@@ -47,6 +47,9 @@ format:
   html:
     theme: lumen
     code-line-numbers: true
+    syntax-definitions: 
+      - cm_pseudo.xml
+    highlight-style: haddock
     default-image-extension: svg
     css: styles.css
   pdf:
@@ -63,14 +66,6 @@ format:
       - right=82.5mm
       - marginparsep=10mm
       - marginparwidth=55mm
-    include-before-body:
-      text: |
-        \RecustomVerbatimEnvironment{verbatim}{Verbatim}{
-          showspaces = false,
-          showtabs = false,
-          breaksymbolleft={},
-          breaklines,
-        }
     code-line-numbers: true
     default-image-extension: pdf
 

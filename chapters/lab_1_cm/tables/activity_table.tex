@@ -3,60 +3,60 @@
   Activity          & Participants & Event & Type       & State Change \\ \midrule
   Wait for check in & Patient (p)  & Start & Scheduled  & 
   \vspace{-12pt}
-  \begin{Verbatim}[numbers=left]
+  \begin{lstlisting}[language=CMPseudo]
 TRIGGER OnStartWaitForCheckIn WITH p
-  \end{Verbatim}
+  \end{lstlisting}
   \\ \cmidrule{3-5}
                     &              & End   & Controlled &
   
   \\ \midrule
   Check in & Patient (p), Receptionist (r)  & Start & Controlled  & 
   \vspace{-12pt}
-  \begin{Verbatim}[numbers=left]
+  \begin{lstlisting}[language=CMPseudo]
 SCHEDULE Check in.End at TIME + CheckInTime()
-  \end{Verbatim}
+  \end{lstlisting}
   \\ \cmidrule{3-5}
                     &              & End   & Scheduled &
   \vspace{-12pt}
-  \begin{Verbatim}[numbers=left]
+  \begin{lstlisting}[language=CMPseudo]
 TRANSITION 3 WITH p
 TRANSITION 8 WITH r
-  \end{Verbatim}          
+  \end{lstlisting}          
   \\ \midrule
   Wait for Scan & Patient (p)  & Start & Scheduled  &              \\ \cmidrule{3-5}
                 &              & End   & Controlled &
   \vspace{-12pt}
-  \begin{Verbatim}[numbers=left]
+  \begin{lstlisting}[language=CMPseudo]
 TRIGGER OnStartWaitForScan WITH p
-  \end{Verbatim}
+  \end{lstlisting}
   \\ \midrule
   Scan & Patient (p), CTMachine (c)  & Start & Controlled  & 
   \vspace{-12pt}
-  \begin{Verbatim}[numbers=left]
+  \begin{lstlisting}[language=CMPseudo]
 SCHEDULE Scan.End at TIME + ScanTime()
-  \end{Verbatim}
+  \end{lstlisting}
   \\ \cmidrule{3-5}
                     &              & End   & Scheduled &
   \vspace{-12pt}
-  \begin{Verbatim}[numbers=left]
+  \begin{lstlisting}[language=CMPseudo]
 TRANSITION 5 WITH p
 TRANSITION 12 WITH c
-  \end{Verbatim}          
+  \end{lstlisting}          
   \\ \midrule
   Wait for Task (R) & Receptionist (r)  & Start & Scheduled  &
   \vspace{-12pt}
-  \begin{Verbatim}[numbers=left]
+  \begin{lstlisting}[language=CMPseudo]
 TRIGGER OnStartWaitForTaskR WITH r
-  \end{Verbatim}
+  \end{lstlisting}
   \\ \cmidrule{3-5}
                     &              & End   & Controlled &
   
   \\ \midrule
   Wait for Task (CT) & CTMachine (c)  & Start & Scheduled  &
   \vspace{-12pt}
-  \begin{Verbatim}[numbers=left]
+  \begin{lstlisting}[language=CMPseudo]
 TRIGGER OnStartWaitForTaskCT WITH c
-  \end{Verbatim}
+  \end{lstlisting}
   \\ \cmidrule{3-5}
                     &              & End   & Controlled &
   \\ \bottomrule

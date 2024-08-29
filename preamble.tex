@@ -10,9 +10,14 @@
 %\usepackage[xcharter, vvarbb, scaled=1.07]{newtxmath}
 % \usepackage{xcolor}
 \def\fps@table{htbp}
-\usepackage{fvextra}
-% \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
-% \DefineVerbatimEnvironment{StateChanges}{Verbatim}{breaklines,commandchars=\\\{\},numbers=left}
+\usepackage{listings}
+\lstdefinelanguage{CMPseudo}{%
+  language     = Python,
+  morekeywords = {zeros, TRANSITION, TRIGGER, WITH, SCHEDULE, TIME, FOR, IN, WITH, IF, THEN, END, IS, NOT, empty},
+  numbers=left,
+  numberstyle=\footnotesize
+}
+
 \newlength{\lastcol}
 
 \setcounter{topnumber}{8}

@@ -3,13 +3,13 @@
    & Triggered by: CTMachine c\\ \midrule 
   &
 \vspace{-12pt}
-\begin{Verbatim}[numbers=left]
+\begin{lstlisting}[language=CMPseudo]
 patients = {p FOR p IN P IF p.State = "Wait for Scan"}
-IF patients != {} THEN 
-    p_hat = argmin{p.CurrentStart FOR p in patients}
-    TRANSITION 4 with p_hat
-    TRANSITION 11 with c
+IF patients IS NOT empty THEN 
+    p_hat = argmin{p.CurrentStart FOR p IN patients}
+    TRANSITION 4 WITH p_hat
+    TRANSITION 11 WITH c
 END IF
-  \end{Verbatim}
+  \end{lstlisting}
   \\ \bottomrule
   \end{tabular}

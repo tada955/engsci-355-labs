@@ -3,13 +3,13 @@
    & Triggered by: Patient p\\ \midrule 
   &
 \vspace{-12pt}
-\begin{Verbatim}[numbers=left]
+\begin{lstlisting}[language=CMPseudo]
 cts = {c FOR c IN C IF c.State = "Wait for task (C)"}
-IF cts != {} THEN 
-    c_hat = argmin{c.CurrentStart FOR c in cts}
-    TRANSITION 4 with p
-    TRANSITION 11 with c_hat
+IF cts IS NOT empty THEN 
+    c_hat = argmin{c.CurrentStart FOR c IN cts}
+    TRANSITION 4 WITH p
+    TRANSITION 11 WITH c_hat
 END IF
-  \end{Verbatim}
+  \end{lstlisting}
   \\ \bottomrule
   \end{tabular}
