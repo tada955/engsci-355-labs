@@ -1,4 +1,4 @@
-# Radiology Clinic
+# Radiology Clinic {#sec-radiology_cm}
 
 ## Data
 

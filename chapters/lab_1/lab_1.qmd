@@ -8,7 +8,7 @@ We want to use the simulation to determine the average time that patients spend 
 We want to compare this time to the time that patients would spend in the system if interarrival times and scan durations were always equal to the average of the distributions for all patients.
 Typically we would first formulate the simulation model by defining the objectives, benefits, conceptual model, and experiments.
 For the sake of brevity we will only cover the experiments.
-As the aim of the lab is to learn the basics of Jaamsim, the conceptual model is not given here, instead it is available separately in the file Radiology\_Lab\_1\_CM.pdf.
+As the aim of the lab is to learn the basics of Jaamsim, the conceptual model is not given here, instead it is available in [@sec-radiology_cm].
 
 ## Experiments
 
