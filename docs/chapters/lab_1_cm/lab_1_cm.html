@@ -74,8 +74,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.js"></script>
-<link href="../../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -549,7 +547,7 @@ Table&nbsp;3.5: Activities
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Wait for check in</td>
+<td style="text-align: left;">Wait for Check In</td>
 <td style="text-align: left;">Patient (p)</td>
 <td style="text-align: left;">Start</td>
 <td style="text-align: left;">Scheduled</td>
@@ -563,19 +561,19 @@ Table&nbsp;3.5: Activities
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Check in</td>
+<td style="text-align: left;">Check In</td>
 <td style="text-align: left;">Patient (p), Receptionist (r)</td>
 <td style="text-align: left;">Start</td>
 <td style="text-align: left;">Controlled</td>
-<td style="text-align: left;"><div class="sourceCode" id="cb2" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">SCHEDULE</span> Check <span class="kw">in</span>.End at <span class="kw">TIME</span> <span class="op">+</span> CheckInTime()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb2" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">SCHEDULE</span> Check In.End at <span class="kw">TIME</span> <span class="op">+</span> CheckInTime()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">End</td>
 <td style="text-align: left;">Scheduled</td>
-<td style="text-align: left;"><div class="sourceCode" id="cb3" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">TRANSITION</span> <span class="dv">3</span> <span class="kw">WITH</span> p</span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="kw">TRANSITION</span> <span class="dv">8</span> <span class="kw">WITH</span> r</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb3" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">START</span> Wait <span class="cf">for</span> Scan <span class="kw">WITH</span> p</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="kw">START</span> Wait <span class="cf">for</span> Task (R) <span class="kw">WITH</span> r</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Wait for Scan</td>
@@ -603,8 +601,8 @@ Table&nbsp;3.5: Activities
 <td style="text-align: left;"></td>
 <td style="text-align: left;">End</td>
 <td style="text-align: left;">Scheduled</td>
-<td style="text-align: left;"><div class="sourceCode" id="cb6" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">TRANSITION</span> <span class="dv">5</span> <span class="kw">WITH</span> p</span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="kw">TRANSITION</span> <span class="dv">12</span> <span class="kw">WITH</span> c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb6" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">START</span> Leave (P) <span class="kw">WITH</span> p</span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="kw">START</span> Wait <span class="cf">for</span> Task (CT) <span class="kw">WITH</span> c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Wait for Task (R)</td>
@@ -671,7 +669,7 @@ Table&nbsp;3.6: Events
 <span id="cb10-2"><a href="#cb10-2"></a>p.Priority <span class="op">=</span> PatientPriority()</span>
 <span id="cb10-3"><a href="#cb10-3"></a>NextPatIDNum <span class="op">=</span> NextPatIDNum <span class="op">+</span> <span class="dv">1</span></span>
 <span id="cb10-4"><a href="#cb10-4"></a><span class="kw">SCHEDULE</span> Arrival (P) at <span class="kw">TIME</span> <span class="op">+</span> PatientInterArrival()</span>
-<span id="cb10-5"><a href="#cb10-5"></a><span class="kw">TRANSITION</span> <span class="dv">1</span> <span class="kw">WITH</span> p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="kw">START</span> Wait <span class="cf">for</span> Check In <span class="kw">WITH</span> p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Leave (P)</td>
@@ -688,7 +686,7 @@ Table&nbsp;3.6: Events
 <span id="cb12-3"><a href="#cb12-3"></a><span class="kw">IF</span> NextReceptionistIDNum <span class="op">&lt;=</span> NumReceptionists <span class="kw">THEN</span></span>
 <span id="cb12-4"><a href="#cb12-4"></a>    <span class="kw">SCHEDULE</span> Arrival (R) at <span class="kw">TIME</span></span>
 <span id="cb12-5"><a href="#cb12-5"></a><span class="kw">END</span> <span class="kw">IF</span></span>
-<span id="cb12-6"><a href="#cb12-6"></a><span class="kw">TRANSITION</span> <span class="dv">6</span> <span class="kw">WITH</span> r</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<span id="cb12-6"><a href="#cb12-6"></a><span class="kw">START</span> Wait <span class="cf">for</span> Task (R) <span class="kw">WITH</span> r</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Leave (R)</td>
@@ -705,7 +703,7 @@ Table&nbsp;3.6: Events
 <span id="cb14-3"><a href="#cb14-3"></a><span class="kw">IF</span> NextCTMachineIDNum <span class="op">&lt;=</span> NumCTMachines <span class="kw">THEN</span></span>
 <span id="cb14-4"><a href="#cb14-4"></a>    <span class="kw">SCHEDULE</span> Arrival (CT) at <span class="kw">TIME</span></span>
 <span id="cb14-5"><a href="#cb14-5"></a><span class="kw">END</span> <span class="kw">IF</span></span>
-<span id="cb14-6"><a href="#cb14-6"></a><span class="kw">TRANSITION</span> <span class="dv">10</span> <span class="kw">WITH</span> c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<span id="cb14-6"><a href="#cb14-6"></a><span class="kw">START</span> Wait <span class="cf">for</span> Task (CT) <span class="kw">WITH</span> c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Leave (P)</td>
@@ -775,9 +773,8 @@ Table&nbsp;3.7: OnStartWaitForCheckIn
 <td style="text-align: left;"><div class="sourceCode" id="cb16" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb16-1"><a href="#cb16-1"></a>receps <span class="op">=</span> {r <span class="kw">FOR</span> r <span class="kw">IN</span> R <span class="kw">IF</span> r.State <span class="op">=</span> <span class="st">"Wait for task (R)"</span>}</span>
 <span id="cb16-2"><a href="#cb16-2"></a><span class="kw">IF</span> receps <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">empty</span> <span class="kw">THEN</span> </span>
 <span id="cb16-3"><a href="#cb16-3"></a>    r_hat <span class="op">=</span> argmin{r.CurrentStart <span class="kw">FOR</span> r <span class="kw">IN</span> receps}</span>
-<span id="cb16-4"><a href="#cb16-4"></a>    <span class="kw">TRANSITION</span> <span class="dv">2</span> <span class="kw">WITH</span> p</span>
-<span id="cb16-5"><a href="#cb16-5"></a>    <span class="kw">TRANSITION</span> <span class="dv">7</span> <span class="kw">WITH</span> r_hat</span>
-<span id="cb16-6"><a href="#cb16-6"></a><span class="kw">END</span> <span class="kw">IF</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<span id="cb16-4"><a href="#cb16-4"></a>    <span class="kw">START</span> Check In <span class="kw">WITH</span> p, r_hat</span>
+<span id="cb16-5"><a href="#cb16-5"></a><span class="kw">END</span> <span class="kw">IF</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -803,9 +800,8 @@ Table&nbsp;3.8: OnStartWaitForScan
 <td style="text-align: left;"><div class="sourceCode" id="cb17" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb17-1"><a href="#cb17-1"></a>cts <span class="op">=</span> {c <span class="kw">FOR</span> c <span class="kw">IN</span> C <span class="kw">IF</span> c.State <span class="op">=</span> <span class="st">"Wait for task (C)"</span>}</span>
 <span id="cb17-2"><a href="#cb17-2"></a><span class="kw">IF</span> cts <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">empty</span> <span class="kw">THEN</span> </span>
 <span id="cb17-3"><a href="#cb17-3"></a>    c_hat <span class="op">=</span> argmin{c.CurrentStart <span class="kw">FOR</span> c <span class="kw">IN</span> cts}</span>
-<span id="cb17-4"><a href="#cb17-4"></a>    <span class="kw">TRANSITION</span> <span class="dv">4</span> <span class="kw">WITH</span> p</span>
-<span id="cb17-5"><a href="#cb17-5"></a>    <span class="kw">TRANSITION</span> <span class="dv">11</span> <span class="kw">WITH</span> c_hat</span>
-<span id="cb17-6"><a href="#cb17-6"></a><span class="kw">END</span> <span class="kw">IF</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<span id="cb17-4"><a href="#cb17-4"></a>    <span class="kw">START</span> Scan <span class="kw">WITH</span> p, r_hat</span>
+<span id="cb17-5"><a href="#cb17-5"></a><span class="kw">END</span> <span class="kw">IF</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -831,9 +827,8 @@ Table&nbsp;3.9: OnStartWaitForTaskR
 <td style="text-align: left;"><div class="sourceCode" id="cb18" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb18-1"><a href="#cb18-1"></a>patients <span class="op">=</span> {p <span class="kw">FOR</span> p <span class="kw">IN</span> P <span class="kw">IF</span> p.State <span class="op">=</span> <span class="st">"Wait for Check In"</span>}</span>
 <span id="cb18-2"><a href="#cb18-2"></a><span class="kw">IF</span> patients <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">empty</span> <span class="kw">THEN</span> </span>
 <span id="cb18-3"><a href="#cb18-3"></a>    p_hat <span class="op">=</span> argmin{p.CurrentStart <span class="kw">FOR</span> p <span class="kw">IN</span> patients}</span>
-<span id="cb18-4"><a href="#cb18-4"></a>    <span class="kw">TRANSITION</span> <span class="dv">2</span> <span class="kw">WITH</span> p_hat</span>
-<span id="cb18-5"><a href="#cb18-5"></a>    <span class="kw">TRANSITION</span> <span class="dv">7</span> <span class="kw">WITH</span> r</span>
-<span id="cb18-6"><a href="#cb18-6"></a><span class="kw">END</span> <span class="kw">IF</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<span id="cb18-4"><a href="#cb18-4"></a>    <span class="kw">START</span> Check In <span class="kw">WITH</span> p, r_hat</span>
+<span id="cb18-5"><a href="#cb18-5"></a><span class="kw">END</span> <span class="kw">IF</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -859,9 +854,8 @@ Table&nbsp;3.10: OnStartWaitForTaskCT
 <td style="text-align: left;"><div class="sourceCode" id="cb19" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb19-1"><a href="#cb19-1"></a>patients <span class="op">=</span> {p <span class="kw">FOR</span> p <span class="kw">IN</span> P <span class="kw">IF</span> p.State <span class="op">=</span> <span class="st">"Wait for Scan"</span>}</span>
 <span id="cb19-2"><a href="#cb19-2"></a><span class="kw">IF</span> patients <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">empty</span> <span class="kw">THEN</span> </span>
 <span id="cb19-3"><a href="#cb19-3"></a>    p_hat <span class="op">=</span> argmin{p.CurrentStart <span class="kw">FOR</span> p <span class="kw">IN</span> patients}</span>
-<span id="cb19-4"><a href="#cb19-4"></a>    <span class="kw">TRANSITION</span> <span class="dv">4</span> <span class="kw">WITH</span> p_hat</span>
-<span id="cb19-5"><a href="#cb19-5"></a>    <span class="kw">TRANSITION</span> <span class="dv">11</span> <span class="kw">WITH</span> c</span>
-<span id="cb19-6"><a href="#cb19-6"></a><span class="kw">END</span> <span class="kw">IF</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<span id="cb19-4"><a href="#cb19-4"></a>    <span class="kw">START</span> Scan <span class="kw">WITH</span> p, r_hat</span>
+<span id="cb19-5"><a href="#cb19-5"></a><span class="kw">END</span> <span class="kw">IF</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -1292,30 +1286,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-    <script type="text/javascript">
-    (function(d) {
-      d.querySelectorAll(".pseudocode-container").forEach(function(el) {
-        let pseudocodeOptions = {
-          indentSize: el.dataset.indentSize || "1.2em",
-          commentDelimiter: el.dataset.commentDelimiter || "//",
-          lineNumber: el.dataset.lineNumber === "true" ? true : false,
-          lineNumberPunc: el.dataset.lineNumberPunc || ":",
-          noEnd: el.dataset.noEnd === "true" ? true : false,
-          titlePrefix: el.dataset.algTitle || "Algorithm"
-        };
-        pseudocode.renderElement(el.querySelector(".pseudocode"), pseudocodeOptions);
-      });
-    })(document);
-    (function(d) {
-      d.querySelectorAll(".pseudocode-container").forEach(function(el) {
-        titleSpan = el.querySelector(".ps-root > .ps-algorithm > .ps-line > .ps-keyword")
-        titlePrefix = el.dataset.algTitle;
-        titleIndex = el.dataset.chapterLevel ? el.dataset.chapterLevel + "." + el.dataset.pseudocodeIndex : el.dataset.pseudocodeIndex;
-        titleSpan.innerHTML = titlePrefix + " " + titleIndex + " ";
-      });
-    })(document);
-    </script>
-  
 
 
 

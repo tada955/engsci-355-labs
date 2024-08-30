@@ -89,6 +89,7 @@
 			<item>END</item>
 			<item>IS</item>
 			<item>NOT</item>
+			<item>START</item>
 			<item>empty</item>
 		</list>
 		<list name="flow">

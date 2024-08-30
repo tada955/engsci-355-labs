@@ -7,8 +7,7 @@
 cts = {c FOR c IN C IF c.State = "Wait for task (C)"}
 IF cts IS NOT empty THEN 
     c_hat = argmin{c.CurrentStart FOR c IN cts}
-    TRANSITION 4 WITH p
-    TRANSITION 11 WITH c_hat
+    START Scan WITH p, r_hat
 END IF
   \end{lstlisting}
   \\ \bottomrule

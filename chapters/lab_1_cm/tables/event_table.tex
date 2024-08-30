@@ -16,7 +16,7 @@ p.ID = NextPatIDNum
 p.Priority = PatientPriority()
 NextPatIDNum = NextPatIDNum + 1
 SCHEDULE Arrival (P) at TIME + PatientInterArrival()
-TRANSITION 1 WITH p
+START Wait for Check In WITH p
   \end{lstlisting}
   \\ \midrule
   Leave (P) & Patient (p)  & Scheduled  & 
@@ -33,7 +33,7 @@ NextReceptionistIDNum = NextReceptionistIDNum + 1
 IF NextReceptionistIDNum <= NumReceptionists THEN
     SCHEDULE Arrival (R) at TIME
 END IF
-TRANSITION 6 WITH r
+START Wait for Task (R) WITH r
   \end{lstlisting}
   \\ \midrule
   Leave (R) & Receptionist (r)  & Scheduled  & 
@@ -50,7 +50,7 @@ NextCTMachineIDNum = NextCTMachineIDNum + 1
 IF NextCTMachineIDNum <= NumCTMachines THEN
     SCHEDULE Arrival (CT) at TIME
 END IF
-TRANSITION 10 WITH c
+START Wait for Task (CT) WITH c
   \end{lstlisting}
   \\ \midrule
   Leave (P) & CTMachine (c)  & Scheduled  & 

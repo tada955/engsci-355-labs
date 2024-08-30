@@ -32,16 +32,7 @@ latex-auto-install: true
 callout-icon: false
 
 filters:
-  - diagram
   - parse-latex
-  - highlight-text
-  - pseudocode
-  
-      
-# diagram:
-#   engine:
-#     tikz:
-#       include-headers: activity_diagram_styles.tex
 
 format:
   html:

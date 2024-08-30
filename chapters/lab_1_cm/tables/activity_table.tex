@@ -1,7 +1,7 @@
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}p{0.9cm}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{8cm}@{}}
   \toprule
   Activity          & Participants & Event & Type       & State Change \\ \midrule
-  Wait for check in & Patient (p)  & Start & Scheduled  & 
+  Wait for Check In & Patient (p)  & Start & Scheduled  & 
   \vspace{-12pt}
   \begin{lstlisting}[language=CMPseudo]
 TRIGGER OnStartWaitForCheckIn WITH p
@@ -10,17 +10,17 @@ TRIGGER OnStartWaitForCheckIn WITH p
                     &              & End   & Controlled &
   
   \\ \midrule
-  Check in & Patient (p), Receptionist (r)  & Start & Controlled  & 
+  Check In & Patient (p), Receptionist (r)  & Start & Controlled  & 
   \vspace{-12pt}
   \begin{lstlisting}[language=CMPseudo]
-SCHEDULE Check in.End at TIME + CheckInTime()
+SCHEDULE Check In.End at TIME + CheckInTime()
   \end{lstlisting}
   \\ \cmidrule{3-5}
                     &              & End   & Scheduled &
   \vspace{-12pt}
   \begin{lstlisting}[language=CMPseudo]
-TRANSITION 3 WITH p
-TRANSITION 8 WITH r
+START Wait for Scan WITH p
+START Wait for Task (R) WITH r
   \end{lstlisting}          
   \\ \midrule
   Wait for Scan & Patient (p)  & Start & Scheduled  &              \\ \cmidrule{3-5}
@@ -39,8 +39,8 @@ SCHEDULE Scan.End at TIME + ScanTime()
                     &              & End   & Scheduled &
   \vspace{-12pt}
   \begin{lstlisting}[language=CMPseudo]
-TRANSITION 5 WITH p
-TRANSITION 12 WITH c
+START Leave (P) WITH p
+START Wait for Task (CT) WITH c
   \end{lstlisting}          
   \\ \midrule
   Wait for Task (R) & Receptionist (r)  & Start & Scheduled  &

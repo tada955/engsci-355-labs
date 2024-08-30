@@ -7,8 +7,7 @@
 receps = {r FOR r IN R IF r.State = "Wait for task (R)"}
 IF receps IS NOT empty THEN 
     r_hat = argmin{r.CurrentStart FOR r IN receps}
-    TRANSITION 2 WITH p
-    TRANSITION 7 WITH r_hat
+    START Check In WITH p, r_hat
 END IF
 \end{lstlisting}
   \\ \bottomrule

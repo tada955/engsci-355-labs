@@ -7,8 +7,7 @@
 patients = {p FOR p IN P IF p.State = "Wait for Scan"}
 IF patients IS NOT empty THEN 
     p_hat = argmin{p.CurrentStart FOR p IN patients}
-    TRANSITION 4 WITH p_hat
-    TRANSITION 11 WITH c
+    START Scan WITH p, r_hat
 END IF
   \end{lstlisting}
   \\ \bottomrule
