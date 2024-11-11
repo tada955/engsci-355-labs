@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ENGSCI 355 Labs - 3&nbsp; Radiology Clinic</title>
+<title>3&nbsp; Radiology Clinic – ENGSCI 355 Labs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../chapters/lab_2/lab_2.html" rel="prev">
+<link href="../../chapters/jaamsim_setup/jaamsim_setup.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -102,7 +102,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -141,13 +141,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/lab_1_cm/lab_1_cm.html">Conceptual Models</a></li><li class="breadcrumb-item"><a href="../../chapters/lab_1_cm/lab_1_cm.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Radiology Clinic</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -160,6 +160,9 @@ window.Quarto = {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">ENGSCI 355 Labs</a> 
+        <div class="sidebar-tools-main">
+    <a href="../../ENGSCI-355-Labs.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -177,32 +180,32 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Jaamsim Labs</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/lab_1/lab_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Radiology Clinic</span></span></a>
+  <a href="../../chapters/vscode_java_setup/vscode_java_setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Setting Up VSCode and Java</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/lab_2/lab_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+  <a href="../../chapters/jaamsim_setup/jaamsim_setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting Up JaamSim and HCCM</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Conceptual Models</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -256,13 +259,13 @@ window.Quarto = {
 
 <section id="data" class="level2 page-columns page-full" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="data"><span class="header-section-number">3.1</span> Data</h2>
-<div id="tbl-var_lab1" class="sm column-page-right borderless quarto-float anchored">
+<div id="tbl-var_lab1" class="sm column-page-right borderless quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-var_lab1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;3.1: List of Global Variables
 </figcaption>
 <div aria-describedby="tbl-var_lab1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table-sm table-borderless small table">
+<table class="table-sm table-borderless small caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: left;">Name</th>
@@ -306,13 +309,13 @@ Table&nbsp;3.1: List of Global Variables
 </div>
 </figure>
 </div>
-<div id="tbl-data_lab1" class="sm column-page-right borderless quarto-float anchored">
+<div id="tbl-data_lab1" class="sm column-page-right borderless quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-data_lab1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;3.2: List of Data Modules
 </figcaption>
 <div aria-describedby="tbl-data_lab1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table-sm table-borderless small table">
+<table class="table-sm table-borderless small caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: left;">Name</th>
@@ -367,13 +370,13 @@ Table&nbsp;3.2: List of Data Modules
 </section>
 <section id="components" class="level2 page-columns page-full" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="components"><span class="header-section-number">3.2</span> Components</h2>
-<div id="tbl-entities_lab1" class="sm column-page-right borderless quarto-float anchored">
+<div id="tbl-entities_lab1" class="sm column-page-right borderless quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-entities_lab1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;3.3: List of Entities
 </figcaption>
 <div aria-describedby="tbl-entities_lab1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table-sm table-borderless small table">
+<table class="table-sm table-borderless small caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: left;">Entity</th>
@@ -430,13 +433,13 @@ Table&nbsp;3.3: List of Entities
 </div>
 </figure>
 </div>
-<div id="tbl-transitions_lab1" class="sm column-page-right borderless quarto-float anchored">
+<div id="tbl-transitions_lab1" class="sm column-page-right borderless quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-transitions_lab1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;3.4: List of Transitions
 </figcaption>
 <div aria-describedby="tbl-transitions_lab1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table-sm table-borderless small table">
+<table class="table-sm table-borderless small caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: left;">No.</th>
@@ -529,13 +532,13 @@ Table&nbsp;3.4: List of Transitions
 </div>
 </figure>
 </div>
-<div id="tbl-activities_lab1" class="sm column-page-right borderless quarto-float anchored">
+<div id="tbl-activities_lab1" class="sm column-page-right borderless quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-activities_lab1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;3.5: Activities
 </figcaption>
 <div aria-describedby="tbl-activities_lab1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table-sm table-borderless small table">
+<table class="table-sm table-borderless small caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: left;">Activity</th>
@@ -637,13 +640,13 @@ Table&nbsp;3.5: Activities
 </div>
 </figure>
 </div>
-<div id="tbl-events_lab1" class="sm column-page-right borderless quarto-float anchored">
+<div id="tbl-events_lab1" class="sm column-page-right borderless quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-events_lab1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;3.6: Events
 </figcaption>
 <div aria-describedby="tbl-events_lab1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table-sm table-borderless small table">
+<table class="table-sm table-borderless small caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: left;">Activity</th>
@@ -720,7 +723,7 @@ Table&nbsp;3.6: Events
 </section>
 <section id="activity-diagrams" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="activity-diagrams"><span class="header-section-number">3.3</span> Activity Diagrams</h2>
-<div id="fig-pat_act" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-pat_act" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pat_act-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/patient_activity.svg" class="img-fluid figure-img" style="width:155mm">
@@ -730,7 +733,7 @@ Figure&nbsp;3.1: Patient Activity Diagram
 </figcaption>
 </figure>
 </div>
-<div id="fig-recep_act" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-recep_act" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-recep_act-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/receptionist_activity.svg" class="img-fluid figure-img" style="width:76mm">
@@ -740,7 +743,7 @@ Figure&nbsp;3.2: Receptionist Activity Diagram
 </figcaption>
 </figure>
 </div>
-<div id="fig-ct_act" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-ct_act" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ct_act-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/CT_activity.svg" class="img-fluid figure-img" style="width:76mm">
@@ -754,13 +757,13 @@ Figure&nbsp;3.3: CT Activity Diagram
 </section>
 <section id="control-policies" class="level2 page-columns page-full" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="control-policies"><span class="header-section-number">3.4</span> Control Policies</h2>
-<div id="tbl-start_wait_check_in" class="sm column-page-right borderless quarto-float anchored">
+<div id="tbl-start_wait_check_in" class="sm column-page-right borderless quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-start_wait_check_in-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;3.7: OnStartWaitForCheckIn
 </figcaption>
 <div aria-describedby="tbl-start_wait_check_in-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table-sm table-borderless small table">
+<table class="table-sm table-borderless small caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
@@ -781,13 +784,13 @@ Table&nbsp;3.7: OnStartWaitForCheckIn
 </div>
 </figure>
 </div>
-<div id="tbl-start_wait_check_in" class="sm column-page-right borderless quarto-float anchored">
+<div id="tbl-start_wait_check_in" class="sm column-page-right borderless quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-start_wait_check_in-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;3.8: OnStartWaitForScan
 </figcaption>
 <div aria-describedby="tbl-start_wait_check_in-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table-sm table-borderless small table">
+<table class="table-sm table-borderless small caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
@@ -808,13 +811,13 @@ Table&nbsp;3.8: OnStartWaitForScan
 </div>
 </figure>
 </div>
-<div id="tbl-start_wait_check_in" class="sm column-page-right borderless quarto-float anchored">
+<div id="tbl-start_wait_check_in" class="sm column-page-right borderless quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-start_wait_check_in-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;3.9: OnStartWaitForTaskR
 </figcaption>
 <div aria-describedby="tbl-start_wait_check_in-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table-sm table-borderless small table">
+<table class="table-sm table-borderless small caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
@@ -835,13 +838,13 @@ Table&nbsp;3.9: OnStartWaitForTaskR
 </div>
 </figure>
 </div>
-<div id="tbl-start_wait_check_in" class="sm column-page-right borderless quarto-float anchored">
+<div id="tbl-start_wait_check_in" class="sm column-page-right borderless quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-start_wait_check_in-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;3.10: OnStartWaitForTaskCT
 </figcaption>
 <div aria-describedby="tbl-start_wait_check_in-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table-sm table-borderless small table">
+<table class="table-sm table-borderless small caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
@@ -902,18 +905,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -945,7 +937,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -953,7 +967,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -1278,8 +1292,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../chapters/lab_2/lab_2.html" class="pagination-link" aria-label="Summary">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span>
+      <a href="../../chapters/jaamsim_setup/jaamsim_setup.html" class="pagination-link" aria-label="Setting Up JaamSim and HCCM">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting Up JaamSim and HCCM</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

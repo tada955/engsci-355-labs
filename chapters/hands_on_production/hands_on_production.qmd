@@ -1,0 +1,76 @@
+# Operations System in Practice {#sec-hands-on-sim}
+
+The goal of this lab is to give you some hands-on experience with an operations system, the type of system that we will be focussing on simulating.
+Hopefully this will give you some idea of what is needed to simulate a system in terms of:
+
+- the components of the system and how they interact with each other (entities and their behaviour);
+- the type and amount of information/data that is needed, both for activity durations and control policies;
+- the types of experiments that can be performed and how the system can be redesigned.
+
+## Making Paper Cars
+
+The system that we will use as an example is making a car out of paper.
+You will each be given a piece of paper with the net of paper car on it as in @fig-car_net.
+
+::: {#fig-car_net .column-margin}
+![](figures/Car_Net_Blank.png)
+
+The Net Used to Make Paper Cars
+
+:::
+
+You will also get a pair of scissors, some tape, and blank pieces of paper.
+To make the car:
+
+1. Trace the net onto a new piece of paper.
+2. Cut the new net out.
+3. Fold the paper and tape the edges shut placing the tabs on the inside.
+
+@fig-car_complete shows an example of a completed car.
+
+::: {#fig-car_complete .column-margin}
+![](figures/Car_Complete.jpg)
+
+A Completed Car
+
+:::
+
+First everyone should make one car by themselves.
+Once you have, show one of the instructors to get signed off.
+Then, discuss with you group how you can work together to make paper cars.
+You might want to experiment with different setups/policies and try making a few cars to see how long it takes and gather some data.
+
+There will be a competition to see which group can make the most cars in 10 minutes.
+Before the time starts each group must submit an estimate of how many cars they believe they will be able to make.
+The score for each group will then be comprised of the following elements:
+
+- 1 point for each car completed up to and including the estimated number.
+- 0.25 points for each car completed above the estimated number.
+- -0.75 points for each car not completed in the estimated number.
+
+Additionally, the following rules must be followed:
+
+1. Each car must be traced and cut individually.
+2. Cars must be the same shape as the original template, including tabs.
+3. You can have as many stencils as you like.
+4. All final cars must have started as a blank, unfolded piece of paper.
+5. You may not have any pre-cut tape or nets.
+6. All cars must have been made only by members of your group.
+7. All cars must be folded and taped neatly to count. The lecturer has final say on whether a car meets the required neatness.
+
+## Reflections
+
+Now that you have attempted to make as many cars as you can you may wish to reflect on the process by asking yourself the following questions:
+
+- Did your group have any traced/cut out cars left at the end?
+- What was the bottleneck/slowest part of the system?
+- Did you collect any data/do any experiments? If so, did they help? Would you do more/different ones now?
+- What would you do differently next time?
+
+The process that we considered was relatively simple.
+Cinsider how would your group's strategy change if any of the following additional conditions were added:
+
+- Blank pieces of paper for you to trace onto only become available one at a time every two minutes;
+- You have to make different styles of cars on demand;
+- There is a limit to how many traced nets/cut pieces of tape you can have at any point (buffer limit);
+- Each time a pair of scissors is stopped being used there is a cooldown time of 1 minute.

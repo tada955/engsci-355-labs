@@ -1,0 +1,49 @@
+# Inputs, Outputs, Entities, and Behaviour
+
+In this lab and the next one, we will work through the Hierarchical Control Conceptual Modelling (HCCM) framework to build a conceptual model, aligned with the HCCM standard from lectures, that represents the practical activity, i.e., making paper cars, from @sec-hands-on-sim.
+
+Working in the same groups as for practical activity, you will work through the phases for HCCM modelling shown below and complete templates for those steps.
+In this lab you will complete phases 1, 2, 3, and start phase 4.
+The remainder of phase 4 will be completed in the next lab.
+@sec-hands-on-sim provides a partially completed conceptual model of the car making system that you can use as a starting point.
+
+<!-- \begin{center}
+\includegraphics[width=0.65\textwidth]{hccm-framework.png} 
+\end{center} -->
+
+## Understanding of the Problem Situation
+
+To understand the problem situation, you need to summarise what is happening in a concise way.
+There is no strict rule for the best way to do this. One good approach is listening to the problem "holder", i.e., person/people who have the problem such as a client, then reflecting what you have heard in a couple of paragraphs with lists of key details and questions.
+You can then work through one or more iterations of feedback and refinement to get a final, agreed upon problem description.
+
+## Identification of Modelling and General Objectives
+
+As described in lectures, there are two types of objectives to consider when developing a simulation:
+
+> "The second step deals with the determination of the objectives. According to Robinson [26] they drive all aspects of the modeling process and are a subset of an organization's aims. Further, objectives can be classified into modeling and general objectives, where the latter are concerned with the flexibility, run-speed, visual-display and model/component reuse."
+
+For the modelling objective you may like to think about what you trying to discover using simulation, and what level of performance you are trying to achieve in which areas/metrics.
+
+## Defining Output Responses
+
+Output responses are things that can be measured and compared to understand how a system has behaved/performed.
+They are the metrics used to compare different simulation scenarios.
+The output responses should let you know whether the modelling objectives have been achieved and why or how.
+You may also want to consider how this will be reported (tables, graphs, etc.).
+
+## Defining Input Factors
+
+Input factors are things that can be changed and may modify how a system behaves/performs.
+They are often defined to create multiple different scenarios to compare via simulation.
+They are also what you can change to try and achieve the modelling objectives.
+
+## Model Content
+
+For the model content definition of our conceptual model we will follow the new HCCM standard.
+This standard is presented in an academic article (currently under review) that is available on Canvas under \texttt{Files > Lectures > Conceptual Modelling} in the file 
+[hccm-standard.pdf](https://canvas.auckland.ac.nz/courses/113292/files/folder/Lectures/Conceptual%20Modelling?preview=12376819)
+
+### Identifying Entities
+
+Before formally defining entities it is often useful to identify entities in the system and whether they are active, i.e., have behaviour like a doctor or patient, or passive, i.e., are part of the system that should be modelled but that don't have explicit behaviour like a waiting room with a given capacity, but that doesn't actually have defined actions.

@@ -1,0 +1,82 @@
+# Setting Up VSCode and Java
+
+In this lab you will walk through the set up of running a Java program in VSCode.
+You will need to be able to do this to implement HCCMs in Jaamsim.
+
+If you do not already have VSCode installed on your machine, download and install the version appropriate for your operating system from [here](https://code.visualstudio.com/Download).
+
+<!-- XXX Check lab computer java installations XXX -->
+
+If you are using your own laptop, it is best to install a recent version of the Java JDK (unless you are confident you already have a recent version).
+We recommend Amazon Corretto 21.
+You can download it from [here](https://docs.aws.amazon.com/corretto/latest/corretto-21-ug/downloads-list.html), and then install it.
+
+::: {.content-visible when-format="pdf"}
+
+To see short videos of the steps described below please visit this [site](https://auckland.au.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=e07b3856-7cf5-4024-8c93-b21f016633ea).
+
+:::
+
+::: {.content-visible when-format="html"}
+
+The videos provided on this page are also available [here](https://auckland.au.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=e07b3856-7cf5-4024-8c93-b21f016633ea).
+
+:::
+
+Open VSCode, then on the left-hand side click on the Extensions tab.
+Search for the 'Extension Pack for Java' and install it.
+
+::: {.content-visible when-format="html"}
+{{< video figures/1_VSCode_Install_Java_Extensions.mp4 >}}
+:::
+
+Create a new folder called **ENGSCI355**, if you are using a lab computer create this folder on your H drive.
+If you aren't, then create it within Documents or wherever you usually keep University related work.
+Inside the **ENGSCI355** folder create another folder called **Java\_Example**.
+Then in VSCode open this folder by going File -> Open Folder, then navigating to the **Java\_Example** folder.
+
+::: {.content-visible when-format="html"}
+{{< video figures/2_Create_Java_Folders.mp4 >}}
+:::
+
+::: {.content-visible when-format="html" .column-page-right}
+{{< video figures/3_Open_New_Folder.mp4 >}}
+:::
+
+
+Once you have opened the folder in VSCode, create a new file in it called **Hello.java**.
+Once you have that file (or any .java file) open VSCode should detect that you are editing a java file and, if there isn't one already, create a Java Project in the same folder.
+You should see that the 'Java Projects' section has been enabled in the bottom left of the screen.
+
+::: {.content-visible when-format="html" .column-page-right}
+{{< video figures/4_Create_Java_File.mp4 >}}
+:::
+
+We now want to make sure that this Java Project is using the correct Java JDK.
+Hover your mouse over the 'Java Projects' title and then click on the three dots that appear on the right hand side (with the tooltip 'More Actions'), and select 'Configure Java Runtime'.
+Use the drop-down menu that appears to select the Amazon Corretto 21 JDK.
+If it is not on the list, select 'Find a local JDK' and browse to the location that you installed the Amazon Corretto JDK.
+
+::: {.content-visible when-format="html" .column-page-right}
+{{< video figures/5_Set_JDK.mp4 >}}
+:::
+
+Now go back to the Hello.java file and add the following code:
+
+```java
+public class Hello {
+  public static void main(String[] args) {
+    System.out.println("Hello!");
+  }
+}
+```
+
+To run the program either click on the 'Run' button just above the line that declares the main function, or click on the run button in the top right corner of the screen.
+You should see a line with 'Hello!' printed by itself.
+
+::: {.content-visible when-format="html" .column-page-right}
+{{< video figures/6_Run_Java_Program.mp4 >}}
+:::
+
+You have now create and run a Java program!
+If you run into any issues, there are more detailed instructions available [here](https://code.visualstudio.com/docs/java/java-tutorial).

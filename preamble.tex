@@ -7,15 +7,33 @@
 \usepackage{array}
 \usepackage{multirow}
 \usepackage{tikz}
+\usepackage{framed}
 %\usepackage[xcharter, vvarbb, scaled=1.07]{newtxmath}
-% \usepackage{xcolor}
+\usepackage{xcolor}
+\definecolor{CodeBackground}{HTML}{F5F5F5}
+
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+
 \def\fps@table{htbp}
 \usepackage{listings}
+\lstset{breaklines=true, columns=flexible}
 \lstdefinelanguage{CMPseudo}{%
   language     = Python,
   morekeywords = {zeros, TRANSITION, TRIGGER, WITH, SCHEDULE, TIME, FOR, IN, WITH, IF, THEN, END, IS, NOT, empty, START},
   numbers=left,
-  numberstyle=\footnotesize
+  numberstyle=\footnotesize,
+  basicstyle = \small \ttfamily,
+  showstringspaces = false
+}
+
+\lstdefinelanguage{JavaNew}{%
+  language     = Java,
+  numbers=left,
+  numberstyle=\footnotesize,
+  backgroundcolor=\color{CodeBackground},
+  keywordstyle = \color{blue},
+  basicstyle = \small \ttfamily
 }
 
 \newlength{\lastcol}

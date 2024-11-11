@@ -7,3 +7,10 @@
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
+
+.answer-box {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-top: 1px solid;
+  border-bottom: 1px solid 
+}

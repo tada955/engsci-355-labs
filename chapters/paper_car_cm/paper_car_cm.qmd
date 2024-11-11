@@ -1,0 +1,67 @@
+# Making Paper Cars Conceptual Model
+
+## Understanding of the Problem Situation
+
+In the box below write a problem description for making paper cars, think about what you are trying to solve/discover by simulating this activity.
+You may want to look at @sec-hands-on-sim again to remind yourself about the process.
+
+::: {.content-visible when-format="latex"}
+
+::: {.content-visible unless-profile="answers"}
+
+```{=latex}
+\begin{framed}
+\vspace*{8cm}
+\end{framed}
+```
+
+:::
+
+::: {.content-visible when-profile="answers"}
+
+```{=latex}
+\begin{minipage}[t][9cm]{\textwidth}
+\begin{framed}
+There are one or more people making cars from paper.
+They need to trace the car template on the paper, then cut the car template out of the paper.
+They then need to fold the car and use pieces of tape to stick it together.
+They either cut the pieces of tape from the tape roll at the time they need them or cut them earlier and have them ready.
+There are a limited number of pencils, templates, scissors, and tape rolls available for use.
+The goal is to make as many cars as possible in 15 mins and determine the best way to do this given the number of people and resources to hand.
+\end{framed}
+\end{minipage}
+```
+
+:::
+
+:::
+
+::: {.content-visible when-format="html"}
+
+:::{.answer-box} 
+
+::: {.content-visible unless-profile="answers"}
+
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+
+:::
+
+::: {.content-visible when-profile="answers"}
+
+There are one or more people making cars from paper.
+They need to trace the car template on the paper, then cut the car template out of the paper.
+They then need to fold the car and use pieces of tape to stick it together.
+They either cut the pieces of tape from the tape roll at the time they need them or cut them earlier and have them ready.
+There are a limited number of pencils, templates, scissors, and tape rolls available for use.
+The goal is to make as many cars as possible in 15 mins and determine the best way to do this given the number of people and resources to hand.
+
+:::
+
+:::
+
+:::

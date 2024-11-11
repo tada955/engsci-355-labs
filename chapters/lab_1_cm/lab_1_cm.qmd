@@ -5,7 +5,7 @@
 ::: {#tbl-var_lab1 .sm .column-page-right .borderless}
 
 ```{=latex}
-{{< include tables\variable_table.tex >}}
+{{< include tables/variable_table.tex >}}
 ```
 
 List of Global Variables
@@ -15,7 +15,7 @@ List of Global Variables
 ::: {#tbl-data_lab1 .sm .column-page-right .borderless}
 
 ```{=latex}
-{{< include tables\data_table.tex >}}
+{{< include tables/data_table.tex >}}
 ```
 
 List of Data Modules
@@ -29,7 +29,7 @@ List of Data Modules
 ::: {#tbl-entities_lab1 .sm .column-page-right .borderless}
 
 ```{=latex}
-{{< include tables\entity_table.tex >}}
+{{< include tables/entity_table.tex >}}
 ```
 
 List of Entities
@@ -39,7 +39,7 @@ List of Entities
 ::: {#tbl-transitions_lab1 .sm .column-page-right .borderless}
 
 ```{=latex}
-{{< include tables\transition_table.tex >}}
+{{< include tables/transition_table.tex >}}
 ```
 
 List of Transitions
@@ -49,7 +49,7 @@ List of Transitions
 ::: {#tbl-activities_lab1 .sm .column-page-right .borderless}
 
 ```{=latex}
-{{< include tables\activity_table.tex >}}
+{{< include tables/activity_table.tex >}}
 ```
 
 Activities
@@ -59,7 +59,7 @@ Activities
 ::: {#tbl-events_lab1 .sm .column-page-right .borderless}
 
 ```{=latex}
-{{< include tables\event_table.tex >}}
+{{< include tables/event_table.tex >}}
 ```
 
 Events
@@ -98,7 +98,7 @@ CT Activity Diagram
 ::: {#tbl-start_wait_check_in .sm .column-page-right .borderless}
 
 ```{=latex}
-{{< include tables\ControlPolicies\start_wait_check_in.tex >}}
+{{< include tables/ControlPolicies/start_wait_check_in.tex >}}
 ```
 
 OnStartWaitForCheckIn
@@ -108,7 +108,7 @@ OnStartWaitForCheckIn
 ::: {#tbl-start_wait_check_in .sm .column-page-right .borderless}
 
 ```{=latex}
-{{< include tables\ControlPolicies\start_wait_for_scan.tex >}}
+{{< include tables/ControlPolicies/start_wait_for_scan.tex >}}
 ```
 
 OnStartWaitForScan
@@ -118,7 +118,7 @@ OnStartWaitForScan
 ::: {#tbl-start_wait_check_in .sm .column-page-right .borderless}
 
 ```{=latex}
-{{< include tables\ControlPolicies\start_wait_task_r.tex >}}
+{{< include tables/ControlPolicies/start_wait_task_r.tex >}}
 ```
 
 OnStartWaitForTaskR
@@ -128,7 +128,7 @@ OnStartWaitForTaskR
 ::: {#tbl-start_wait_check_in .sm .column-page-right .borderless}
 
 ```{=latex}
-{{< include tables\ControlPolicies\start_wait_task_ct.tex >}}
+{{< include tables/ControlPolicies/start_wait_task_ct.tex >}}
 ```
 
 OnStartWaitForTaskCT

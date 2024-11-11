@@ -1,0 +1,232 @@
+# Setting Up JaamSim and HCCM
+
+In this lab you will walk through the set up of how to run JaamSim from source in a VSCode project and how to include the HCCM library in JaamSim.
+
+## Prerequisites
+
+These instructions were prepared using:
+
+1. Git -- 2.47.0.2;
+2. GitHub Desktop -- 3.4.8 (x64);
+3. Java -- Amazon Corretto JRE 21;
+4. VSCode -- 1.95.1.
+
+They should work with more recent versions of the software too.
+All of this software is standard on Engineering lab machines.
+Amazon Corretto JRE 21 is available on the University of Auckland's Software Centre.
+
+::: {.content-visible when-format="pdf"}
+
+To see short videos of the steps described below please visit this [site](https://auckland.au.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=59000722-14f5-4215-8948-b22501731784).
+
+:::
+
+::: {.content-visible when-format="html"}
+
+The videos provided on this page are also available [here](https://auckland.au.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=59000722-14f5-4215-8948-b22501731784).
+
+:::
+
+## Create the Project Folder Structure
+
+Create a new folder on your H drive called ENGSCI355.
+Then create three folders within this one, called **sim**, **labs**, and **workspace**.
+The **sim** folder will contain the java code for the simulation software Jaamsim, including custom code that you write, and is the focus of these instructions.
+The **labs** folder will contain subfolders for each lab with the simulation files for each.
+Create a folder for HCCM logic functions within the **sim** folder.
+We will use **sim\_custom** in these instructions.
+
+::: {.content-visible when-format="html" .column-page-right}
+{{< video figures/1_Create_JaamSim_Folders.mp4 >}}
+:::
+
+## Clone HCCM into the project folder
+
+Open GitHub Desktop and go to File $\rightarrow$ Clone repository, then select the URL tab and enter
+
+> https://github.com/mosu001/hccm
+
+as the URL.
+Choose the Local path to be the **sim** folder that you just created.
+
+into an hccm folder within the **sim** folder.
+This will create an **hccm** folder within the **sim** folder that contains the HCCM and Jaamsim code.
+
+Note, if you use git from the command line, e.g., Git Bash, you need to add the recurse submodules option
+
+`git clone --recurse-submodules https://github.com/mosu001/hccm`
+
+::: {.content-visible when-format="html" .column-page-right}
+{{< video figures/2_Clone_HCCM_Repo.mp4 >}}
+:::
+
+## Create files to load HCCM and customised components
+
+From **hccm\_custom** copy both **autoload.cfg** and **hccm.inc** into the **sim\_custom** folder.
+Then open **autoload.cfg** with VSCode and edit it so that the content matches that in @fig-inc.
+
+::: {#fig-inc}
+```
+Include units.inc
+Include sim.inc
+Include units-imperial.inc
+Include units-knots.inc
+Include displayModels.inc
+Include graphics.inc
+Include probabilityDistributions.inc
+Include basicObjects.inc
+Include resourceObjects.inc
+Include examples.inc
+Include processFlow.inc
+Include calculationObjects.inc
+Include fluidObjects.inc
+Include submodels.inc
+Include hccm.inc
+Include sim_custom.inc
+```
+
+Customised autoload.cfg File
+:::
+
+Then rename **hccm.inc** to **sim\_custom.inc**, open it in VSCode, and delete all the contents so it is blank.
+Don't forget to save both **autoload.cfg** and **sim\_custom.inc**.
+
+::: {.content-visible when-format="html" .column-page-right}
+{{< video figures/3_Copy_Autoload.mp4 >}}
+:::
+
+## Create a VSCode Java Project
+
+In VSCode use File $\rightarrow$ Open Folder to open the **sim** folder.
+In the File Explorer open some folder so that you can see a .java file and open it, for example: hccm\textbackslash custom\textbackslash hccm\textbackslash Constants.java.
+VSCode should then recognise that you have opened a Java file and the Java Projects pane should appear.
+
+::: {.content-visible when-format="html" .column-page-right}
+{{< video figures/4_Open_Sim_Project.mp4 >}}
+:::
+
+## Configure Source Folders
+
+Now we need to tell VSCode where the source code of the project is.
+To do this we click on the three dots at the right of the 'Java Projects' title and select 'Configure Classpath'.
+A new menu should come up that allows you to add and remove sources.
+If anything other than **hccm\textbackslash custom** is already there remove it by clicking on the x on the far right hand side, then 'Apply Settings'.
+Add new sources by clicking on 'Add Source Root'.
+First add **sim\textbackslash hccm\textbackslash jaamsim\textbackslash src\textbackslash main\textbackslash java**, then click 'Apply Settings'.
+Then add both **sim\textbackslash hccm\textbackslash jaamsim\textbackslash src\textbackslash main\textbackslash resources** and **sim\textbackslash sim\_custom**, remembering to apply the settings after each one.
+
+You can check to make sure that you have the correct sources configured by opening the **settings.json** file in the **.vscode** folder.
+Under "java.project.sourcePaths" there should be the following four entries:
+
+- hccm\\\\custom
+- hccm\\\\jaamsim\\\\src\\\\main\\\\java
+- hccm\\\\jaamsim\\\\src\\\\main\\\\resources
+- sim\_custom
+
+::: {.content-visible when-format="html" .column-page-right}
+{{< video figures/5_Configure_Classpath.mp4 >}}
+:::
+
+## Configure JDK
+
+We need to make sure that VSCode is using the version of Java that we want it to.
+To do this we click on the three dots at the right of the 'Java Projects' title and select 'Configure Java Runtime'.
+A drop-down menu for JDK should come up.
+Make sure that JavaSE-21 is selected and then click 'Apply Settings'.
+
+::: {.content-visible when-format="html" .column-page-right}
+{{< video figures/6_Configure_JDK.mp4 >}}
+:::
+
+## Configure Libraries
+
+JaamSim also needs the gluegen and jogl libraries to run.
+These are packaged with JaamSim as .jar files (a compiled Java program).
+They can be added by opening the project settings by clicking on the three dots at the right of the 'Java Projects' title and selecting either 'Configure Java Runtime' or 'Configure Classpath'.
+Then select the 'Libraries' tab on the right.
+Click on 'Add Library', then navigate to hccm\\jaamsim\\jar, select all of the files, and click 'Select Jar File'.
+Then click 'Apply Settings'.
+
+::: {.content-visible when-format="html" .column-page-right}
+{{< video figures/7_Configure_Libraries.mp4 >}}
+:::
+
+## Integrate with JaamSim
+
+To integrate HCCM and any custom logic with JaamSim you need to copy your **autoload.cfg** and **sim\_custom.inc** files (from **sim\_custom**) to sim\\hccm\\jaamsim\\src\\main\\resources\\resources\\inputs and replace the autoload.cfg file that is currently there.
+You also need to copy the file **hccm.inc** in hccm\\custom to the same location.
+To check that they have been copied correctly you can look in the 'Java Projects' section on the left-hand side.
+Under hccm\\jaamsim\\src\\main\\resources\\resources\\inputs you should see both **hccm.inc** and **sim\_custom.inc**.
+If you don't, try using the menu accessed by clicking the three dots and selecting 'Refresh'.
+
+::: {.content-visible when-format="html" .column-page-right}
+{{< video figures/8_Integrate_HCCM.mp4 >}}
+:::
+
+## Run Custom JaamSim
+
+You should now be able to run JaamSim with the HCCM objects enabled.
+Start by clicking on the 'Run and Debug' menu on the left-hand side, then click on 'create a launch.json file', and select 'Java' from the list of debuggers that comes up in the middle of the screen.
+By doing this VSCode analyses the source code to determine which java files you might like to run and creates run configurations for each of them.
+In the file that is created you should see an entry with the name 'GUIFrame', this is the class that we need to run to start JaamSim.
+To make the view work correctly when JaamSim is running you need to add another parameter called "vmArgs" with the following entries enclosed in double quotes and separated by spaces on a single line:
+
+- \--add-exports java.base/java.lang=ALL-UNNAMED
+- \--add-exports java.desktop/sun.awt=ALL-UNNAMED
+- \--add-exports java.desktop/sun.java2d=ALL-UNNAMED
+
+The final entry in the .launch file should look like this:
+
+:::{.column-page-right}
+```{.java}
+"type": "java",
+"name": "GUIFrame",
+"request": "launch",
+"mainClass": "com.jaamsim.ui.GUIFrame",
+"projectName": "sim_d11998cc",
+"vmArgs": "--add-exports java.base/java.lang=ALL-UNNAMED --add-exports java.desktop/sun.awt=ALL-UNNAMED --add-exports java.desktop/sun.java2d=ALL-UNNAMED"
+```
+:::
+
+Then, in the top left-hand corner next to the green play button click on the drop-down menu and select 'GUIFrame'.
+Then click the green play button to run JaamSim.
+The launch screen should appear but you might also have to click on the JaamSim icon in the Taskbar at the bottom of the screen to open JaamSim.
+You should see the 'HCCM' palette at the bottom of the 'Model Builder' window, and be able to drag and drop objects into the View.
+
+::: {.content-visible when-format="html" .column-page-right}
+{{< video figures/9_Run_JaamSim.mp4 >}}
+:::
+
+## Running an HCCM Model
+
+Now that we have JaamSim running with the HCCM objects we can try running an existing model.
+Download the single server queue model's folder from Canvas (ssq.zip), move it into the **labs** folder and extract **ssq.zip** into that folder.
+You might want to remove the ssq at the end of the extraction destination to prevent nested ssq folders being created.
+
+Now we need to create package in our Java Project to hold the custom logic associated with this model.
+In VSCode right-click on the **sim\_custom** folder and select New Java Package.
+Enter **ssq** for the name of the package and click Finish.
+This will have created a new folder in the **sim\_custom** folder called ssq.
+
+Now go back to the ssq folder you extracted the zip file to and copy the FIFOQControlUnit.java file to the newly created package folder under sim\\sim\_custom\\ssq.
+This java file defines a new Jaamsim object, in this case the control unit for the SSQ model.
+
+::: {.content-visible when-format="html" .column-page-right}
+{{< video figures/10_Create_Package_Class.mp4 >}}
+:::
+
+Finally we need to make this new object available in Jaamsim.
+To do this we need to edit the **sim\_custom.inc** file that we put in sim\\hccm\\jaamsim\\src\\main\\resources\\resources\\inputs.
+Open the **sim\_custom.inc** file and also open the **ssq.inc** file in the ssq folder.
+Copy the contents of **ssq.inc** into **sim\_custom.inc.**
+
+Run JaamSim with HCCM from the Run and Debug menu again (make sure that GUIFrame is selected in the drop-down).
+You should now see a Single Server Queue palette in the Model Builder window. It has the FIFO trigger for the Single Server Queue model (you will learn more about triggers in later labs).
+
+Next in Jaamsim in the top left corner select file, then open, and open ssq.cfg from the ssq folder.
+You can run the model by clicking on the blue play button in the top left and see how the customers and servers join together for service in the queue.
+
+::: {.content-visible when-format="html"}
+{{< video figures/11_Run_HCCM_Model.mp4 >}}
+:::
+

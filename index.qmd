@@ -1,5 +1,4 @@
 # Preface {.unnumbered}
 
-These are the Labs for ENGSCI 355.
-
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+These are an online version of the Labs for ENGSCI 355.
+The topics covered are: a hands-on simulation of a manufacturing process; conceptual modelling using HCCM; implementing HCCM models in Jaamsim; and missing data imputaton.
