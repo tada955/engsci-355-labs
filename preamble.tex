@@ -8,12 +8,15 @@
 \usepackage{multirow}
 \usepackage{tikz}
 \usepackage{framed}
+\usepackage{mdframed}
 %\usepackage[xcharter, vvarbb, scaled=1.07]{newtxmath}
 \usepackage{xcolor}
-\definecolor{CodeBackground}{HTML}{F5F5F5}
+\definecolor{CodeBackground}{HTML}{F0F0F0}
 
 \usepackage{fvextra}
 \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+
+\newenvironment{cntrlplcy}{}{}
 
 \def\fps@table{htbp}
 \usepackage{listings}
@@ -24,7 +27,8 @@
   numbers=left,
   numberstyle=\footnotesize,
   basicstyle = \small \ttfamily,
-  showstringspaces = false
+  showstringspaces = false,
+  backgroundcolor=\color{CodeBackground},
 }
 
 \lstdefinelanguage{JavaNew}{%
@@ -41,3 +45,13 @@
 \setcounter{topnumber}{8}
 \setcounter{bottomnumber}{8}
 \setcounter{totalnumber}{8}
+
+% \pagestyle{myheadings}
+% \markright{\rightmark}
+
+\renewcommand*{\partpagestyle}{empty}
+
+\newmdenv[hidealllines=true, innerleftmargin=0cm, innerrightmargin=0cm, innertopmargin=0cm, innerbottommargin=0cm]{codebox}
+
+\newmdenv[nobreak=false, hidealllines=true, backgroundcolor=CodeBackground]{codeout}
+

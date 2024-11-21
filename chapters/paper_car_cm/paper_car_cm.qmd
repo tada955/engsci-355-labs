@@ -5,49 +5,27 @@
 In the box below write a problem description for making paper cars, think about what you are trying to solve/discover by simulating this activity.
 You may want to look at @sec-hands-on-sim again to remind yourself about the process.
 
-::: {.content-visible when-format="latex"}
+:::{.mdframed options="innerbottommargin=3cm" .column-page-right} 
 
 ::: {.content-visible unless-profile="answers"}
 
-```{=latex}
-\begin{framed}
-\vspace*{8cm}
-\end{framed}
-```
+&nbsp;
 
-:::
+&nbsp;
 
-::: {.content-visible when-profile="answers"}
+&nbsp;
 
-```{=latex}
-\begin{minipage}[t][9cm]{\textwidth}
-\begin{framed}
-There are one or more people making cars from paper.
-They need to trace the car template on the paper, then cut the car template out of the paper.
-They then need to fold the car and use pieces of tape to stick it together.
-They either cut the pieces of tape from the tape roll at the time they need them or cut them earlier and have them ready.
-There are a limited number of pencils, templates, scissors, and tape rolls available for use.
-The goal is to make as many cars as possible in 15 mins and determine the best way to do this given the number of people and resources to hand.
-\end{framed}
-\end{minipage}
-```
+&nbsp;
 
-:::
+&nbsp;
 
-:::
+&nbsp;
 
-::: {.content-visible when-format="html"}
+&nbsp;
 
-:::{.answer-box} 
+&nbsp;
 
-::: {.content-visible unless-profile="answers"}
-
-<br/><br/>
-<br/><br/>
-<br/><br/>
-<br/><br/>
-<br/><br/>
-<br/><br/>
+&nbsp;
 
 :::
 
@@ -64,4 +42,424 @@ The goal is to make as many cars as possible in 15 mins and determine the best w
 
 :::
 
+## Modelling Objectives
+
+In the box below write the modelling objectives for making paper cars, i.e., what are you trying to discover using simulation?
+
+:::{.mdframed options="innerbottommargin=3cm" .column-page-right} 
+
+::: {.content-visible unless-profile="answers"}
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
 :::
+
+::: {.content-visible when-profile="answers"}
+
+- Determine how many cubes we can make in 15 mins
+- Determine where the bottlenecks are
+- Change task prioritization to see if we can make more cubes
+
+:::
+
+:::
+
+{{< pagebreak >}}
+
+## General Objectives
+
+In the box below write the general objectives for making paper cars, i.e., what are some of the general properties you'd like your simulation to have?
+
+:::{.mdframed options="innerbottommargin=4.5cm" .column-page-right} 
+
+::: {.content-visible unless-profile="answers"}
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+:::
+
+::: {.content-visible when-profile="answers"}
+
+- Run faster that 15 mins
+- Be able to change inputs easily
+- Get visualisations of outputs (could be as simple as confidence intervals or might be, e.g., distributions of \# of cars made
+
+:::
+
+:::
+
+## Defining Output Responses
+
+In the box below write the output responses for making paper cars, i.e., what are you going to measure to determine the performance of the system?
+
+:::{.mdframed options="innerbottommargin=4.5cm" .column-page-right} 
+
+::: {.content-visible unless-profile="answers"}
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+:::
+
+::: {.content-visible when-profile="answers"}
+
+- Measure of how many cars can be made (for various different inputs)
+- Waiting times of cars at various steps (bottlenecks)
+- Idle time of people (waste)
+
+:::
+
+:::
+
+{{< pagebreak >}}
+
+## Defining Input Factors
+
+In the box below write the input factors for making paper cars, i.e., what are you going to change to achieve the modelling objectives?
+
+:::{.mdframed options="innerbottommargin=4.5cm" .column-page-right} 
+
+::: {.content-visible unless-profile="answers"}
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+:::
+
+::: {.content-visible when-profile="answers"}
+
+- Strategy for assigning tasks -- who should be doing which task and when/for how long
+
+:::
+
+:::
+
+## Identifying Entities
+
+In the box below list the entities for making paper cars.
+
+:::{.mdframed options="innerbottommargin=4.5cm" .column-page-right} 
+
+::: {.content-visible unless-profile="answers"}
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+:::
+
+::: {.content-visible when-profile="answers"}
+
+- Paper
+- Pencil/Template
+- Scissors
+- Tape
+- Tape Pieces
+- Person
+
+:::
+
+:::
+
+{{< pagebreak >}}
+
+## Drawing Behavioural Paths
+
+The activity diagrams for the pencil & template, and scissors are given below in [Figures @fig-pencil_act; and @fig-scissors_act].
+
+::: {#fig-pencil_act}
+![](figures/pencil-activity){width=72mm}
+
+Pencil Activity Diagram
+
+:::
+
+::: {#fig-scissors_act}
+![](figures/scissors-activity){width=100mm}
+
+Scissors Activity Diagram
+
+:::
+
+{{< pagebreak >}}
+
+In the boxes below draw the activity diagrams for the remaining entities.
+
+::: {.content-visible unless-profile="answers"}
+
+:::{.mdframed options="innerbottommargin=8cm" .column-page-right}
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+:::
+
+&nbsp;
+
+:::{.mdframed options="innerbottommargin=5cm" .column-page-right}
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+:::
+
+&nbsp;
+
+:::{.mdframed options="innerbottommargin=5cm" .column-page-right}
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+:::
+
+&nbsp;
+
+:::{.mdframed options="innerbottommargin=7cm" .column-page-right}
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+:::
+
+:::
+
+::: {.content-visible when-profile="answers"}
+
+::: {#fig-paper_act}
+![](figures/paper-activity){width=73mm}
+
+Paper Activity Diagram
+
+:::
+
+::: {#fig-tape_act}
+![](figures/tape-activity){width=71mm}
+
+Tape Activity Diagram
+
+:::
+
+::: {#fig-tape_piece_act}
+![](figures/tape-piece-activity){width=119mm}
+
+Tape Piece Activity Diagram
+
+:::
+
+::: {#fig-person_act}
+![](figures/person-activity){width=110mm}
+
+Person Activity Diagram
+
+::: 
+
+:::
+

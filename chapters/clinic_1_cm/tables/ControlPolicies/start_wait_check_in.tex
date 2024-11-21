@@ -1,0 +1,14 @@
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25cm}>{\raggedright\arraybackslash}p{13cm}@{}}
+  \toprule
+   & Triggered by: Patient p\\ \midrule 
+  &
+\vspace{-12pt}
+\begin{lstlisting}[language=CMPseudo]
+receps = {r FOR r IN R IF r.State = "Wait for task (R)"}
+IF receps IS NOT empty THEN 
+    r_hat = argmin{r.CurrentStart FOR r IN receps}
+    START Check In WITH p, r_hat
+END IF
+\end{lstlisting}
+  \\ \bottomrule
+  \end{tabular}

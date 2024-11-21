@@ -8,9 +8,13 @@
   margin-bottom: 0 !important;
 }
 
-.answer-box {
+.mdframed {
   border-left: 1px solid;
   border-right: 1px solid;
   border-top: 1px solid;
-  border-bottom: 1px solid 
+  border-bottom: 1px solid;
+}
+
+.codeout {
+  background-color: #F0F0F0;
 }

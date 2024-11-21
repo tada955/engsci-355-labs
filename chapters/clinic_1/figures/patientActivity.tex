@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+
+\node [rectangle, draw=black, minimum width=2cm, align=center] (0) at (0,0) {Arrive};
+\node [rectangle, draw=black, minimum width=2cm, align=center] (a) at (2.5,0) {Queue for\\check in};
+\node [rectangle, draw=black, minimum width=2cm, align=center] (b) at (5,0) {Check in};
+\node [rectangle, draw=black, minimum width=2cm, align=center] (c) at (7.5,0) {Queue for\\scan};
+\node [rectangle, draw=black, minimum width=2cm, align=center] (d) at (10,0) {Scan};
+\node [rectangle, draw=black, minimum width=2cm, align=center] (e) at (12.5,0) {Leave};
+
+\draw [->, >=triangle 45, semithick] (0) edge (a);
+\draw [->, >=triangle 45, semithick] (a) edge (b);
+\draw [->, >=triangle 45, semithick] (b) edge (c);
+\draw [->, >=triangle 45, semithick] (c) edge (d);
+\draw [->, >=triangle 45, semithick] (d) edge (e);
+
+\end{tikzpicture}

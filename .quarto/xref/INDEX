@@ -1,50 +1,38 @@
 {
   "index.qmd": {
-    "index.html": "50ab4fbf"
+    "index.html": "049ea6fe"
   },
   "intro.qmd": {
-    "intro.html": "356bbd05"
+    "intro.html": "35ff100e"
   },
   "summary.qmd": {
-    "summary.html": "8dbe8aea"
+    "summary.html": "049f312b"
   },
   "references.qmd": {
-    "references.html": "b9932caf"
-  },
-  "lab_1.qmd": {
-    "lab_1.html": "868cf185"
-  },
-  "lab_1_cm.qmd": {
-    "lab_1_cm.html": "5660a5f9"
-  },
-  "chapters/lab2/lab2.qmd": {
-    "lab2.html": "1664e1ee"
-  },
-  "chapters/lab_1/lab_1.qmd": {
-    "lab_1.html": "089dbe19"
-  },
-  "chapters/lab_1_cm/lab_1_cm.qmd": {
-    "lab_1_cm.html": "7d06aeaa"
-  },
-  "chapters/lab_2/lab_2.qmd": {
-    "lab_2.html": "ee5a92c4"
-  },
-  "chapters/jaamsim_setup/jaamsim_setup.qmd": {
-    "jaamsim_setup.html": "998ea4f0"
-  },
-  "chapters/vscode_java_setup/vscode_java_setup.qmd": {
-    "vscode_java_setup.html": "a41fc347"
+    "references.html": "7ca4fac0"
   },
   "chapters/hands_on_production/hands_on_production.qmd": {
-    "hands_on_production.html": "3ae7c7a8"
+    "hands_on_production.html": "0ad1c07b"
   },
   "chapters/cm_entities_behaviour/cm_entities_behaviour.qmd": {
-    "cm_entities_behaviour.html": "2498f3e7"
+    "cm_entities_behaviour.html": "659b44c4"
   },
   "chapters/cm_events_activities/cm_events_activities.qmd": {
-    "cm_events_activities.html": "1f00f581"
+    "cm_events_activities.html": "687bbd3c"
+  },
+  "chapters/vscode_java_setup/vscode_java_setup.qmd": {
+    "vscode_java_setup.html": "aee80076"
+  },
+  "chapters/jaamsim_setup/jaamsim_setup.qmd": {
+    "jaamsim_setup.html": "2a62db12"
   },
   "chapters/paper_car_cm/paper_car_cm.qmd": {
-    "paper_car_cm.html": "3f095c86"
+    "paper_car_cm.html": "4185bcf6"
+  },
+  "chapters/clinic_1/clinic_1.qmd": {
+    "clinic_1.html": "74a6cc7c"
+  },
+  "chapters/clinic_1_cm/clinic_1_cm.qmd": {
+    "clinic_1_cm.html": "8698229a"
   }
 }

@@ -10,201 +10,432 @@
     ]
   },
   {
+    "objectID": "chapters/hands_on_production/hands_on_production.html",
+    "href": "chapters/hands_on_production/hands_on_production.html",
+    "title": "1  Operations System in Practice",
+    "section": "",
+    "text": "1.1 Making Paper Cars\nThe system that we will use as an example is making a car out of paper. You will each be given a piece of paper with the net of paper car on it as in Figure 1.1.\nYou will also get a pair of scissors, some tape, and blank pieces of paper. To make the car:\nFigure 1.2 shows an example of a completed car.\nFirst everyone should make one car by themselves. Once you have, show one of the instructors to get signed off. Then, discuss with you group how you can work together to make paper cars. You might want to experiment with different setups/policies and try making a few cars to see how long it takes and gather some data.\nThere will be a competition to see which group can make the most cars in 10 minutes. Before the time starts each group must submit an estimate of how many cars they believe they will be able to make. The score for each group will then be comprised of the following elements:\nAdditionally, the following rules must be followed:",
+    "crumbs": [
+      "Practical Lab",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Operations System in Practice</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/hands_on_production/hands_on_production.html#making-paper-cars",
+    "href": "chapters/hands_on_production/hands_on_production.html#making-paper-cars",
+    "title": "1  Operations System in Practice",
+    "section": "",
+    "text": "Figure 1.1: The Net Used to Make Paper Cars\n\n\n\n\nTrace the net onto a new piece of paper.\nCut the new net out.\nFold the paper and tape the edges shut placing the tabs on the inside.\n\n\n\n\n\n\n\n\n\nFigure 1.2: A Completed Car\n\n\n\n\n\n1 point for each car completed up to and including the estimated number.\n0.25 points for each car completed above the estimated number.\n-0.75 points for each car not completed in the estimated number.\n\n\n\nEach car must be traced and cut individually.\nCars must be the same shape as the original template, including tabs.\nYou can have as many stencils as you like.\nAll final cars must have started as a blank, unfolded piece of paper.\nYou may not have any pre-cut tape or nets.\nAll cars must have been made only by members of your group.\nAll cars must be folded and taped neatly to count. The lecturer has final say on whether a car meets the required neatness.",
+    "crumbs": [
+      "Practical Lab",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Operations System in Practice</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/hands_on_production/hands_on_production.html#reflections",
+    "href": "chapters/hands_on_production/hands_on_production.html#reflections",
+    "title": "1  Operations System in Practice",
+    "section": "1.2 Reflections",
+    "text": "1.2 Reflections\nNow that you have attempted to make as many cars as you can you may wish to reflect on the process by asking yourself the following questions:\n\nDid your group have any traced/cut out cars left at the end?\nWhat was the bottleneck/slowest part of the system?\nDid you collect any data/do any experiments? If so, did they help? Would you do more/different ones now?\nWhat would you do differently next time?\n\nThe process that we considered was relatively simple. Cinsider how would your group’s strategy change if any of the following additional conditions were added:\n\nBlank pieces of paper for you to trace onto only become available one at a time every two minutes;\nYou have to make different styles of cars on demand;\nThere is a limit to how many traced nets/cut pieces of tape you can have at any point (buffer limit);\nEach time a pair of scissors is stopped being used there is a cooldown time of 1 minute.",
+    "crumbs": [
+      "Practical Lab",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Operations System in Practice</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/cm_entities_behaviour/cm_entities_behaviour.html",
+    "href": "chapters/cm_entities_behaviour/cm_entities_behaviour.html",
+    "title": "2  Inputs, Outputs, Entities, and Behaviour",
+    "section": "",
+    "text": "2.1 Understanding of the Problem Situation\nTo understand the problem situation, you need to summarise what is happening in a concise way. There is no strict rule for the best way to do this. One good approach is listening to the problem “holder”, i.e., person/people who have the problem such as a client, then reflecting what you have heard in a couple of paragraphs with lists of key details and questions. You can then work through one or more iterations of feedback and refinement to get a final, agreed upon problem description.",
+    "crumbs": [
+      "Conceptual Modelling Labs",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Inputs, Outputs, Entities, and Behaviour</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/cm_entities_behaviour/cm_entities_behaviour.html#identification-of-modelling-and-general-objectives",
+    "href": "chapters/cm_entities_behaviour/cm_entities_behaviour.html#identification-of-modelling-and-general-objectives",
+    "title": "2  Inputs, Outputs, Entities, and Behaviour",
+    "section": "2.2 Identification of Modelling and General Objectives",
+    "text": "2.2 Identification of Modelling and General Objectives\nAs described in lectures, there are two types of objectives to consider when developing a simulation:\n\n“The second step deals with the determination of the objectives. According to Robinson [26] they drive all aspects of the modeling process and are a subset of an organization’s aims. Further, objectives can be classified into modeling and general objectives, where the latter are concerned with the flexibility, run-speed, visual-display and model/component reuse.”\n\nFor the modelling objective you may like to think about what you trying to discover using simulation, and what level of performance you are trying to achieve in which areas/metrics.",
+    "crumbs": [
+      "Conceptual Modelling Labs",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Inputs, Outputs, Entities, and Behaviour</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/cm_entities_behaviour/cm_entities_behaviour.html#defining-output-responses",
+    "href": "chapters/cm_entities_behaviour/cm_entities_behaviour.html#defining-output-responses",
+    "title": "2  Inputs, Outputs, Entities, and Behaviour",
+    "section": "2.3 Defining Output Responses",
+    "text": "2.3 Defining Output Responses\nOutput responses are things that can be measured and compared to understand how a system has behaved/performed. They are the metrics used to compare different simulation scenarios. The output responses should let you know whether the modelling objectives have been achieved and why or how. You may also want to consider how this will be reported (tables, graphs, etc.).",
+    "crumbs": [
+      "Conceptual Modelling Labs",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Inputs, Outputs, Entities, and Behaviour</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/cm_entities_behaviour/cm_entities_behaviour.html#defining-input-factors",
+    "href": "chapters/cm_entities_behaviour/cm_entities_behaviour.html#defining-input-factors",
+    "title": "2  Inputs, Outputs, Entities, and Behaviour",
+    "section": "2.4 Defining Input Factors",
+    "text": "2.4 Defining Input Factors\nInput factors are things that can be changed and may modify how a system behaves/performs. They are often defined to create multiple different scenarios to compare via simulation. They are also what you can change to try and achieve the modelling objectives.",
+    "crumbs": [
+      "Conceptual Modelling Labs",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Inputs, Outputs, Entities, and Behaviour</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/cm_entities_behaviour/cm_entities_behaviour.html#model-content",
+    "href": "chapters/cm_entities_behaviour/cm_entities_behaviour.html#model-content",
+    "title": "2  Inputs, Outputs, Entities, and Behaviour",
+    "section": "2.5 Model Content",
+    "text": "2.5 Model Content\nFor the model content definition of our conceptual model we will follow the new HCCM standard. This standard is presented in an academic article (currently under review) that is available on Canvas under Files &gt; Lectures &gt; Conceptual Modelling in the file hccm-standard.pdf\n\n2.5.1 Identifying Entities\nBefore formally defining entities it is often useful to identify entities in the system and whether they are active, i.e., have behaviour like a doctor or patient, or passive, i.e., are part of the system that should be modelled but that don’t have explicit behaviour like a waiting room with a given capacity, but that doesn’t actually have defined actions.\nThe goal is to identify everything that is involved in a meaningful way in all of the activities that are important to the system. Thinking about the inputs and outputs can also be useful. Clearly the entities must be influenced in some way by the inputs, and they must themselves influence the outputs. You may also consider that an activity does not have a significant influence on the performance of the system, and decide to exclude it – and therefore any entities that are involved only in that activity. Likewise the participation of a particular entity in an activity might be deemed inconsequential and therefore excluded.\n\n\n2.5.2 Drawing Behavioural Paths\nOnce preliminary identification of identities has been done, behavioural paths for each of the active entities should be drawn. These are essentially flowcharts with a special structure. Circles represent events, usually used when entities are arriving and leaving. Rectangles represent activities, including when entities have to wait for another activity. Red squares at the top left of an activity (or sometimes an event) let us know that some logic is triggered when the activity starts. This generally occurs at the start of “wait” activities and is used to check whether the conditions that mean the entity can stop waiting and move on to the next activity are met.\nWhat we are trying to do when drawing the behavioural paths is identify the activities and events that the entities participate in, the possible orders that these can occur in, and any points where some control logic needs to be used.\nBoth when identifying the entities and drawing the behavioural paths it is important to keep track of any assumptions and simplifications that you make.",
+    "crumbs": [
+      "Conceptual Modelling Labs",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Inputs, Outputs, Entities, and Behaviour</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/cm_events_activities/cm_events_activities.html",
+    "href": "chapters/cm_events_activities/cm_events_activities.html",
+    "title": "3  Events, Activities, and Logic",
+    "section": "",
+    "text": "In summary, this chapter has no content whatsoever.",
+    "crumbs": [
+      "Conceptual Modelling Labs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Events, Activities, and Logic</span>"
+    ]
+  },
+  {
     "objectID": "chapters/vscode_java_setup/vscode_java_setup.html",
     "href": "chapters/vscode_java_setup/vscode_java_setup.html",
-    "title": "1  Setting Up VSCode and Java",
+    "title": "4  Setting Up VSCode and Java",
     "section": "",
     "text": "In this lab you will walk through the set up of running a Java program in VSCode. You will need to be able to do this to implement HCCMs in Jaamsim.\nIf you do not already have VSCode installed on your machine, download and install the version appropriate for your operating system from here.\n\nIf you are using your own laptop, it is best to install a recent version of the Java JDK (unless you are confident you already have a recent version). We recommend Amazon Corretto 21. You can download it from here, and then install it.\nThe videos provided on this page are also available here.\nOpen VSCode, then on the left-hand side click on the Extensions tab. Search for the ‘Extension Pack for Java’ and install it.\n\nCreate a new folder called ENGSCI355, if you are using a lab computer create this folder on your H drive. If you aren’t, then create it within Documents or wherever you usually keep University related work. Inside the ENGSCI355 folder create another folder called Java_Example. Then in VSCode open this folder by going File -&gt; Open Folder, then navigating to the Java_Example folder.\n\n\nOnce you have opened the folder in VSCode, create a new file in it called Hello.java. Once you have that file (or any .java file) open VSCode should detect that you are editing a java file and, if there isn’t one already, create a Java Project in the same folder. You should see that the ‘Java Projects’ section has been enabled in the bottom left of the screen.\n\nWe now want to make sure that this Java Project is using the correct Java JDK. Hover your mouse over the ‘Java Projects’ title and then click on the three dots that appear on the right hand side (with the tooltip ‘More Actions’), and select ‘Configure Java Runtime’. Use the drop-down menu that appears to select the Amazon Corretto 21 JDK. If it is not on the list, select ‘Find a local JDK’ and browse to the location that you installed the Amazon Corretto JDK.\n\nNow go back to the Hello.java file and add the following code:\npublic class Hello {\n  public static void main(String[] args) {\n    System.out.println(\"Hello!\");\n  }\n}\nTo run the program either click on the ‘Run’ button just above the line that declares the main function, or click on the run button in the top right corner of the screen. You should see a line with ‘Hello!’ printed by itself.\n\nYou have now create and run a Java program! If you run into any issues, there are more detailed instructions available here.",
     "crumbs": [
       "Jaamsim Labs",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Setting Up VSCode and Java</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Setting Up VSCode and Java</span>"
     ]
   },
   {
     "objectID": "chapters/jaamsim_setup/jaamsim_setup.html",
     "href": "chapters/jaamsim_setup/jaamsim_setup.html",
-    "title": "2  Setting Up JaamSim and HCCM",
+    "title": "5  Setting Up JaamSim and HCCM",
     "section": "",
-    "text": "2.1 Prerequisites\nThese instructions were prepared using:\nThey should work with more recent versions of the software too. All of this software is standard on Engineering lab machines. Amazon Corretto JRE 21 is available on the University of Auckland’s Software Centre.\nThe videos provided on this page are also available here.",
+    "text": "5.1 Prerequisites\nThese instructions were prepared using:\nThey should work with more recent versions of the software too. All of this software is standard on Engineering lab machines. Amazon Corretto JRE 21 is available on the University of Auckland’s Software Centre.\nThe videos provided on this page are also available here.",
     "crumbs": [
       "Jaamsim Labs",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setting Up JaamSim and HCCM</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Setting Up JaamSim and HCCM</span>"
     ]
   },
   {
     "objectID": "chapters/jaamsim_setup/jaamsim_setup.html#prerequisites",
     "href": "chapters/jaamsim_setup/jaamsim_setup.html#prerequisites",
-    "title": "2  Setting Up JaamSim and HCCM",
+    "title": "5  Setting Up JaamSim and HCCM",
     "section": "",
     "text": "Git – 2.47.0.2;\nGitHub Desktop – 3.4.8 (x64);\nJava – Amazon Corretto JRE 21;\nVSCode – 1.95.1.",
     "crumbs": [
       "Jaamsim Labs",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setting Up JaamSim and HCCM</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Setting Up JaamSim and HCCM</span>"
     ]
   },
   {
     "objectID": "chapters/jaamsim_setup/jaamsim_setup.html#create-the-project-folder-structure",
     "href": "chapters/jaamsim_setup/jaamsim_setup.html#create-the-project-folder-structure",
-    "title": "2  Setting Up JaamSim and HCCM",
-    "section": "2.2 Create the Project Folder Structure",
-    "text": "2.2 Create the Project Folder Structure\nCreate a new folder on your H drive called ENGSCI355. Then create three folders within this one, called sim, labs, and workspace. The sim folder will contain the java code for the simulation software Jaamsim, including custom code that you write, and is the focus of these instructions. The labs folder will contain subfolders for each lab with the simulation files for each. Create a folder for HCCM logic functions within the sim folder. We will use sim_custom in these instructions.",
+    "title": "5  Setting Up JaamSim and HCCM",
+    "section": "5.2 Create the Project Folder Structure",
+    "text": "5.2 Create the Project Folder Structure\nCreate a new folder on your H drive called ENGSCI355. Then create three folders within this one, called sim, labs, and workspace. The sim folder will contain the java code for the simulation software Jaamsim, including custom code that you write, and is the focus of these instructions. The labs folder will contain subfolders for each lab with the simulation files for each. Create a folder for HCCM logic functions within the sim folder. We will use sim_custom in these instructions.",
     "crumbs": [
       "Jaamsim Labs",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setting Up JaamSim and HCCM</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Setting Up JaamSim and HCCM</span>"
     ]
   },
   {
     "objectID": "chapters/jaamsim_setup/jaamsim_setup.html#clone-hccm-into-the-project-folder",
     "href": "chapters/jaamsim_setup/jaamsim_setup.html#clone-hccm-into-the-project-folder",
-    "title": "2  Setting Up JaamSim and HCCM",
-    "section": "2.3 Clone HCCM into the project folder",
-    "text": "2.3 Clone HCCM into the project folder\nOpen GitHub Desktop and go to File \\(\\rightarrow\\) Clone repository, then select the URL tab and enter\n\nhttps://github.com/mosu001/hccm\n\nas the URL. Choose the Local path to be the sim folder that you just created.\ninto an hccm folder within the sim folder. This will create an hccm folder within the sim folder that contains the HCCM and Jaamsim code.\nNote, if you use git from the command line, e.g., Git Bash, you need to add the recurse submodules option\ngit clone --recurse-submodules https://github.com/mosu001/hccm",
+    "title": "5  Setting Up JaamSim and HCCM",
+    "section": "5.3 Clone HCCM into the project folder",
+    "text": "5.3 Clone HCCM into the project folder\nOpen GitHub Desktop and go to File \\(\\rightarrow\\) Clone repository, then select the URL tab and enter\n\nhttps://github.com/mosu001/hccm\n\nas the URL. Choose the Local path to be the sim folder that you just created.\ninto an hccm folder within the sim folder. This will create an hccm folder within the sim folder that contains the HCCM and Jaamsim code.\nNote, if you use git from the command line, e.g., Git Bash, you need to add the recurse submodules option\ngit clone --recurse-submodules https://github.com/mosu001/hccm",
     "crumbs": [
       "Jaamsim Labs",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setting Up JaamSim and HCCM</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Setting Up JaamSim and HCCM</span>"
     ]
   },
   {
     "objectID": "chapters/jaamsim_setup/jaamsim_setup.html#create-files-to-load-hccm-and-customised-components",
     "href": "chapters/jaamsim_setup/jaamsim_setup.html#create-files-to-load-hccm-and-customised-components",
-    "title": "2  Setting Up JaamSim and HCCM",
-    "section": "2.4 Create files to load HCCM and customised components",
-    "text": "2.4 Create files to load HCCM and customised components\nFrom hccm_custom copy both autoload.cfg and hccm.inc into the sim_custom folder. Then open autoload.cfg with VSCode and edit it so that the content matches that in Figure 2.1.\n\n\n\nInclude units.inc\nInclude sim.inc\nInclude units-imperial.inc\nInclude units-knots.inc\nInclude displayModels.inc\nInclude graphics.inc\nInclude probabilityDistributions.inc\nInclude basicObjects.inc\nInclude resourceObjects.inc\nInclude examples.inc\nInclude processFlow.inc\nInclude calculationObjects.inc\nInclude fluidObjects.inc\nInclude submodels.inc\nInclude hccm.inc\nInclude sim_custom.inc\n\n\nFigure 2.1: Customised autoload.cfg File\n\n\n\nThen rename hccm.inc to sim_custom.inc, open it in VSCode, and delete all the contents so it is blank. Don’t forget to save both autoload.cfg and sim_custom.inc.",
+    "title": "5  Setting Up JaamSim and HCCM",
+    "section": "5.4 Create files to load HCCM and customised components",
+    "text": "5.4 Create files to load HCCM and customised components\nFrom hccm_custom copy both autoload.cfg and hccm.inc into the sim_custom folder. Then open autoload.cfg with VSCode and edit it so that the content matches that in Figure 5.1.\n\n\n\nInclude units.inc\nInclude sim.inc\nInclude units-imperial.inc\nInclude units-knots.inc\nInclude displayModels.inc\nInclude graphics.inc\nInclude probabilityDistributions.inc\nInclude basicObjects.inc\nInclude resourceObjects.inc\nInclude examples.inc\nInclude processFlow.inc\nInclude calculationObjects.inc\nInclude fluidObjects.inc\nInclude submodels.inc\nInclude hccm.inc\nInclude sim_custom.inc\n\n\nFigure 5.1: Customised autoload.cfg File\n\n\n\nThen rename hccm.inc to sim_custom.inc, open it in VSCode, and delete all the contents so it is blank. Don’t forget to save both autoload.cfg and sim_custom.inc.",
     "crumbs": [
       "Jaamsim Labs",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setting Up JaamSim and HCCM</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Setting Up JaamSim and HCCM</span>"
     ]
   },
   {
     "objectID": "chapters/jaamsim_setup/jaamsim_setup.html#create-a-vscode-java-project",
     "href": "chapters/jaamsim_setup/jaamsim_setup.html#create-a-vscode-java-project",
-    "title": "2  Setting Up JaamSim and HCCM",
-    "section": "2.5 Create a VSCode Java Project",
-    "text": "2.5 Create a VSCode Java Project\nIn VSCode use File \\(\\rightarrow\\) Open Folder to open the sim folder. In the File Explorer open some folder so that you can see a .java file and open it, for example: hccm\\custom\\hccm\\Constants.java. VSCode should then recognise that you have opened a Java file and the Java Projects pane should appear.",
+    "title": "5  Setting Up JaamSim and HCCM",
+    "section": "5.5 Create a VSCode Java Project",
+    "text": "5.5 Create a VSCode Java Project\nIn VSCode use File \\(\\rightarrow\\) Open Folder to open the sim folder. In the File Explorer open some folder so that you can see a .java file and open it, for example: hccm\\custom\\hccm\\Constants.java. VSCode should then recognise that you have opened a Java file and the Java Projects pane should appear.",
     "crumbs": [
       "Jaamsim Labs",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setting Up JaamSim and HCCM</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Setting Up JaamSim and HCCM</span>"
     ]
   },
   {
     "objectID": "chapters/jaamsim_setup/jaamsim_setup.html#configure-source-folders",
     "href": "chapters/jaamsim_setup/jaamsim_setup.html#configure-source-folders",
-    "title": "2  Setting Up JaamSim and HCCM",
-    "section": "2.6 Configure Source Folders",
-    "text": "2.6 Configure Source Folders\nNow we need to tell VSCode where the source code of the project is. To do this we click on the three dots at the right of the ‘Java Projects’ title and select ‘Configure Classpath’. A new menu should come up that allows you to add and remove sources. If anything other than hccm\\custom is already there remove it by clicking on the x on the far right hand side, then ‘Apply Settings’. Add new sources by clicking on ‘Add Source Root’. First add sim\\hccm\\jaamsim\\src\\main\\java, then click ‘Apply Settings’. Then add both sim\\hccm\\jaamsim\\src\\main\\resources and sim\\sim_custom, remembering to apply the settings after each one.\nYou can check to make sure that you have the correct sources configured by opening the settings.json file in the .vscode folder. Under “java.project.sourcePaths” there should be the following four entries:\n\nhccm\\\\custom\nhccm\\\\jaamsim\\\\src\\\\main\\\\java\nhccm\\\\jaamsim\\\\src\\\\main\\\\resources\nsim_custom",
+    "title": "5  Setting Up JaamSim and HCCM",
+    "section": "5.6 Configure Source Folders",
+    "text": "5.6 Configure Source Folders\nNow we need to tell VSCode where the source code of the project is. To do this we click on the three dots at the right of the ‘Java Projects’ title and select ‘Configure Classpath’. A new menu should come up that allows you to add and remove sources. If anything other than hccm\\custom is already there remove it by clicking on the x on the far right hand side, then ‘Apply Settings’. Add new sources by clicking on ‘Add Source Root’. First add sim\\hccm\\jaamsim\\src\\main\\java, then click ‘Apply Settings’. Then add both sim\\hccm\\jaamsim\\src\\main\\resources and sim\\sim_custom, remembering to apply the settings after each one.\nYou can check to make sure that you have the correct sources configured by opening the settings.json file in the .vscode folder. Under “java.project.sourcePaths” there should be the following four entries:\n\nhccm\\\\custom\nhccm\\\\jaamsim\\\\src\\\\main\\\\java\nhccm\\\\jaamsim\\\\src\\\\main\\\\resources\nsim_custom",
     "crumbs": [
       "Jaamsim Labs",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setting Up JaamSim and HCCM</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Setting Up JaamSim and HCCM</span>"
     ]
   },
   {
     "objectID": "chapters/jaamsim_setup/jaamsim_setup.html#configure-jdk",
     "href": "chapters/jaamsim_setup/jaamsim_setup.html#configure-jdk",
-    "title": "2  Setting Up JaamSim and HCCM",
-    "section": "2.7 Configure JDK",
-    "text": "2.7 Configure JDK\nWe need to make sure that VSCode is using the version of Java that we want it to. To do this we click on the three dots at the right of the ‘Java Projects’ title and select ‘Configure Java Runtime’. A drop-down menu for JDK should come up. Make sure that JavaSE-21 is selected and then click ‘Apply Settings’.",
+    "title": "5  Setting Up JaamSim and HCCM",
+    "section": "5.7 Configure JDK",
+    "text": "5.7 Configure JDK\nWe need to make sure that VSCode is using the version of Java that we want it to. To do this we click on the three dots at the right of the ‘Java Projects’ title and select ‘Configure Java Runtime’. A drop-down menu for JDK should come up. Make sure that JavaSE-21 is selected and then click ‘Apply Settings’.",
     "crumbs": [
       "Jaamsim Labs",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setting Up JaamSim and HCCM</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Setting Up JaamSim and HCCM</span>"
     ]
   },
   {
     "objectID": "chapters/jaamsim_setup/jaamsim_setup.html#configure-libraries",
     "href": "chapters/jaamsim_setup/jaamsim_setup.html#configure-libraries",
-    "title": "2  Setting Up JaamSim and HCCM",
-    "section": "2.8 Configure Libraries",
-    "text": "2.8 Configure Libraries\nJaamSim also needs the gluegen and jogl libraries to run. These are packaged with JaamSim as .jar files (a compiled Java program). They can be added by opening the project settings by clicking on the three dots at the right of the ‘Java Projects’ title and selecting either ‘Configure Java Runtime’ or ‘Configure Classpath’. Then select the ‘Libraries’ tab on the right. Click on ‘Add Library’, then navigate to hccm\\jaamsim\\jar, select all of the files, and click ‘Select Jar File’. Then click ‘Apply Settings’.",
+    "title": "5  Setting Up JaamSim and HCCM",
+    "section": "5.8 Configure Libraries",
+    "text": "5.8 Configure Libraries\nJaamSim also needs the gluegen and jogl libraries to run. These are packaged with JaamSim as .jar files (a compiled Java program). They can be added by opening the project settings by clicking on the three dots at the right of the ‘Java Projects’ title and selecting either ‘Configure Java Runtime’ or ‘Configure Classpath’. Then select the ‘Libraries’ tab on the right. Click on ‘Add Library’, then navigate to hccm\\jaamsim\\jar, select all of the files, and click ‘Select Jar File’. Then click ‘Apply Settings’.",
     "crumbs": [
       "Jaamsim Labs",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setting Up JaamSim and HCCM</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Setting Up JaamSim and HCCM</span>"
     ]
   },
   {
     "objectID": "chapters/jaamsim_setup/jaamsim_setup.html#integrate-with-jaamsim",
     "href": "chapters/jaamsim_setup/jaamsim_setup.html#integrate-with-jaamsim",
-    "title": "2  Setting Up JaamSim and HCCM",
-    "section": "2.9 Integrate with JaamSim",
-    "text": "2.9 Integrate with JaamSim\nTo integrate HCCM and any custom logic with JaamSim you need to copy your autoload.cfg and sim_custom.inc files (from sim_custom) to sim\\hccm\\jaamsim\\src\\main\\resources\\resources\\inputs and replace the autoload.cfg file that is currently there. You also need to copy the file hccm.inc in hccm\\custom to the same location. To check that they have been copied correctly you can look in the ‘Java Projects’ section on the left-hand side. Under hccm\\jaamsim\\src\\main\\resources\\resources\\inputs you should see both hccm.inc and sim_custom.inc. If you don’t, try using the menu accessed by clicking the three dots and selecting ‘Refresh’.",
+    "title": "5  Setting Up JaamSim and HCCM",
+    "section": "5.9 Integrate with JaamSim",
+    "text": "5.9 Integrate with JaamSim\nTo integrate HCCM and any custom logic with JaamSim you need to copy your autoload.cfg and sim_custom.inc files (from sim_custom) to sim\\hccm\\jaamsim\\src\\main\\resources\\resources\\inputs and replace the autoload.cfg file that is currently there. You also need to copy the file hccm.inc in hccm\\custom to the same location. To check that they have been copied correctly you can look in the ‘Java Projects’ section on the left-hand side. Under hccm\\jaamsim\\src\\main\\resources\\resources\\inputs you should see both hccm.inc and sim_custom.inc. If you don’t, try using the menu accessed by clicking the three dots and selecting ‘Refresh’.",
     "crumbs": [
       "Jaamsim Labs",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setting Up JaamSim and HCCM</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Setting Up JaamSim and HCCM</span>"
     ]
   },
   {
     "objectID": "chapters/jaamsim_setup/jaamsim_setup.html#run-custom-jaamsim",
     "href": "chapters/jaamsim_setup/jaamsim_setup.html#run-custom-jaamsim",
-    "title": "2  Setting Up JaamSim and HCCM",
-    "section": "2.10 Run Custom JaamSim",
-    "text": "2.10 Run Custom JaamSim\nYou should now be able to run JaamSim with the HCCM objects enabled. Start by clicking on the ‘Run and Debug’ menu on the left-hand side, then click on ‘create a launch.json file’, and select ‘Java’ from the list of debuggers that comes up in the middle of the screen. By doing this VSCode analyses the source code to determine which java files you might like to run and creates run configurations for each of them. In the file that is created you should see an entry with the name ‘GUIFrame’, this is the class that we need to run to start JaamSim. To make the view work correctly when JaamSim is running you need to add another parameter called “vmArgs” with the following entries enclosed in double quotes and separated by spaces on a single line:\n\n--add-exports java.base/java.lang=ALL-UNNAMED\n--add-exports java.desktop/sun.awt=ALL-UNNAMED\n--add-exports java.desktop/sun.java2d=ALL-UNNAMED\n\nThe final entry in the .launch file should look like this:\n\n\"type\": \"java\",\n\"name\": \"GUIFrame\",\n\"request\": \"launch\",\n\"mainClass\": \"com.jaamsim.ui.GUIFrame\",\n\"projectName\": \"sim_d11998cc\",\n\"vmArgs\": \"--add-exports java.base/java.lang=ALL-UNNAMED --add-exports java.desktop/sun.awt=ALL-UNNAMED --add-exports java.desktop/sun.java2d=ALL-UNNAMED\"\n\nThen, in the top left-hand corner next to the green play button click on the drop-down menu and select ‘GUIFrame’. Then click the green play button to run JaamSim. The launch screen should appear but you might also have to click on the JaamSim icon in the Taskbar at the bottom of the screen to open JaamSim. You should see the ‘HCCM’ palette at the bottom of the ‘Model Builder’ window, and be able to drag and drop objects into the View.",
+    "title": "5  Setting Up JaamSim and HCCM",
+    "section": "5.10 Run Custom JaamSim",
+    "text": "5.10 Run Custom JaamSim\nYou should now be able to run JaamSim with the HCCM objects enabled. Start by clicking on the ‘Run and Debug’ menu on the left-hand side, then click on ‘create a launch.json file’, and select ‘Java’ from the list of debuggers that comes up in the middle of the screen. By doing this VSCode analyses the source code to determine which java files you might like to run and creates run configurations for each of them. In the file that is created you should see an entry with the name ‘GUIFrame’, this is the class that we need to run to start JaamSim. To make the view work correctly when JaamSim is running you need to add another parameter called “vmArgs” with the following entries enclosed in double quotes and separated by spaces on a single line:\n\n--add-exports java.base/java.lang=ALL-UNNAMED\n--add-exports java.desktop/sun.awt=ALL-UNNAMED\n--add-exports java.desktop/sun.java2d=ALL-UNNAMED\n\nThe final entry in the .launch file should look like this:\n\n\"type\": \"java\",\n\"name\": \"GUIFrame\",\n\"request\": \"launch\",\n\"mainClass\": \"com.jaamsim.ui.GUIFrame\",\n\"projectName\": \"sim_d11998cc\",\n\"vmArgs\": \"--add-exports java.base/java.lang=ALL-UNNAMED --add-exports java.desktop/sun.awt=ALL-UNNAMED --add-exports java.desktop/sun.java2d=ALL-UNNAMED\"\n\nThen, in the top left-hand corner next to the green play button click on the drop-down menu and select ‘GUIFrame’. Then click the green play button to run JaamSim. The launch screen should appear but you might also have to click on the JaamSim icon in the Taskbar at the bottom of the screen to open JaamSim. You should see the ‘HCCM’ palette at the bottom of the ‘Model Builder’ window, and be able to drag and drop objects into the View.",
     "crumbs": [
       "Jaamsim Labs",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setting Up JaamSim and HCCM</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Setting Up JaamSim and HCCM</span>"
     ]
   },
   {
     "objectID": "chapters/jaamsim_setup/jaamsim_setup.html#running-an-hccm-model",
     "href": "chapters/jaamsim_setup/jaamsim_setup.html#running-an-hccm-model",
-    "title": "2  Setting Up JaamSim and HCCM",
-    "section": "2.11 Running an HCCM Model",
-    "text": "2.11 Running an HCCM Model\nNow that we have JaamSim running with the HCCM objects we can try running an existing model. Download the single server queue model’s folder from Canvas (ssq.zip), move it into the labs folder and extract ssq.zip into that folder. You might want to remove the ssq at the end of the extraction destination to prevent nested ssq folders being created.\nNow we need to create package in our Java Project to hold the custom logic associated with this model. In VSCode right-click on the sim_custom folder and select New Java Package. Enter ssq for the name of the package and click Finish. This will have created a new folder in the sim_custom folder called ssq.\nNow go back to the ssq folder you extracted the zip file to and copy the FIFOQControlUnit.java file to the newly created package folder under sim\\sim_custom\\ssq. This java file defines a new Jaamsim object, in this case the control unit for the SSQ model.\n\nFinally we need to make this new object available in Jaamsim. To do this we need to edit the sim_custom.inc file that we put in sim\\hccm\\jaamsim\\src\\main\\resources\\resources\\inputs. Open the sim_custom.inc file and also open the ssq.inc file in the ssq folder. Copy the contents of ssq.inc into sim_custom.inc.\nRun JaamSim with HCCM from the Run and Debug menu again (make sure that GUIFrame is selected in the drop-down). You should now see a Single Server Queue palette in the Model Builder window. It has the FIFO trigger for the Single Server Queue model (you will learn more about triggers in later labs).\nNext in Jaamsim in the top left corner select file, then open, and open ssq.cfg from the ssq folder. You can run the model by clicking on the blue play button in the top left and see how the customers and servers join together for service in the queue.",
+    "title": "5  Setting Up JaamSim and HCCM",
+    "section": "5.11 Running an HCCM Model",
+    "text": "5.11 Running an HCCM Model\nNow that we have JaamSim running with the HCCM objects we can try running an existing model. Download the single server queue model’s folder from Canvas (ssq.zip), move it into the labs folder and extract ssq.zip into that folder. You might want to remove the ssq at the end of the extraction destination to prevent nested ssq folders being created.\nNow we need to create package in our Java Project to hold the custom logic associated with this model. In VSCode right-click on the sim_custom folder and select New Java Package. Enter ssq for the name of the package and click Finish. This will have created a new folder in the sim_custom folder called ssq.\nNow go back to the ssq folder you extracted the zip file to and copy the FIFOQControlUnit.java file to the newly created package folder under sim\\sim_custom\\ssq. This java file defines a new Jaamsim object, in this case the control unit for the SSQ model.\n\nFinally we need to make this new object available in Jaamsim. To do this we need to edit the sim_custom.inc file that we put in sim\\hccm\\jaamsim\\src\\main\\resources\\resources\\inputs. Open the sim_custom.inc file and also open the ssq.inc file in the ssq folder. Copy the contents of ssq.inc into sim_custom.inc.\nRun JaamSim with HCCM from the Run and Debug menu again (make sure that GUIFrame is selected in the drop-down). You should now see a Single Server Queue palette in the Model Builder window. It has the FIFO trigger for the Single Server Queue model (you will learn more about triggers in later labs).\nNext in Jaamsim in the top left corner select file, then open, and open ssq.cfg from the ssq folder. You can run the model by clicking on the blue play button in the top left and see how the customers and servers join together for service in the queue.",
     "crumbs": [
       "Jaamsim Labs",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setting Up JaamSim and HCCM</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Setting Up JaamSim and HCCM</span>"
     ]
   },
   {
-    "objectID": "chapters/lab_1_cm/lab_1_cm.html",
-    "href": "chapters/lab_1_cm/lab_1_cm.html",
-    "title": "3  Radiology Clinic",
+    "objectID": "chapters/clinic_1/clinic_1.html",
+    "href": "chapters/clinic_1/clinic_1.html",
+    "title": "6  Radiology Clinic",
     "section": "",
-    "text": "3.1 Data",
+    "text": "6.1 Experiments\nWe will perform just one experiment, using distributions for the arrival, check in, and scan processes. We will use a Poisson distribution with \\(\\lambda=8/\\text{hour}\\) for the arrival process, a uniform distribution between 2 and 5 minutes for the check in durations, and a log-normal distribution where the underlying normal variable has a mean of -1.34 and standard deviation 0.29 for the scan durations. For the experiment we will run 50 replications that each last for 1 week.",
     "crumbs": [
-      "Conceptual Models",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Radiology Clinic</span>"
+      "Jaamsim Labs",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Radiology Clinic</span>"
     ]
   },
   {
-    "objectID": "chapters/lab_1_cm/lab_1_cm.html#data",
-    "href": "chapters/lab_1_cm/lab_1_cm.html#data",
-    "title": "3  Radiology Clinic",
+    "objectID": "chapters/clinic_1/clinic_1.html#jaamsim-model",
+    "href": "chapters/clinic_1/clinic_1.html#jaamsim-model",
+    "title": "6  Radiology Clinic",
+    "section": "6.2 Jaamsim Model",
+    "text": "6.2 Jaamsim Model\n\n6.2.1 Creating Model Objects\nRun Jaamsim by opening your VSCode project and the clicking the run button and select GUIFrame. The HCCM palette on the left hand side allows us to create Jaamsim objects that correspond to the components of our HCCM conceptual models. Based on the problem description and conceptual model we need three types of entities: patients, receptionists, and CT Machines. To create each of these expand the HCCM palette in the Model Builder window, select ActiveEntity, and dragging it into the View Window, see Figure 6.1. Then in the Object Selector window select ActiveEntity1, press F2, and rename it PatientEntity.\n\n\n\n\n\n\n\nFigure 6.1: Screenshot of an ActiveEntity\n\n\nRepeat this process two more times and create ActiveEntities called ReceptionistEntity and CTMachineEntity.\nAn ActiveEntity object by itself does not create any entities in the simulation, it just acts as a prototype for entities. To create entities an ArriveEvent object is used, which simulates patients/receptionists/CTMachines arriving at the clinic. The ArriveEvent object creates a series of entities that are passed to the next object in a process. The PrototypeEntity keyword identifies the entity to be copied. The rate at which entities are generated is determined by the InterArrivalTime and FirstArrivalTime keywords. Create three ArriveEvents called PatientArrival, ReceptionistArrival, and CTMachineArrival, and set the PrototypeEntity to be the related entity (patient, receptionist, CTMachine).\nWe also need to create objects that represent the entities leaving, called LeaveEvent, we will only create one for the patients, as we are assuming that the receptionist and CT machines are available 24/7 so they do not need to leave. Drag and drop a leave event into the simulation, rename it PatientLeave, and set the Participant to be the patient entity (under the HCCM tab).\nThe patients waiting for check in and scanning, and both the receptionist and CT machines waiting for tasks can be represented by WaitActivities, so create four WaitActivities and rename them WaitForCheckIn, WaitForScan, WaitForTaskReceptionist, and WaitForTaskCTMachine respectively, and once again set the Participant to the respective entity.\nWe can then represent the patient doing check in with the receptionist, and the patient being scanned by a CT machine as process activities. Create two process activities and rename them CheckIn, and Scan.\nWe also need to create objects to represent the probability distributions that the interarrival, check in, and scan times come from. Probability distributions can be represented in Jaamsim with distribution objects. If we examine the PatientArrival object we see two keywords FirstArrivalTime and InterArrivalTime which determine the rate that the entities are created. For a Poisson process with an average of 8 arrivals per hour the interarrival times can be modelled by an exponential distribution with mean 0.125 hours. We therefore go into the Probability Distributions palette in the Model Builder window and create an ExponentialDistribution object and name it ArrivalDistribution. First we set the UnitType keyword to be TimeUnit, then we set the mean of the distribution to 0.125 h. The UnitType tells Jaamsim what type of value we want the distribution object to create, in our case this is the time between arrivals in hours, which is a unit of time. Also make sure that the RandomSeed is 1, this determines the seed for the random number generator. Table 6.1 shows the keywords and values for the ArrivalDistribution object.\n\n\n\nTable 6.1: Arrival Distribution Inputs\n\n\n\n\n\nObject\nKeyword\nValue\n\n\n\n\nArrivalDistribution\nUnitType\nTimeUnit\n\n\n\nRandomSeed\n1\n\n\n\nMean\n0.125 h\n\n\n\n\n\n\nWe need to repeat these steps for the check in and scan processes, which follow uniform and log-normal distributions respectively, so create a UniformDistribution object called CheckInDistribution and a LogNormalDistribution object called ScanDistribution. Then update the keywords of the distribution objects as follows in Table 6.2:\n\n\n\nTable 6.2: Check In and Scan Distributions\n\n\n\n\n\nObject\nKeyword\nValue\n\n\n\n\nCheckInDistribtuion\nUnitType\nTimeUnit\n\n\n\nRandomSeed\n2\n\n\n\nMinValue\n2 min\n\n\n\nMaxValue\n5 min\n\n\n\n\n\n\n\nScanDistribution\nUnitType\nTimeUnit\n\n\n\nRandomSeed\n3\n\n\n\nScale\n1 h\n\n\n\nNormalMean\n-1.34\n\n\n\nNormalSD\n0.29\n\n\n\n\n\n\nThe final object we need at this stage is a Statistics object, to capture some output about the patients. This is found under the ProcessFlow palette, create a Statistics object and call it TimeInSystem.\nAt this point you should have the objects shown in Table 6.3 in your simulation.\n\n\n\nTable 6.3: Model Objects\n\n\n\n\n\nObject Type\nName\n\n\n\n\nActiveEntity\nPatientEntity\n\n\nActiveEntity\nReceptionistEntity\n\n\nActiveEntity\nCTMachineEntity\n\n\n\n\n\n\nArriveEvent\nPatientArrival\n\n\nArriveEvent\nReceptionistArrival\n\n\nArriveEvent\nCTMachineArrival\n\n\n\n\n\n\nLeaveEvent\nPatientLeave\n\n\n\n\n\n\nWaitActivity\nWaitForCheckIn\n\n\nWaitActivity\nWaitForScan\n\n\nWaitActivity\nWaitForTaskReceptionist\n\n\nWaitActivity\nWaitForTaskCTMachine\n\n\n\n\n\n\nProcessActivity\nCheckIn\n\n\nProcessActivity\nScan\n\n\n\n\n\n\nExponentialDistribution\nArrivalDistribution\n\n\nUniformDistribution\nCheckInDistribution\n\n\nLogNormalDistribution\nScanDistribution\n\n\n\n\n\n\nStatistics\nTimeInSystem\n\n\n\n\n\n\nOnce you have created all of these objects lay them out similarly to as shown in Figure 6.2.\n\n\n\n\n\n\nFigure 6.2: Screenshot of Simulation Model Layout\n\n\n\nCreate a new folder in the labs folder called RC1 and save your simulation as radiology_lab.cfg or something similar inside the new folder. Also take this opportunity to change the graphics of the PatientEntity, ReceptionistEntity and CTMachineEntity. Download the patient.png, receptionist.png, and ctscanner.png (icons made by Freepik from www.flaticon.com) files from Canvas and save them in the same folder as your simulation .cfg file. Then in Jaamsim right click on PatientEntity and select Change Graphics. Click on Import and navigate to your downloaded patient.png, import it (it may be called patient-model) and accept the change. Repeat the process for the receptionists, and CT scanners.\n\n\n6.2.2 Configuring Objects\nNow that we have created the objects we need, we need to set the options for the each of them, starting with the ArriveEvents. The PatientArrival should have both the first arrival time and inter arrival times set by the ArrivalDistribution object, use the PatientEntity as a prototype, and the NextAEJObject should be WaitForCheckIn. NextAEJObject stands for next activity/event/Jaamsim object and refers to the fact that the next place an entity goes could be a standard Jaamsim object or a custom HCCM activity or event. For the arrive events we set NextAEJObject to the object that represents the activity that is transitioned to at the end of the event state changes in the conceptual model. For the ReceptionistArrival and CTMachineArrival we need to: set the prototype entity; both MaxNumber and InitialNumber (1 for receptionist, 3 for CT Machine); and set the NextAEJObject to the respective wait activity.\n\n\n\nTable 6.4: Arrival Event Parameters\n\n\n\n\n\nObject\nTab\nKeyword\nValue\n\n\n\n\nPatientArrival\nKey Inputs\nPrototypeEntity\nPatientEntity\n\n\nPatientArrival\nKey Inputs\nFirstArrivalTime\nArrivalDistribution\n\n\nPatientArrival\nKey Inputs\nInterArrivalTime\nArrivalDistribution\n\n\nPatientArrival\nHCCM\nNextAEJObject\nWaitForCheckIn\n\n\n\n\n\n\n\n\nReceptionistArrival\nKey Inputs\nPrototypeEntity\nReceptionistEntity\n\n\nReceptionistArrival\nKey Inputs\nMaxNumber\n1\n\n\nReceptionistArrival\nKey Inputs\nInitialNumber\n1\n\n\nReceptionistArrival\nHCCM\nNextAEJObject\nWaitForTaskReceptionist\n\n\n\n\n\n\n\n\nCTMachineArrival\nKey Inputs\nPrototypeEntity\nCTMachineEntity\n\n\nCTMachineArrival\nKey Inputs\nMaxNumber\n3\n\n\nCTMachineArrival\nKey Inputs\nInitialNumber\n3\n\n\nCTMachineArrival\nHCCM\nNextAEJObject\nWaitForTaskCTMachine\n\n\n\n\n\n\nNext we will set the options for the Process Activities (and Statistics) so that the routing/flow for the entities is correct. The Check In activity has both the Patient and Receptionist as participants so we set the Participant list to PatientEntity, ReceptionistEntity. The duration is determined by the check in distribution, so we just set the duration to be CheckInDistribution object. After Check In the Patient starts waiting for a scan and the receptionist goes back to waiting for a task, so we set the NextAEJList to WaitForScan, WaitForTaskReceptionist. The Scan activity has both the Patient and CTMachine as participants and the duration is determined by the ScanDistribution object. After Scan the Patient should just leave, but we want to record some statistics first so we send it to TimeInSystem, and the CTMachine goes back to WaitForTaskCTMachine. For Process Activities the NextAEJList is similar to the NextAEJObject from the Arrive Events (which is similar to NextComponent), the difference is that a list of next objects is given, one for each of the participants in the activity. The participants are sent to the corresponding element of the list so it is important that the next activities are in the same order as the participants.\nNote that when you click on the checkboxes in the popup menu for both ParticipantList and NextAEJList the items are added in alphabetical order, not the order you click them in. This is particularly important for the Scan activity as the CTMachineEntity comes before the PatientEntity alphabetically, but for the next activities TimeInSystem is before WaitForTaskCTMachine alphabetically so the two lists will not be in the same order.\n\n\n\nTable 6.5: Process Activity Parameters\n\n\n\n\n\nObject\nTab\nKeyword\nValue\n\n\n\n\nCheckIn\nKey Inputs\nDuration\nCheckInDistribution\n\n\nCheckIn\nHCCM\nParticipantList\nPatientEntity ReceptionistEntity\n\n\nCheckIn\nHCCM\nNextAEJList\nWaitForScan WaitForTaskReceptionist\n\n\n\n\n\n\n\n\nScan\nKey Inputs\nDuration\nScanDistribution\n\n\nScan\nHCCM\nParticipantList\nPatientEntity CTMachineEntity\n\n\nScan\nHCCM\nNextAEJList\nTimeInSystem WaitForTaskCTMachine\n\n\n\n\n\n\nThe last object we need to configure before the simulation will run (it will run but it will not quite work correctly) is the TimeInSystem object. This is a Statistics object which collects a value from each Entity that passes through it and outputs the mean of the sampled values. We then need to finish the routing so that patients leave after going through the TimeInSystem, and tell the Statistics object which value to record as shown in Table 6.6, note that this refers to the Statistics object itself, obj refers to the entity that the Statistics object is currently processing, and TotalTime is an output on the entity that stores the total time that the entity has been in the simulation for.\n\n\n\nTable 6.6: Collecting Statistics\n\n\n\n\n\nObject\nKeyword\nValue\n\n\n\n\nTimeInSystem\nNextComponent\nPatientLeave\n\n\n\nUnitType\nTimeUnit\n\n\n\nSampleValue\nthis.obj.TotalTime\n\n\n\n\n\n\nSave your simulation again. If you run your simulation now you should see one receptionist arrive and wait, three CT machines arrive and wait, and patients arrive, and wait for check in. However nothing else will happen and all of the entities will simply be waiting, this is because we have not specified any logic to be triggered when the entities start waiting.",
+    "crumbs": [
+      "Jaamsim Labs",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Radiology Clinic</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/clinic_1/clinic_1.html#model-logic-java",
+    "href": "chapters/clinic_1/clinic_1.html#model-logic-java",
+    "title": "6  Radiology Clinic",
+    "section": "6.3 Model Logic – Java",
+    "text": "6.3 Model Logic – Java\nIn your VSCode project you should have a folder called sim_custom under the Explorer tab on the left-hand side in VSCode. First right-click on this folder and select New Java Package. Enter labs for the name of the package and press Enter.\n\n\n\n\n\n\nFigure 6.3: First Step in Creating a New Package\n\n\n\n\n\n\n\n\n\nFigure 6.4: Second Step in Creating a New Package\n\n\n\nA new folder called labs should have been created within the sim_custom folder. Right click on the newly created labs folder and select New Java File \\(\\rightarrow\\) Class. Name the Class RadiologyControlUnit and press Enter.\n\n\n\n\n\n\nFigure 6.5: First Step in Creating a New Class\n\n\n\n\n\n\n\n\n\nFigure 6.6: Second Step in Creating a New Class\n\n\n\n\nThe final step required to make this new object available in the simulation is to add to the contents of the sim_custom.inc file that we put in sim \\(\\rightarrow\\) hccm \\(\\rightarrow\\) jaamsim \\(\\rightarrow\\) src \\(\\rightarrow\\) main \\(\\rightarrow\\) resources \\(\\rightarrow\\) resources \\(\\rightarrow\\) inputs. There should already be some code there from the previous lab, so you only need to add lines 3, 7, and 10. If you want to copy and paste this make sure the quotes are copied correctly and the returns (arrows) are removed. Alternatively there is a new sim_custom.inc file here XXX on Canvas under Jaamsim Lab 1 that you can use directly.\n\nDefine ObjectType {\n    FIFOQControlUnit\n    RadiologyControlUnit\n}\n\nControllerIconModel ImageFile { '&lt;res&gt;/images/Controller-256.png' }  Transparent { TRUE }\nAssembleIconModel ImageFile { '&lt;res&gt;/images/Assemble-256.png' }  Transparent { TRUE }\n\nFIFOQControlUnit JavaClass { ssq.FIFOQControlUnit }  Palette { 'Single Server Queue' } DefaultDisplayModel { ControllerIconModel } IconFile { '&lt;res&gt;/images/Controller-24.png' } DefaultSize { 0.5 0.5 0.5 m }\nRadiologyControlUnit JavaClass { labs.RadiologyControlUnit }  Palette { 'Custom Logic' } DefaultDisplayModel { AssembleIconModel } IconFile { '&lt;res&gt;/images/Assemble-24.png' } DefaultSize { 0.5 0.5 0.5 m }\n\nOnce you have updated the sim_custom.inc file, restart Jaamsim. If everything is working correctly the RadiologyControlUnit object should now be available under the Custom Logic palette as shown in the screenshot below:\n\n\n\n\n\n\nFigure 6.7: Screenshot of Control Unit Object\n\n\n\nOnce you have the new RadiologyControlUnit object available open your simulation and create one.\nWe now need to add the Java code to the new RadiologyControlUnit class to run the control policies. First add the following imports under the package declaration. Note These code snippets for this lab are provided in a separate file for you here XXX.\npackage labs;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Collections;\nimport java.util.List;\n\nimport hccm.activities.ProcessActivity;\nimport hccm.controlunits.ControlUnit;\nimport hccm.entities.ActiveEntity;\nThen, within the definition of the class we need to create four methods that represent the four control policies in the model. Each control policy is a public method of the class that does not return any value (is void) and takes both a list of Active Entities, and the simulation time as inputs. We will use the same names for the methods as the control policies in the conceptual model: OnStartWaitForCheckIn, OnStartWaitForScan, OnStartWaitForTaskReceptionist, and OnStartWaitForTaskCTMachine. In the first of these, OnStartWaitForCheckIn we first need to get a list of the Receptionist Entities that are currently in the ’’WaitForTaskReceptionist” activity, and we also create a comparator object that is used to sort a list of entities by when they started their current activity.\nOnce we have the list of idle receptionists we check whether it is not empty, and if it isn’t proceed to sort it, select the first one, and transition the patient and receptionist to the check in activity.\n\npublic void OnStartWaitForCheckIn(List&lt;ActiveEntity&gt; ents, double simTime) {\n        \n    ArrayList&lt;ActiveEntity&gt; idleReceps = this.getEntitiesInActivity(\"ReceptionistEntity\", \"WaitForTaskReceptionist\", simTime);\n    ActivityStartCompare actSartComp = this.new ActivityStartCompare();        \n    \n    if (idleReceps.size() &gt; 0) {\n      Collections.sort(idleReceps, actSartComp);\n      \n      ActiveEntity patient = ents.get(0);\n      ActiveEntity receptionist = idleReceps.get(0);\n      \n      transitionTo(\"CheckIn\", patient, receptionist);\n    }\n  }\n\nSimilar methods are defined for the other control policies, with small changes based on the types of entities that are being checked, and the activity that is started. There are gaps that need to be filled in on lines 3, 24, and 42. In the first gap you need to create an array that contains all of the CT Machines that are currently idle. In the second, you need to select which of the patients that are currently waiting should do check in with the receptionist. In the third, you need to start the next activity with the patient and CT Machine. All of these have similar lines in the first method that you can use as a guide.\n\npublic void OnStartWaitForScan(List&lt;ActiveEntity&gt; ents, double simTime) {\n  \n    // A //\n    ActivityStartCompare actSartComp = this.new ActivityStartCompare();        \n    \n    if (idleCTs.size() &gt; 0) {\n      Collections.sort(idleCTs, actSartComp);\n      \n      ActiveEntity patient = ents.get(0);\n      ActiveEntity ct = idleCTs.get(0);\n\n      transitionTo(\"Scan\", patient, ct);\n    }\n  }\n    \npublic void OnStartWaitForTaskReceptionist(List&lt;ActiveEntity&gt; ents, double simTime) {\n      \n  ArrayList&lt;ActiveEntity&gt; waitPats = this.getEntitiesInActivity(\"PatientEntity\", \"WaitForCheckIn\", simTime);\n  ActivityStartCompare actSartComp = this.new ActivityStartCompare();\n  \n  if (waitPats.size() &gt; 0) {\n    Collections.sort(waitPats, actSartComp);\n    \n    // B //\n    ActiveEntity receptionist = ents.get(0);\n\n    transitionTo(\"CheckIn\", patient, receptionist);\n  }\n}\n\npublic void OnStartWaitForTaskCTMachine(List&lt;ActiveEntity&gt; ents, double simTime) {\n  \n  ArrayList&lt;ActiveEntity&gt; waitPats = this.getEntitiesInActivity(\"PatientEntity\", \"WaitForScan\", simTime);\n  ActivityStartCompare actSartComp = this.new ActivityStartCompare();        \n    \n  if (waitPats.size() &gt; 0) {\n    Collections.sort(waitPats, actSartComp);\n    \n    ActiveEntity patient = waitPats.get(0);\n    ActiveEntity ct = ents.get(0);\n\n    // C //\n  }\n}\n\nThe final step needed to get this logic into the simulation is to define Triggers that initiate these methods and where/when they should be called. To do this create four Trigger objects, called StartWaitCheckIn, StartWaitScan, StartWaitTaskReceptionist, and StartWaitTaskCTMachine from the HCCM palette and set the ControlUnit and ControlPolicy for each one. The value of the ControlPolicy keyword needs to exactly match the name of the method you have defined in the java code.\n\n\n\nTable 6.7: Trigger Parameters\n\n\n\n\n\nObject\nTab\nKeyword\nValue\n\n\n\n\nStartWaitCheckIn\nHCCM\nControlUnit\nRadiologyControlUnit1\n\n\nStartWaitCheckIn\nHCCM\nControlPolicy\nOnStartWaitForCheckIn\n\n\n\n\n\n\n\n\nStartWaitScan\nHCCM\nControlUnit\nRadiologyControlUnit1\n\n\nStartWaitScan\nHCCM\nControlPolicy\nOnStartWaitForScan\n\n\n\n\n\n\n\n\nStartWaitTaskReceptionist\nHCCM\nControlUnit\nRadiologyControlUnit1\n\n\nStartWaitTaskReceptionist\nHCCM\nControlPolicy\nOnStartWaitForTaskReceptionist\n\n\n\n\n\n\n\n\nStartWaitTaskCTMachine\nHCCM\nControlUnit\nRadiologyControlUnit1\n\n\nStartWaitTaskCTMachine\nHCCM\nControlPolicy\nOnStartWaitForTaskCTMachine\n\n\n\n\n\n\nThen update the parameters in the Wait Activities that these control policies should be triggered in:\n\n\n\nTable 6.8: Wait Activity Parameters\n\n\n\n\n\nObject\nTab\nKeyword\nValue\n\n\n\n\nWaitForCheckIn\nHCCM\nStartTriggerList\nStartWaitCheckIn\n\n\nWaitForCheckIn\nHCCM\nStartTriggerChoice\n1\n\n\n\n\n\n\n\n\nWaitForScan\nHCCM\nStartTriggerList\nStartWaitScan\n\n\nWaitForScan\nHCCM\nStartTriggerChoice\n1\n\n\n\n\n\n\n\n\nWaitForTaskReceptionist\nHCCM\nStartTriggerList\nStartWaitTaskReceptionist\n\n\nWaitForTaskReceptionist\nHCCM\nStartTriggerChoice\n1\n\n\n\n\n\n\n\n\nWaitForTaskCTMachine\nHCCM\nStartTriggerList\nStartWaitTaskCTMachine\n\n\nWaitForTaskCTMachine\nHCCM\nStartTriggerChoice\n1\n\n\n\n\n\n\nNow if you save and run your simulation you should be able to see patients arriving, checking in, being scanned, and leaving. If you get an error saying that a method cannot be found on the control unit, first make sure that all of the ControlPolicy inputs exactly match the names of the methods in the control unit java file. Then try closing Jaamsim, cleaning your project, and restarting Jaamsim.",
+    "crumbs": [
+      "Jaamsim Labs",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Radiology Clinic</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/clinic_1/clinic_1.html#model-output",
+    "href": "chapters/clinic_1/clinic_1.html#model-output",
+    "title": "6  Radiology Clinic",
+    "section": "6.4 Model Output",
+    "text": "6.4 Model Output\nTo perform different experiments and multiple replications we make use of Jaamsim’s MultipleRuns feature which can be found in the Simulation object at the top of the Object Selector window. Here we can use the NumberOfReplications to control how many replications are performed. We want to do 50 replications so we set NumberOfReplications to 50. We want each replication to run for one week, so we set RunDuration to 7d. To record outputs we can make use of the Simulation object’s RunOutputList, which saves the final value of outputs at the end of each run. The scenario number, and the replication number are saved by default (by default PrintRunLabels and PrintReplications are TRUE), but we will calculate confidence intervals ourselves so we set PrintConfidenceIntervals to FALSE. Because ActiveEntities are removed from the simulation when they enter a LeaveEvent, we cannot get the total time that each patient spends in the clinic at the end of the run. This is why we created a Statistics object called TimeInSystem that records how long they have been in the system before they are destroyed. We can use the SampleAverage output of the TimeInSystem object in the Simulation’s RunOutputList to output the mean time in system for each replication. Note The SampleAverage is divided by 1[h] to give a raw number in hours for later processing in Python. Otherwise JaamSim writes an h to the data file.\n\n\n\nTable 6.9: Simulation Parameters\n\n\n\n\n\nObject\nTab\nKeyword\nValue\n\n\n\n\nSimulation\nKey Inputs\nRunDuration\n7 d\n\n\nSimulation\nKey Inputs\nRunOutputList\n{‘[TimeInSystem].SampleAverage / 1[h]’}\n\n\nSimulation\nMultiple Runs\nNumberOfReplications\n50\n\n\nSimulation\nMultiple Runs\nPrintConfidenceIntervals\nFALSE\n\n\n\n\n\n\nNow if you save and run your simulation a file should be created called ‘yourSimulationName.dat’. To speed up running the simulation you can turn off the option ‘Real time’, in the top left corner next to the play button.\nWith the model complete and the results recorded we can use Python to analyse them. First download the Python analysis file provided, then change name of the .dat and .log files to match yours and make sure they are in the same directory as the Python file, then run the Python file. The following output should be printed:\n\n\n\n   Scenario  Replication  TimeInSystem\n0         1          1.0      0.443924\n1         1          2.0      0.521371\n2         1          3.0      0.441290\n3         1          4.0      0.418234\n4         1          5.0      0.519311\nMean             0.449299\nCI Half Width    0.007243\nName: TimeInSystem, dtype: float64",
+    "crumbs": [
+      "Jaamsim Labs",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Radiology Clinic</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/clinic_1/clinic_1.html#task",
+    "href": "chapters/clinic_1/clinic_1.html#task",
+    "title": "6  Radiology Clinic",
+    "section": "6.5 Task",
+    "text": "6.5 Task\nConstruct a 95% confidence interval for the average utilisation of the three CT machines in each experiment. You will need to add an entry to the RunOutputList. You should get the following output:\n\n\n\nMean             0.730582\nCI Half Width    0.006098\nName: Utilisation, dtype: float64\n\n\n\nHint: there are many ways to do this. Have a look at the outputs provided on the wait activity WaitForTaskCTMachine, can you calculate the total time that the three CTMachines have spent waiting using these outputs?",
+    "crumbs": [
+      "Jaamsim Labs",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Radiology Clinic</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/paper_car_cm/paper_car_cm.html",
+    "href": "chapters/paper_car_cm/paper_car_cm.html",
+    "title": "7  Making Paper Cars Conceptual Model",
     "section": "",
-    "text": "Table 3.1: List of Global Variables\n\n\n\n\n\nName\nDescription\nInitial Value\n\n\n\n\nNextPatIdNum\nThe Id number that will be assigned to the next patient\n1\n\n\nNextReceptionistIdNum\nThe Id number that will be assigned to the next receptionist\n1\n\n\nNextCTMachineIdNum\nThe Id number that will be assigned to the next CT Machine\n1\n\n\n\\(P\\)\nThe set of all patients\n\\(\\emptyset\\)\n\n\n\\(R\\)\nThe set of all receptionists\n\\(\\emptyset\\)\n\n\n\\(C\\)\nThe set of all CT Machines\n\\(\\emptyset\\)\n\n\n\n\n\n\n\n\n\nTable 3.2: List of Data Modules\n\n\n\n\n\nName\nSource\nIdentification\nInput\nOutput\n\n\n\n\nPatientInterarrivalTime\nPoisson Process\nParameter\nMean interarrival time\nSample from Distribution\n\n\nNumReceptionists\nConstant\nParameter\nN/A\nValue\n\n\nNumCTMachines\nConstant\nParameter\nN/A\nValue\n\n\nCheckInTime\nUniform Distribution\nParameter\nMin and max time\nSample from Distribution\n\n\nScanTime\nLog-normal Distribution\nParameter\nMean and std. dev.\nSample from Distribution",
+    "text": "7.1 Understanding of the Problem Situation\nIn the box below write a problem description for making paper cars, think about what you are trying to solve/discover by simulating this activity. You may want to look at Chapter 1 again to remind yourself about the process.",
     "crumbs": [
       "Conceptual Models",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Radiology Clinic</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Making Paper Cars Conceptual Model</span>"
     ]
   },
   {
-    "objectID": "chapters/lab_1_cm/lab_1_cm.html#components",
-    "href": "chapters/lab_1_cm/lab_1_cm.html#components",
-    "title": "3  Radiology Clinic",
-    "section": "3.2 Components",
-    "text": "3.2 Components\n\n\n\nTable 3.3: List of Entities\n\n\n\n\n\nEntity\nAttributes\n\n\n\n\nPatient\nID\n\n\n\nState\n\n\n\nStateTimes\n\n\n\n\n\n\nReceptionist\nID\n\n\n\nState\n\n\n\nStateTimes\n\n\n\n\n\n\nCT Machine\nID\n\n\n\nState\n\n\n\nStateTimes\n\n\n\n\n\n\n\n\n\nTable 3.4: List of Transitions\n\n\n\n\n\nNo.\nParticipant\nFrom Event\nTo Event\n\n\n\n\n1\nPatient\nArrive(P)\nWait for check in.Start\n\n\n2\nPatient\nWait for check in.End\nCheck in.Start\n\n\n3\nPatient\nCheck in.End\nWait for scan.Start\n\n\n4\nPatient\nWait for scan.End\nScan.Start\n\n\n5\nPatient\nScan.End\nLeave(P)\n\n\n6\nReceptionist\nArrive(R)\nWait for task(R).Start\n\n\n7\nReceptionist\nWait for task(R).End\nCheck in.Start\n\n\n8\nReceptionist\nCheck in.End\nWait for task(R).Start\n\n\n9\nReceptionist\nWait for task(R).End\nLeave(R)\n\n\n10\nCT Machine\nArrive(CT)\nWait for task(CT).Start\n\n\n11\nCT Machine\nWait for task(CT).End\nScan.Start\n\n\n12\nCT Machine\nScan.End\nWait for task(CT).Start\n\n\n13\nCT Machine\nWait for task(CT).End\nLeave(CT)\n\n\n\n\n\n\n\n\n\nTable 3.5: Activities\n\n\n\n\n\nActivity\nParticipants\nEvent\nType\nState Change\n\n\n\n\nWait for Check In\nPatient (p)\nStart\nScheduled\nTRIGGER OnStartWaitForCheckIn WITH p\n\n\n\n\nEnd\nControlled\n\n\n\nCheck In\nPatient (p), Receptionist (r)\nStart\nControlled\nSCHEDULE Check In.End at TIME + CheckInTime()\n\n\n\n\nEnd\nScheduled\nSTART Wait for Scan WITH p\nSTART Wait for Task (R) WITH r\n\n\nWait for Scan\nPatient (p)\nStart\nScheduled\n\n\n\n\n\nEnd\nControlled\nTRIGGER OnStartWaitForScan WITH p\n\n\nScan\nPatient (p), CTMachine (c)\nStart\nControlled\nSCHEDULE Scan.End at TIME + ScanTime()\n\n\n\n\nEnd\nScheduled\nSTART Leave (P) WITH p\nSTART Wait for Task (CT) WITH c\n\n\nWait for Task (R)\nReceptionist (r)\nStart\nScheduled\nTRIGGER OnStartWaitForTaskR WITH r\n\n\n\n\nEnd\nControlled\n\n\n\nWait for Task (CT)\nCTMachine (c)\nStart\nScheduled\nTRIGGER OnStartWaitForTaskCT WITH c\n\n\n\n\nEnd\nControlled\n\n\n\n\n\n\n\n\n\n\nTable 3.6: Events\n\n\n\n\n\nActivity\nParticipants\nType\nState Change\n\n\n\n\nSimulation Start\n-\nScheduled\nSCHEDULE Arrival (R) at TIME\nSCHEDULE Arrival (CT) at TIME\nSCHEDULE Arrival (P) at TIME + PatientInterArrival()\n\n\nArrival (P)\nPatient (p)\nScheduled\np.ID = NextPatIDNum\np.Priority = PatientPriority()\nNextPatIDNum = NextPatIDNum + 1\nSCHEDULE Arrival (P) at TIME + PatientInterArrival()\nSTART Wait for Check In WITH p\n\n\nLeave (P)\nPatient (p)\nScheduled\nCalculate statistics for p\n\n\nArrival (R)\nReceptionist (r)\nScheduled\nr.ID = NextReceptionistIDNum\nNextReceptionistIDNum = NextReceptionistIDNum + 1\nIF NextReceptionistIDNum &lt;= NumReceptionists THEN\n    SCHEDULE Arrival (R) at TIME\nEND IF\nSTART Wait for Task (R) WITH r\n\n\nLeave (R)\nReceptionist (r)\nScheduled\nCalculate statistics for r\n\n\nArrival (CT)\nCTMachine (c)\nScheduled\nc.ID = NextCTMachineIDNum\nNextCTMachineIDNum = NextCTMachineIDNum + 1\nIF NextCTMachineIDNum &lt;= NumCTMachines THEN\n    SCHEDULE Arrival (CT) at TIME\nEND IF\nSTART Wait for Task (CT) WITH c\n\n\nLeave (P)\nCTMachine (c)\nScheduled\nCalculate statistics for c",
+    "objectID": "chapters/paper_car_cm/paper_car_cm.html#modelling-objectives",
+    "href": "chapters/paper_car_cm/paper_car_cm.html#modelling-objectives",
+    "title": "7  Making Paper Cars Conceptual Model",
+    "section": "7.2 Modelling Objectives",
+    "text": "7.2 Modelling Objectives\nIn the box below write the modelling objectives for making paper cars, i.e., what are you trying to discover using simulation?",
     "crumbs": [
       "Conceptual Models",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Radiology Clinic</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Making Paper Cars Conceptual Model</span>"
     ]
   },
   {
-    "objectID": "chapters/lab_1_cm/lab_1_cm.html#activity-diagrams",
-    "href": "chapters/lab_1_cm/lab_1_cm.html#activity-diagrams",
-    "title": "3  Radiology Clinic",
-    "section": "3.3 Activity Diagrams",
-    "text": "3.3 Activity Diagrams\n\n\n\n\n\n\nFigure 3.1: Patient Activity Diagram\n\n\n\n\n\n\n\n\n\nFigure 3.2: Receptionist Activity Diagram\n\n\n\n\n\n\n\n\n\nFigure 3.3: CT Activity Diagram",
+    "objectID": "chapters/paper_car_cm/paper_car_cm.html#general-objectives",
+    "href": "chapters/paper_car_cm/paper_car_cm.html#general-objectives",
+    "title": "7  Making Paper Cars Conceptual Model",
+    "section": "7.3 General Objectives",
+    "text": "7.3 General Objectives\nIn the box below write the general objectives for making paper cars, i.e., what are some of the general properties you’d like your simulation to have?",
     "crumbs": [
       "Conceptual Models",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Radiology Clinic</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Making Paper Cars Conceptual Model</span>"
     ]
   },
   {
-    "objectID": "chapters/lab_1_cm/lab_1_cm.html#control-policies",
-    "href": "chapters/lab_1_cm/lab_1_cm.html#control-policies",
-    "title": "3  Radiology Clinic",
-    "section": "3.4 Control Policies",
-    "text": "3.4 Control Policies\n\n\n\nTable 3.7: OnStartWaitForCheckIn\n\n\n\n\n\n\nTriggered by: Patient p\n\n\n\n\n\nreceps = {r FOR r IN R IF r.State = \"Wait for task (R)\"}\nIF receps IS NOT empty THEN \n    r_hat = argmin{r.CurrentStart FOR r IN receps}\n    START Check In WITH p, r_hat\nEND IF\n\n\n\n\n\n\n\n\n\nTable 3.8: OnStartWaitForScan\n\n\n\n\n\n\nTriggered by: Patient p\n\n\n\n\n\ncts = {c FOR c IN C IF c.State = \"Wait for task (C)\"}\nIF cts IS NOT empty THEN \n    c_hat = argmin{c.CurrentStart FOR c IN cts}\n    START Scan WITH p, r_hat\nEND IF\n\n\n\n\n\n\n\n\n\nTable 3.9: OnStartWaitForTaskR\n\n\n\n\n\n\nTriggered by: Receptionist r\n\n\n\n\n\npatients = {p FOR p IN P IF p.State = \"Wait for Check In\"}\nIF patients IS NOT empty THEN \n    p_hat = argmin{p.CurrentStart FOR p IN patients}\n    START Check In WITH p, r_hat\nEND IF\n\n\n\n\n\n\n\n\n\nTable 3.10: OnStartWaitForTaskCT\n\n\n\n\n\n\nTriggered by: CTMachine c\n\n\n\n\n\npatients = {p FOR p IN P IF p.State = \"Wait for Scan\"}\nIF patients IS NOT empty THEN \n    p_hat = argmin{p.CurrentStart FOR p IN patients}\n    START Scan WITH p, r_hat\nEND IF",
+    "objectID": "chapters/paper_car_cm/paper_car_cm.html#defining-output-responses",
+    "href": "chapters/paper_car_cm/paper_car_cm.html#defining-output-responses",
+    "title": "7  Making Paper Cars Conceptual Model",
+    "section": "7.4 Defining Output Responses",
+    "text": "7.4 Defining Output Responses\nIn the box below write the output responses for making paper cars, i.e., what are you going to measure to determine the performance of the system?",
     "crumbs": [
       "Conceptual Models",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Radiology Clinic</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Making Paper Cars Conceptual Model</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/paper_car_cm/paper_car_cm.html#defining-input-factors",
+    "href": "chapters/paper_car_cm/paper_car_cm.html#defining-input-factors",
+    "title": "7  Making Paper Cars Conceptual Model",
+    "section": "7.5 Defining Input Factors",
+    "text": "7.5 Defining Input Factors\nIn the box below write the input factors for making paper cars, i.e., what are you going to change to achieve the modelling objectives?",
+    "crumbs": [
+      "Conceptual Models",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Making Paper Cars Conceptual Model</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/paper_car_cm/paper_car_cm.html#identifying-entities",
+    "href": "chapters/paper_car_cm/paper_car_cm.html#identifying-entities",
+    "title": "7  Making Paper Cars Conceptual Model",
+    "section": "7.6 Identifying Entities",
+    "text": "7.6 Identifying Entities\nIn the box below list the entities for making paper cars.",
+    "crumbs": [
+      "Conceptual Models",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Making Paper Cars Conceptual Model</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/paper_car_cm/paper_car_cm.html#drawing-behavioural-paths",
+    "href": "chapters/paper_car_cm/paper_car_cm.html#drawing-behavioural-paths",
+    "title": "7  Making Paper Cars Conceptual Model",
+    "section": "7.7 Drawing Behavioural Paths",
+    "text": "7.7 Drawing Behavioural Paths\nThe activity diagrams for the pencil & template, and scissors are given below in Figures 7.1, and 7.2.\n\n\n\n\n\n\nFigure 7.1: Pencil Activity Diagram\n\n\n\n\n\n\n\n\n\nFigure 7.2: Scissors Activity Diagram\n\n\n\n\nIn the boxes below draw the activity diagrams for the remaining entities.",
+    "crumbs": [
+      "Conceptual Models",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Making Paper Cars Conceptual Model</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/clinic_1_cm/clinic_1_cm.html",
+    "href": "chapters/clinic_1_cm/clinic_1_cm.html",
+    "title": "8  Radiology Clinic",
+    "section": "",
+    "text": "8.1 Data",
+    "crumbs": [
+      "Conceptual Models",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Radiology Clinic</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/clinic_1_cm/clinic_1_cm.html#data",
+    "href": "chapters/clinic_1_cm/clinic_1_cm.html#data",
+    "title": "8  Radiology Clinic",
+    "section": "",
+    "text": "Table 8.1: List of Global Variables\n\n\n\n\n\nName\nDescription\nInitial Value\n\n\n\n\nNextPatIdNum\nThe Id number that will be assigned to the next patient\n1\n\n\nNextReceptionistIdNum\nThe Id number that will be assigned to the next receptionist\n1\n\n\nNextCTMachineIdNum\nThe Id number that will be assigned to the next CT Machine\n1\n\n\n\\(P\\)\nThe set of all patients\n\\(\\emptyset\\)\n\n\n\\(R\\)\nThe set of all receptionists\n\\(\\emptyset\\)\n\n\n\\(C\\)\nThe set of all CT Machines\n\\(\\emptyset\\)\n\n\n\n\n\n\n\n\n\nTable 8.2: List of Data Modules\n\n\n\n\n\nName\nSource\nIdentification\nInput\nOutput\n\n\n\n\nPatientInterarrivalTime\nPoisson Process\nParameter\nMean interarrival time\nSample from Distribution\n\n\nNumReceptionists\nConstant\nParameter\nN/A\nValue\n\n\nNumCTMachines\nConstant\nParameter\nN/A\nValue\n\n\nCheckInTime\nUniform Distribution\nParameter\nMin and max time\nSample from Distribution\n\n\nScanTime\nLog-normal Distribution\nParameter\nMean and std. dev.\nSample from Distribution",
+    "crumbs": [
+      "Conceptual Models",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Radiology Clinic</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/clinic_1_cm/clinic_1_cm.html#components",
+    "href": "chapters/clinic_1_cm/clinic_1_cm.html#components",
+    "title": "8  Radiology Clinic",
+    "section": "8.2 Components",
+    "text": "8.2 Components\n\n\n\nTable 8.3: List of Entities\n\n\n\n\n\nEntity\nAttributes\n\n\n\n\nPatient\nID\n\n\n\nState\n\n\n\nStateTimes\n\n\n\n\n\n\nReceptionist\nID\n\n\n\nState\n\n\n\nStateTimes\n\n\n\n\n\n\nCT Machine\nID\n\n\n\nState\n\n\n\nStateTimes\n\n\n\n\n\n\n\n\n\nTable 8.4: List of Transitions\n\n\n\n\n\nNo.\nParticipant\nFrom Event\nTo Event\n\n\n\n\n1\nPatient\nArrive(P)\nWait for check in.Start\n\n\n2\nPatient\nWait for check in.End\nCheck in.Start\n\n\n3\nPatient\nCheck in.End\nWait for scan.Start\n\n\n4\nPatient\nWait for scan.End\nScan.Start\n\n\n5\nPatient\nScan.End\nLeave(P)\n\n\n6\nReceptionist\nArrive(R)\nWait for task(R).Start\n\n\n7\nReceptionist\nWait for task(R).End\nCheck in.Start\n\n\n8\nReceptionist\nCheck in.End\nWait for task(R).Start\n\n\n9\nReceptionist\nWait for task(R).End\nLeave(R)\n\n\n10\nCT Machine\nArrive(CT)\nWait for task(CT).Start\n\n\n11\nCT Machine\nWait for task(CT).End\nScan.Start\n\n\n12\nCT Machine\nScan.End\nWait for task(CT).Start\n\n\n13\nCT Machine\nWait for task(CT).End\nLeave(CT)\n\n\n\n\n\n\n\n\n\nTable 8.5: Activities\n\n\n\n\n\nActivity\nParticipants\nEvent\nType\nState Change\n\n\n\n\nWait for Check In\nPatient (p)\nStart\nScheduled\nTRIGGER OnStartWaitForCheckIn WITH p\n\n\n\n\nEnd\nControlled\n\n\n\nCheck In\nPatient (p), Receptionist (r)\nStart\nControlled\nSCHEDULE Check In.End at TIME + CheckInTime()\n\n\n\n\nEnd\nScheduled\nSTART Wait for Scan WITH p\nSTART Wait for Task (R) WITH r\n\n\nWait for Scan\nPatient (p)\nStart\nScheduled\n\n\n\n\n\nEnd\nControlled\nTRIGGER OnStartWaitForScan WITH p\n\n\nScan\nPatient (p), CTMachine (c)\nStart\nControlled\nSCHEDULE Scan.End at TIME + ScanTime()\n\n\n\n\nEnd\nScheduled\nSTART Leave (P) WITH p\nSTART Wait for Task (CT) WITH c\n\n\nWait for Task (R)\nReceptionist (r)\nStart\nScheduled\nTRIGGER OnStartWaitForTaskR WITH r\n\n\n\n\nEnd\nControlled\n\n\n\nWait for Task (CT)\nCTMachine (c)\nStart\nScheduled\nTRIGGER OnStartWaitForTaskCT WITH c\n\n\n\n\nEnd\nControlled\n\n\n\n\n\n\n\n\n\n\nTable 8.6: Events\n\n\n\n\n\nActivity\nParticipants\nType\nState Change\n\n\n\n\nSimulation Start\n-\nScheduled\nSCHEDULE Arrival (R) at TIME\nSCHEDULE Arrival (CT) at TIME\nSCHEDULE Arrival (P) at TIME + PatientInterArrival()\n\n\nArrival (P)\nPatient (p)\nScheduled\np.ID = NextPatIDNum\np.Priority = PatientPriority()\nNextPatIDNum = NextPatIDNum + 1\nSCHEDULE Arrival (P) at TIME + PatientInterArrival()\nSTART Wait for Check In WITH p\n\n\nLeave (P)\nPatient (p)\nScheduled\nCalculate statistics for p\n\n\nArrival (R)\nReceptionist (r)\nScheduled\nr.ID = NextReceptionistIDNum\nNextReceptionistIDNum = NextReceptionistIDNum + 1\nIF NextReceptionistIDNum &lt;= NumReceptionists THEN\n    SCHEDULE Arrival (R) at TIME\nEND IF\nSTART Wait for Task (R) WITH r\n\n\nLeave (R)\nReceptionist (r)\nScheduled\nCalculate statistics for r\n\n\nArrival (CT)\nCTMachine (c)\nScheduled\nc.ID = NextCTMachineIDNum\nNextCTMachineIDNum = NextCTMachineIDNum + 1\nIF NextCTMachineIDNum &lt;= NumCTMachines THEN\n    SCHEDULE Arrival (CT) at TIME\nEND IF\nSTART Wait for Task (CT) WITH c\n\n\nLeave (P)\nCTMachine (c)\nScheduled\nCalculate statistics for c",
+    "crumbs": [
+      "Conceptual Models",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Radiology Clinic</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/clinic_1_cm/clinic_1_cm.html#activity-diagrams",
+    "href": "chapters/clinic_1_cm/clinic_1_cm.html#activity-diagrams",
+    "title": "8  Radiology Clinic",
+    "section": "8.3 Activity Diagrams",
+    "text": "8.3 Activity Diagrams\n\n\n\n\n\n\nFigure 8.1: Patient Activity Diagram\n\n\n\n\n\n\n\n\n\nFigure 8.2: Receptionist Activity Diagram\n\n\n\n\n\n\n\n\n\nFigure 8.3: CT Activity Diagram",
+    "crumbs": [
+      "Conceptual Models",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Radiology Clinic</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/clinic_1_cm/clinic_1_cm.html#control-policies",
+    "href": "chapters/clinic_1_cm/clinic_1_cm.html#control-policies",
+    "title": "8  Radiology Clinic",
+    "section": "8.4 Control Policies",
+    "text": "8.4 Control Policies\n\n\n\nTable 8.7: OnStartWaitForCheckIn\n\n\n\n\n\n\nTriggered by: Patient p\n\n\n\n\n\nreceps = {r FOR r IN R IF r.State = \"Wait for task (R)\"}\nIF receps IS NOT empty THEN \n    r_hat = argmin{r.CurrentStart FOR r IN receps}\n    START Check In WITH p, r_hat\nEND IF\n\n\n\n\n\n\n\n\n\nTable 8.8: OnStartWaitForScan\n\n\n\n\n\n\nTriggered by: Patient p\n\n\n\n\n\ncts = {c FOR c IN C IF c.State = \"Wait for task (C)\"}\nIF cts IS NOT empty THEN \n    c_hat = argmin{c.CurrentStart FOR c IN cts}\n    START Scan WITH p, r_hat\nEND IF\n\n\n\n\n\n\n\n\n\nTable 8.9: OnStartWaitForTaskR\n\n\n\n\n\n\nTriggered by: Receptionist r\n\n\n\n\n\npatients = {p FOR p IN P IF p.State = \"Wait for Check In\"}\nIF patients IS NOT empty THEN \n    p_hat = argmin{p.CurrentStart FOR p IN patients}\n    START Check In WITH p, r_hat\nEND IF\n\n\n\n\n\n\n\n\n\nTable 8.10: OnStartWaitForTaskCT\n\n\n\n\n\n\nTriggered by: CTMachine c\n\n\n\n\n\npatients = {p FOR p IN P IF p.State = \"Wait for Scan\"}\nIF patients IS NOT empty THEN \n    p_hat = argmin{p.CurrentStart FOR p IN patients}\n    START Scan WITH p, r_hat\nEND IF",
+    "crumbs": [
+      "Conceptual Models",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Radiology Clinic</span>"
     ]
   }
 ]

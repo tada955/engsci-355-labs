@@ -414,7 +414,7 @@ local function runLaTeX(source, options)
   local latex_args = pandoc.List:new{ '--interaction=nonstopmode' }
   local latexmk_args = pandoc.List:new{ '-'..pdf_engine }
   -- Export the TEXINPUTS variable
-  local env = texinputs and 'set TEXINPUTS='..texinputs..'; '
+  local env = texinputs and 'export TEXINPUTS='..texinputs..'; '
     or ''
   -- latex command run, for debug purposes
   local cmd
@@ -486,8 +486,7 @@ local function toSVG(source, options)
 	local source_format = source:match('%.pdf$') and 'pdf'
 										or source:match('%.dvi$') and 'dvi'
 										or source:match('%.xdv$') and 'dvi'
-	local cmd_opts = pandoc.List:new({
-    -- '--optimize', 
+	local cmd_opts = pandoc.List:new({'--optimize', 
 		'--verbosity='..dvisvgmVerbosity(),
 --  '--relative',
 --  '--no-fonts', 
