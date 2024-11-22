@@ -516,7 +516,7 @@ Now if you save and run your simulation a file should be created called 'yourSim
 To speed up running the simulation you can turn off the option 'Real time', in the top left corner next to the play button.
 
 With the model complete and the results recorded we can use Python to analyse them.
-First download the Python analysis file provided, then change name of the .dat and .log files to match yours and make sure they are in the same directory as the Python file, then run the Python file.
+First download the Python analysis file provided, then change name of the .dat file to match yours and make sure it is in the same directory as the Python file, then run the Python file.
 The following output should be printed:
 
 ::: {.codeout}

@@ -1,0 +1,328 @@
+# Extended Radiology Clinic
+
+In this lab we will extend the simulation developed in the previous lab to include a priority value for patients, use a priority order for scanning, and make the scanners require half an hour of maintenance every 8 hours.
+The maintenance should only occur when the machine is free, if it is busy when the 8 hours are up the maintenance should take place the next time it is free.
+We assume that there are 5 levels of priority (1, 2, 3, 4, 5) and more important patients (lower value of priority e.g. 1 is more important than 2) are always seen before any patients of lower priority.
+In addition, priority 1 and 2 patients are urgent so they do not need to check in, they go directly to queueing for a scan.
+We want to use the simulation to determine the 90th percentile of time that patients spend in the clinic, between arriving and leaving.
+In addition we want to compare the time that the different priority levels spend in the clinic.
+
+Once again, since the aim of the lab is to learn Jaamsim, the conceptual model is not given here, instead it is available separately in the file Radiology\_Clinic\_2\_Conceptual\_Model.pdf XXX file link.
+
+## Experiments
+
+In this lab we will perform one experiment with 50 replications each 1 week long.
+We will use the same distributions for the interarrival time, check in time, and scan duration for appointment patients as in the previous lab.
+The proportion of each type of patient in each priority group is given in @tbl-pri_props:
+
+::: {#tbl-pri_props tbl-pos="H" .sm}
+
+```{=latex}
+\label{tab:priProps}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Priority & Proportion \\ \midrule
+1        & 0.05       \\ 
+2        & 0.2        \\
+3        & 0.15       \\
+4        & 0.4        \\
+5        & 0.2        \\\bottomrule
+\end{tabular}
+```
+
+Patient Priority Proportions
+
+:::
+
+## Jaamsim Model
+
+To model the priorities, priority order, and maintenance we need to add some components to the model from the previous lab, so create a new folder called **RC2** and copy your .cfg file (and the .png files so that the graphics work) from the previous lab folder into this folder and rename it to **radiology\_lab\_extended.cfg**.
+First we need to add a priority attribute to the Patient entity.
+We can do this under the **Options** tab on the PatientEntity using the AttributeDefinitionList.
+Table @tbl-pat_attr shows how to create the priority attribute and make the default value 0.
+
+::: {#tbl-pat_attr tbl-pos="H" .sm}
+
+```{=latex}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Object            & Keyword         & Value         \\ \midrule
+PatientEntity  & AttributeDefinitionList & \{ priority 0 \}\\
+\bottomrule
+\end{tabular}
+```
+
+Priority Attribute
+
+:::
+
+Next we need a distribution to model the probabilities of the priorities.
+We use a DiscreteDistribution object as this allows us to define a list of values and the probability of each value occuring.
+Create a DiscreteDistribution object called PriorityDistribution with the values shown in @tbl-pri_dist.
+
+::: {#tbl-pri_dist tbl-pos="H" .sm}
+
+```{=latex}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Object            & Keyword         & Value         \\ \midrule
+PriorityDistribution  & UnitType & DimensionlessUnit\\
+                                 & RandomSeed & 4\\
+                                 & ValueList & 1 2 3 4 5\\
+                                 & ProbabilityList & 0.05 0.2 0.15 0.4 0.2\\
+\bottomrule
+\end{tabular}
+```
+
+Priority Distribution
+
+:::
+
+So far we have created the priority attribute and distribution, but we need to assign values from the distribution to the patient entities.
+With the HCCM objects we can assign attributes in the same object that create the arrival.
+
+::: {#tbl-ass_pri tbl-pos="H" .sm}
+
+```{=latex}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Object            & Keyword         & Value         \\ \midrule
+PatientArrival  & AssignmentList & \{ `this.obj.priority \\
+ & & = [PriorityDistribution].Value' \}\\\bottomrule
+\end{tabular}
+```
+
+Assign Priority
+
+:::
+
+Now that we have the priority attribute we can use it change the path of the patients.
+We can use a Branch object (under Process Flow palette) to send the patients to different places based on the priorty attribute: those with priority 1 and 2 should go straight to the scan queue, while those with priorities 3, 4, and 5 go to wait for check in.
+
+::: {#tbl-pri_branch tbl-pos="H" .sm}
+
+```{=latex}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Object            & Keyword         & Value         \\ \midrule
+PriorityBranch  & NextComponentList & WaitForScan WaitForCheckIn \\
+ & Choice & `this.obj.priority $\leq$ 2 ? 1 : 2'\\\bottomrule
+\end{tabular}
+```
+
+Priority Branch
+
+:::
+
+We also need to update the routing from the Arrival object so that the patients go from the Arrive to the Branch.
+
+::: {#tbl-upd_rout tbl-pos="H" .sm}
+
+```{=latex}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Object            & Keyword         & Value         \\ \midrule
+PatientArrival    & NextAEJObject   & PriorityBranch \\\bottomrule
+\end{tabular}
+```
+
+Update Routing
+
+:::
+
+Now we need to add the new Maintenance activity, and RequireMaintenance event.
+We need an additional event as well as the activity because we do not want to interrupt a scan with maintenance, if the machine is currently in use when the 8 hour time is reached.
+This means we cannot simply schedule another maintenance activity 8 hours after the last one was scheduled, as the machine might be in use at this time.
+Instead, we schedule an event (called a logic event in Jaamsim) in 8 hours time, the event then triggers some logic which checks to see if the machine is free and can start maintenance, and if not changes an attribute so that it will start maintenance the next time it is free.
+We therefore also need to add an attribute on the CTMachineEntity called NeedMaintenance, which defaults to 0 and we will set to 1 when it has been 8 hours since the last maintenance.
+
+For the maintenance activity create a process activity with a duration of 30 minutes with the CTMachineEntity as the only participant and the next activity is WaitForTaskCTMachine.
+Also use the start assignment list to set the value of the NeedMaintenance attribute to 0.
+
+Then create a logic event called RequireMaintenance and for now just use the assignment list to set the NeedMaintenance attribute to 1.
+
+Now we will add the new logic before connecting it with new triggers.
+Follow the same instructions as in the previous lab to create a new class called **RadiologyExtendedControlUnit** in the labs package, and copy the java code from the RadiologyControlUnit to the new RadiologyExtendedControlUnit.
+Add the relevant lines to the **sim\_custom.inc** file so that it is available in the HCCM palette.
+Then replace the RadiologyControlUnit with a RadiologyExtendedControlUnit, and replace the references to the RadiologyControlUnit with RadiologyExtendedControlUnit in the trigger objects: StartWaitCheckIn, StartWaitScan, StartWaitTaskReceptionist, and StartWaitTaskCTMachine.
+
+In the new class we need to first update the OnStartWaitForTaskCTMachine, to include the logic for having maintenance and prioritising patients, and add two new ones for the logic triggered when a CTMachine arrives, and when the RequireMaintenance event occurs.
+Note that we don't need to update the OnStartWaitForScan logic as this will only start a scan if the patient is the only one waiting, so the priority does not matter.
+
+First update the OnStartWaitTaskCTMachine code as follows, note that on line 4 a comparator is created to compare patients by their priority attribute.
+This is then used on line 14 to sort the patients by priority.
+Also line 7 used the getNumAttribute function to access the value of the NeedMaintenance attribute of the CT Machine.
+You will need to fill in the parts labelled A, B, and C.
+In A the CT Machine should transition to the maintenance activity as it needs maintenance and has just become free.
+In B we want to save the priority of the highest priority patient that is waiting.
+In C we want to get the priority of the current patient in the loop, to see if it is the same as the highest priority waiting.
+
+:::{.codebox .column-page-right}
+
+```{.java}
+public void OnStartWaitForTaskCTMachine(List<ActiveEntity> ents, double simTime) {
+    
+  ArrayList<ActiveEntity> waitPats = this.getEntitiesInActivity("PatientEntity", "WaitForScan", simTime);
+  AttributeCompare priorityComp = new AttributeCompare("priority");
+  ActivityStartCompare actStartComp = this.new ActivityStartCompare();        
+  ActiveEntity ct = ents.get(0);
+  int reqMaintenance = (int) getNumAttribute(ct, "NeedMaintenance", simTime, -1);
+  
+  if (reqMaintenance == 1) {
+    // A //
+  }
+    
+  else if (waitPats.size() > 0) {
+    Collections.sort(waitPats, priorityComp);
+    
+    int highestPriority = // B //
+    
+    ArrayList<ActiveEntity> priorityPatients = new ArrayList<ActiveEntity>();
+    for (ActiveEntity wP : waitPats) {
+      int patPri = // C //
+      if (patPri == highestPriority) {
+        priorityPatients.add(wP);
+      }
+    }
+    
+    Collections.sort(priorityPatients, actStartComp);
+    ActiveEntity patient = priorityPatients.get(0);
+              
+    transitionTo("Scan", patient, ct);
+  }
+}
+```
+
+:::
+
+{{< pagebreak >}}
+
+Then create two new methods called OnCTArrival and OnRequireMaintenance:
+
+:::{.codebox .column-page-right}
+
+```{.java}
+public void OnCTArrival(List<ActiveEntity> ents, double simTime) {
+        
+  double maintenanceTimeGap = 8 * 60 * 60;
+  LogicEvent le = (LogicEvent) getSubmodelEntity("RequireMaintenance");
+  
+  le.scheduleEvent(ents, maintenanceTimeGap);
+}
+  
+public void OnRequireMaintenance(List<ActiveEntity> ents, double simTime) {
+      
+  double maintenanceTimeGap = 8 * 60 * 60;
+  LogicEvent le = (LogicEvent) getSubmodelEntity("RequireMaintenance");
+  
+  le.scheduleEvent(ents, simTime + maintenanceTimeGap);
+  
+  ActiveEntity ct = ents.get(0);
+  if (ct.getCurrentActivity(simTime).equals("WaitForTaskCTMachine")) {
+    transitionTo("Maintenance", ct);
+  }      
+}
+```
+
+:::
+
+To get the new logic used in the simulation we need to add two new triggers: **StartCTArrival**, and **StartRequireMaintenance**.
+Set the control unit for both the triggers to be the RadiologyExtendedControlUnit, and make the control policies the respective methods in the java code.
+Then update the TriggerList and TriggerChoice on both the CTMachineArrival and RequireMaintenance to refer to these triggers.
+
+In the previous lab we looked at the mean time that patients spend in the clinic, and we were able to output this by first using a Statistics object to calculate it and then setting it in the Simulation object's RunOutputList.
+In this instance we are interested in the 90th percentile of time that patients spend in the clinic.
+Unfortunately the Statistics object does not provide the 90th percentile as an output.
+Therefore we need to capture each of the individual times that each patient spends in the clinic and calculate the 90th percentile ourselves.
+We can do this using an EntityLogger object from the Process Flow palette; create one and place it between the TimeInSystem object and the PatientExit, and name it PatientLogger.
+We then need to update the routing so that patients go through the PatientLogger object before leaving, and tell the PatientLogger object which values to record as shown in @tbl-stats, note that **TotalTime** is an output on the entity which stores the total time that the entity has been in the simulation for:
+
+::: {#tbl-stats tbl-pos="H" .sm}
+
+```{=latex}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Object        & Keyword        & Value \\ \midrule
+TimeInSystem  & NextComponent  & PatientLogger \\
+PatientLogger & DataSource     & \{ [Simulation].ReplicationNumber \}\\
+              &                & \{ `this.obj.TotalTime / 1[h]' \} \\
+              & NextComponent  & PatientLeave \\\bottomrule
+\end{tabular}
+```
+
+Collecting Statistics
+
+:::
+
+Now if you save and run your simulation you should be able to see the CT Machines performing maintenance every 8 hours.
+
+The simulation object should be configured correctly from the previous lab so we don't need to update it.
+Now if you save and run your simulation a file should be created called **radiology\_lab\_extended.dat**.
+
+With the model complete and the results recorded we can use Python to analyse them.
+First download the Python analysis file provided, change the name of the .log file to match yours, and make sure it is in the same directory as the Python file, then run the Python file.
+The following table should be printed:
+
+::: {.codeout}
+```{python}
+#| echo: false
+
+import pandas as pd
+import numpy as np, scipy.stats as st
+
+naStrings = ["this.SimTime/1[h]",  "this.obj", "[Simulation].RunNumber",
+  "this.obj.TotalTime / 1[h]"]
+
+lab_data = pd.read_table("RC2-PatientLogger.log", header=0, names=[
+  "SimTime", "Object", "Replication", "TimeInSystem"
+], skiprows=14, na_values=naStrings).dropna()
+
+lab_data = lab_data.astype({"SimTime": np.float64, "Object": str,
+  "Replication": np.float64, "TimeInSystem": np.float64})
+
+TIS_90 = lab_data.groupby(['Replication'])['TimeInSystem'].quantile(0.90).reset_index()
+
+conf_int = TIS_90.agg(
+  Mean=("TimeInSystem", "mean"),
+  CI_Half_Width=("TimeInSystem", lambda x: x.sem() * st.norm.ppf(0.975)),
+)
+
+print(conf_int)
+```
+
+:::
+
+## Task
+
+By also saving the priority of the patients in the patient logger, construct 95\% confidence intervals for the 90th percentile of the time spent in the clinic for each priority group.
+You should get the following output:
+
+::: {.codeout}
+```{python}
+#| echo: false
+
+import pandas as pd
+import numpy as np, scipy.stats as st
+
+naStrings = ["this.SimTime/1[h]",  "this.obj", "[Simulation].RunNumber",
+  "this.obj.TotalTime / 1[h]"]
+
+lab_data = pd.read_table("RC2_task-PatientLogger.log", header=0, names=[
+  "SimTime", "Object", "Replication", "TimeInSystem", "Priority"
+], skiprows=14, na_values=naStrings).dropna()
+
+lab_data = lab_data.astype({"SimTime": np.float64, "Object": str,
+  "Replication": np.float64, "TimeInSystem": np.float64,
+  "Priority": np.float64})
+
+TIS_90 = lab_data.groupby(["Priority", 'Replication'])['TimeInSystem'].quantile(0.90).reset_index()
+
+conf_int = TIS_90.groupby("Priority").agg(
+  Mean=("TimeInSystem", "mean"),
+  CI_Half_Width=("TimeInSystem", lambda x: x.sem() * st.norm.ppf(0.975)),
+)
+
+print(conf_int)
+```
+
+:::

@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../chapters/paper_car_cm/paper_car_cm.html" rel="next">
+<link href="../../chapters/clinic_2/clinic_2.html" rel="next">
 <link href="../../chapters/jaamsim_setup/jaamsim_setup.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -246,6 +246,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Radiology Clinic</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/clinic_2/clinic_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Extended Radiology Clinic</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -260,13 +266,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../chapters/paper_car_cm/paper_car_cm.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Making Paper Cars Conceptual Model</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Making Paper Cars Conceptual Model</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../chapters/clinic_1_cm/clinic_1_cm.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Radiology Clinic</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Radiology Clinic</span></span></a>
   </div>
 </li>
       </ul>
@@ -316,7 +322,7 @@ window.Quarto = {
 
 
 <p>In this lab you will be introduced to the basics of creating a simulation model using the discrete event simulation software Jaamsim and the HCCM module. To do this we will use the CT service of a radiology clinic as an example. At the clinic patients: arrive according to a known distribution 24/7; check in at reception, which takes a uniformly distributed amount of time; and then have a scan, the duration of which also follows a known distribution; and finally leave.</p>
-<p>We want to use the simulation to determine the average time that patients spend in the clinic, between arriving and leaving. We want to compare this time to the time that patients would spend in the system if interarrival times and scan durations were always equal to the average of the distributions for all patients. Typically we would first formulate the simulation model by defining the objectives, benefits, conceptual model, and experiments. For the sake of brevity we will only cover the experiments. As the aim of the lab is to learn the basics of Jaamsim, the conceptual model is not given here, instead it is available in <a href="../clinic_1_cm/clinic_1_cm.html" class="quarto-xref"><span>Chapter 8</span></a>.</p>
+<p>We want to use the simulation to determine the average time that patients spend in the clinic, between arriving and leaving. We want to compare this time to the time that patients would spend in the system if interarrival times and scan durations were always equal to the average of the distributions for all patients. Typically we would first formulate the simulation model by defining the objectives, benefits, conceptual model, and experiments. For the sake of brevity we will only cover the experiments. As the aim of the lab is to learn the basics of Jaamsim, the conceptual model is not given here, instead it is available in <a href="../clinic_1_cm/clinic_1_cm.html" class="quarto-xref"><span>Chapter 9</span></a>.</p>
 <section id="experiments" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="experiments"><span class="header-section-number">6.1</span> Experiments</h2>
 <p>We will perform just one experiment, using distributions for the arrival, check in, and scan processes. We will use a Poisson distribution with <span class="math inline">\(\lambda=8/\text{hour}\)</span> for the arrival process, a uniform distribution between 2 and 5 minutes for the check in durations, and a log-normal distribution where the underlying normal variable has a mean of -1.34 and standard deviation 0.29 for the scan durations. For the experiment we will run 50 replications that each last for 1 week.</p>
@@ -747,7 +753,7 @@ Table&nbsp;6.5: Process Activity Parameters
 </div>
 </figure>
 </div>
-<p>The last object we need to configure before the simulation will run (it will run but it will not quite work correctly) is the TimeInSystem object. This is a Statistics object which collects a value from each Entity that passes through it and outputs the mean of the sampled values. We then need to finish the routing so that patients leave after going through the TimeInSystem, and tell the Statistics object which value to record as shown in <a href="#tbl-stats" class="quarto-xref">Table&nbsp;<span>6.6</span></a>, note that <strong>this</strong> refers to the Statistics object itself, <strong>obj</strong> refers to the entity that the Statistics object is currently processing, and <strong>TotalTime</strong> is an output on the entity that stores the total time that the entity has been in the simulation for.</p>
+<p>The last object we need to configure before the simulation will run (it will run but it will not quite work correctly) is the TimeInSystem object. This is a Statistics object which collects a value from each Entity that passes through it and outputs the mean of the sampled values. We then need to finish the routing so that patients leave after going through the TimeInSystem, and tell the Statistics object which value to record as shown in <a href="../clinic_2/clinic_2.html#tbl-stats" class="quarto-xref">Table&nbsp;<span>7.7</span></a>, note that <strong>this</strong> refers to the Statistics object itself, <strong>obj</strong> refers to the entity that the Statistics object is currently processing, and <strong>TotalTime</strong> is an output on the entity that stores the total time that the entity has been in the simulation for.</p>
 <div id="tbl-stats" class="sm quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-stats-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1158,9 +1164,9 @@ Table&nbsp;6.9: Simulation Parameters
 </figure>
 </div>
 <p>Now if you save and run your simulation a file should be created called ‘yourSimulationName.dat’. To speed up running the simulation you can turn off the option ‘Real time’, in the top left corner next to the play button.</p>
-<p>With the model complete and the results recorded we can use Python to analyse them. First download the Python analysis file provided, then change name of the .dat and .log files to match yours and make sure they are in the same directory as the Python file, then run the Python file. The following output should be printed:</p>
+<p>With the model complete and the results recorded we can use Python to analyse them. First download the Python analysis file provided, then change name of the .dat file to match yours and make sure it is in the same directory as the Python file, then run the Python file. The following output should be printed:</p>
 <div class="codeout">
-<div id="43dff821" class="cell" data-execution_count="1">
+<div id="3eb406a0" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-stdout">
 <pre><code>   Scenario  Replication  TimeInSystem
 0         1          1.0      0.443924
@@ -1179,7 +1185,7 @@ Name: TimeInSystem, dtype: float64</code></pre>
 <h2 data-number="6.5" class="anchored" data-anchor-id="task"><span class="header-section-number">6.5</span> Task</h2>
 <p>Construct a 95% confidence interval for the average utilisation of the three CT machines in each experiment. You will need to add an entry to the <strong>RunOutputList</strong>. You should get the following output:</p>
 <div class="codeout">
-<div id="1c1da9fa" class="cell" data-execution_count="2">
+<div id="8d1fb27f" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>Mean             0.730582
 CI Half Width    0.006098
@@ -1620,8 +1626,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../chapters/paper_car_cm/paper_car_cm.html" class="pagination-link" aria-label="Making Paper Cars Conceptual Model">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Making Paper Cars Conceptual Model</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../chapters/clinic_2/clinic_2.html" class="pagination-link" aria-label="Extended Radiology Clinic">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Extended Radiology Clinic</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

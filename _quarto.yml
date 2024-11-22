@@ -20,7 +20,7 @@ book:
         - chapters/vscode_java_setup/vscode_java_setup.qmd
         - chapters/jaamsim_setup/jaamsim_setup.qmd
         - chapters/clinic_1/clinic_1.qmd
-    #     - chapters/lab_2/lab_2.qmd
+        - chapters/clinic_2/clinic_2.qmd
     - part: "Conceptual Models"
       chapters:
         - chapters/paper_car_cm/paper_car_cm.qmd
