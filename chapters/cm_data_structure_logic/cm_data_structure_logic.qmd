@@ -1,0 +1,37 @@
+# Data, Structure, and Logic
+
+In this lab you will complete the remainder of the fourth phase of the HCCM framework, with your group.
+
+## Define the Data
+
+Firstly, you need to give detailed definitions of the data.
+You may not have collected data during car making, but complete the following table that describes the kind of data you would need to collect to simulate car making.
+Also add a comment on how the entry for CutTapeDuration would change if no person-by-person data was available, but an Exponential distribution that estimated the time it takes for a person to cut tape was available.
+
+::: {.content-visible unless-profile="answers"}
+
+::: {#tbl-data_pc .sm .column-page-right .borderless}
+
+```{=latex}
+{{< include tables/data_table.tex >}}
+```
+
+List of Data Modules
+
+:::
+
+:::
+
+::: {.content-visible when-profile="answers"}
+
+::: {#tbl-data_pc .sm .column-page-right .borderless}
+
+```{=latex}
+{{< include tables/data_table_ans.tex >}}
+```
+
+List of Data Modules
+
+:::
+
+:::

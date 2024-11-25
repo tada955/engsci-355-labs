@@ -1,0 +1,62 @@
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{10cm}@{}}
+  \toprule
+  Activity          & Participants & Type       & State Change \\ \midrule
+  Simulation Start & -  & Scheduled  & 
+  \vspace{-12pt}
+  \begin{lstlisting}[language=CMPseudo]
+SCHEDULE Arrival (R) at TIME
+SCHEDULE Arrival (CT) at TIME
+SCHEDULE Arrival (P) at TIME + PatientInterArrival()
+  \end{lstlisting}
+  \\ \midrule
+  Arrival (P) & Patient (p)  & Scheduled  & 
+  \vspace{-12pt}
+  \begin{lstlisting}[language=CMPseudo]
+p.ID = NextPatIDNum
+p.Priority = PatientPriority()
+NextPatIDNum = NextPatIDNum + 1
+SCHEDULE Arrival (P) at TIME + PatientInterArrival()
+START Wait for Check In WITH p
+  \end{lstlisting}
+  \\ \midrule
+  Leave (P) & Patient (p)  & Scheduled  & 
+  \vspace{-12pt}
+  \begin{lstlisting}[language=CMPseudo]
+Calculate statistics for p
+  \end{lstlisting}
+  \\ \midrule
+  Arrival (R) & Receptionist (r)  & Scheduled  & 
+  \vspace{-12pt}
+  \begin{lstlisting}[language=CMPseudo]
+r.ID = NextReceptionistIDNum
+NextReceptionistIDNum = NextReceptionistIDNum + 1
+IF NextReceptionistIDNum <= NumReceptionists THEN
+    SCHEDULE Arrival (R) at TIME
+END IF
+START Wait for Task (R) WITH r
+  \end{lstlisting}
+  \\ \midrule
+  Leave (R) & Receptionist (r)  & Scheduled  & 
+  \vspace{-12pt}
+  \begin{lstlisting}[language=CMPseudo]
+Calculate statistics for r
+  \end{lstlisting}
+  \\ \midrule
+  Arrival (CT) & CTMachine (c)  & Scheduled  & 
+  \vspace{-12pt}
+  \begin{lstlisting}[language=CMPseudo]
+c.ID = NextCTMachineIDNum
+NextCTMachineIDNum = NextCTMachineIDNum + 1
+IF NextCTMachineIDNum <= NumCTMachines THEN
+    SCHEDULE Arrival (CT) at TIME
+END IF
+START Wait for Task (CT) WITH c
+  \end{lstlisting}
+  \\ \midrule
+  Leave (P) & CTMachine (c)  & Scheduled  & 
+  \vspace{-12pt}
+  \begin{lstlisting}[language=CMPseudo]
+Calculate statistics for c
+  \end{lstlisting}
+  \\ \bottomrule
+  \end{tabular}

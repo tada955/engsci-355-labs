@@ -40,5 +40,14 @@
   },
   "chapters/clinic_3/clinic_3.qmd": {
     "clinic_3.html": "952c42b0"
+  },
+  "chapters/hccm_framework/hccm_framework.qmd": {
+    "hccm_framework.html": "0a66d842"
+  },
+  "chapters/cm_io_behaviour/cm_io_behaviour.qmd": {
+    "cm_io_behaviour.html": "c609961a"
+  },
+  "chapters/cm_data_structure_logic/cm_data_structure_logic.qmd": {
+    "cm_data_structure_logic.html": "06542c41"
   }
 }

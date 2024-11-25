@@ -1,0 +1,14 @@
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25cm}>{\raggedright\arraybackslash}p{13cm}@{}}
+  \toprule
+   & Triggered by: Receptionist r\\ \midrule 
+  &
+\vspace{-12pt}
+\begin{lstlisting}[language=CMPseudo]
+patients = {p FOR p IN P IF p.State = "Wait for Check In"}
+IF patients IS NOT empty THEN 
+    p_hat = argmin{p.CurrentStart FOR p IN patients}
+    START Check In WITH p, r_hat
+END IF
+  \end{lstlisting}  
+  \\[-12pt] \bottomrule
+  \end{tabular}

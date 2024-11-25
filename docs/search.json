@@ -43,157 +43,256 @@
     ]
   },
   {
+    "objectID": "chapters/hccm_framework/hccm_framework.html",
+    "href": "chapters/hccm_framework/hccm_framework.html",
+    "title": "2  HCCM Framework",
+    "section": "",
+    "text": "2.1 Understanding of the Problem Situation\nIn Phase 1, in order to understand the problem situation, you need to summarise what is happening in a concise way. There is no strict rule for the best way to do this. One good approach is listening to the problem “holder”, i.e., person/people who have the problem such as a client, then reflecting what you have heard in a couple of paragraphs with lists of key details and questions. You can then work through one or more iterations of feedback and refinement to get a final, agreed upon problem description.",
+    "crumbs": [
+      "Conceptual Modelling Labs",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>HCCM Framework</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/hccm_framework/hccm_framework.html#identification-of-modelling-and-general-objectives",
+    "href": "chapters/hccm_framework/hccm_framework.html#identification-of-modelling-and-general-objectives",
+    "title": "2  HCCM Framework",
+    "section": "2.2 Identification of Modelling and General Objectives",
+    "text": "2.2 Identification of Modelling and General Objectives\nFor Phase 2, as described in lectures, there are two types of objectives to consider when developing a simulation:\n\n“The second step deals with the determination of the objectives. According to Robinson [26] they drive all aspects of the modeling process and are a subset of an organization’s aims. Further, objectives can be classified into modeling and general objectives, where the latter are concerned with the flexibility, run-speed, visual-display and model/component reuse.”\n\nFor the modelling objective you may like to think about what you trying to discover using simulation, and what level of performance you are trying to achieve in which areas/metrics.",
+    "crumbs": [
+      "Conceptual Modelling Labs",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>HCCM Framework</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/hccm_framework/hccm_framework.html#defining-output-responses",
+    "href": "chapters/hccm_framework/hccm_framework.html#defining-output-responses",
+    "title": "2  HCCM Framework",
+    "section": "2.3 Defining Output Responses",
+    "text": "2.3 Defining Output Responses\nPhase 3 includes defining both the output responses and input factors. You can do these in either order, but it can often be useful to define the output responses first, as it may help you think about what inputs will influence the outputs.\nOutput responses are things that can be measured and compared to understand how a system has behaved/performed. They are the metrics used to compare different simulation scenarios. The output responses should let you know whether the modelling objectives have been achieved and why or how. You may also want to consider how this will be reported (tables, graphs, etc.).",
+    "crumbs": [
+      "Conceptual Modelling Labs",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>HCCM Framework</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/hccm_framework/hccm_framework.html#defining-input-factors",
+    "href": "chapters/hccm_framework/hccm_framework.html#defining-input-factors",
+    "title": "2  HCCM Framework",
+    "section": "2.4 Defining Input Factors",
+    "text": "2.4 Defining Input Factors\nInput factors are things that can be changed and may modify how a system behaves/performs. They are often defined to create multiple different scenarios to compare via simulation. They are also what you can change to try and achieve the modelling objectives.",
+    "crumbs": [
+      "Conceptual Modelling Labs",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>HCCM Framework</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/hccm_framework/hccm_framework.html#model-content",
+    "href": "chapters/hccm_framework/hccm_framework.html#model-content",
+    "title": "2  HCCM Framework",
+    "section": "2.5 Model Content",
+    "text": "2.5 Model Content\nIn Phase 4 the model content is defined. There is no strict order in which you need to complete the four components (structre, behaviour, data, and logic). A possible approach, that we will take in this lab, is to:\n\nIdentify the entities;\nDraw the behavioural paths;\nDefine the data;\nDefine the structure (including the entities again);\nDefine the logic.\n\nUsing this approach you may still find yourself deciding to add/remove parts that you have already defined. This is a normal part of the conceptual modelling process, and you need to go back to the part of the process you want to change – for example adding and entity or activity – and then update the rest of the CM.\nFor the model content definition of our conceptual model we will follow the new HCCM standard. This standard is presented in an academic article (currently under review) that is available on Canvas under Files &gt; Lectures &gt; Conceptual Modelling in the file hccm-standard.pdf\n\n2.5.1 Identifying Entities\nBefore formally defining entities it is often useful to identify entities in the system and whether they are active, i.e., have behaviour like a doctor or patient, or passive, i.e., are part of the system that should be modelled but that don’t have explicit behaviour like a waiting room with a given capacity, but that doesn’t actually have defined actions.\nThe goal is to identify everything that is involved in a meaningful way in all of the activities that are important to the system. Thinking about the inputs and outputs can also be useful. Clearly the entities must be influenced in some way by the inputs, and they must themselves influence the outputs. You may also consider that an activity does not have a significant influence on the performance of the system, and decide to exclude it – and therefore any entities that are involved only in that activity. Likewise the participation of a particular entity in an activity might be deemed inconsequential and therefore excluded. Although it is possible to revisit and add/remove entities later, at this stage you want to consider the whole system carefully, as it is easier to include/exclude an entity now than to change it later.\n\n\n2.5.2 Drawing Behavioural Paths\nOnce preliminary identification of entities has been done, behavioural paths for each of the active entities should be drawn. These are essentially flowcharts with a special structure. Circles represent events, usually used when entities are arriving and leaving. Rectangles represent activities, including when entities have to wait for another activity. Red squares at the top left of an activity (or sometimes an event) let us know that some logic is triggered when the activity starts. This generally occurs at the start of “wait” activities and is used to check whether the conditions that mean the entity can stop waiting and move on to the next activity are met.\nWhat we are trying to do when drawing the behavioural paths is identify the activities and events that the entities participate in, the possible orders that these can occur in, and any points where some control logic needs to be used.\nBoth when identifying the entities and drawing the behavioural paths it is important to keep track of any assumptions and simplifications that you make.\n\n\n2.5.3 Define the Data\nThe data for the conceptual model includes both variables, and data modules. Variables can change their value throughout the simulation and are generally used to store some information temporarily before it is required later in the simulation. Data modules contain the information that is needed to perform the simulation and can be collected beforehand. Data mocules can also represent the input/experimental factors – the things that may change between different simulation scenarios. For each data module the following information should be given:\n\nThe name of the data module;\nThe source of the data, where the information was obtained;\nThe way the data is modelled, is it represented by a constant, a distribution, etc.\nWhether the output is deterministic or stochastic;\nThe inputs that the module requires;\nThe quantity that the module outputs.\n\nWhen presenting a conceptual model is useful to put the data first, as it is often referenced throughout the rest of the conceptual model.\n\n\n2.5.4 Define the Structure\nTo define the structure we start with formally defining the entities by listing them along with any attributes that they have. Some common attributes, such as ID number and the activity that the entity is currently participating in, are often omitted to avoid repitition. Attributes are usually included either to assist with the system behaviour – for example record whether a patient has had a test – or to capture the perfomance of the system – how long something has waited for.\nNext we define the transitions. Each arrow on a behavioural diagram corresponds to a transition. We can collate these in a table describing: the entity that is performing the transition, and the events that the entity transitions from and to. You can simply number them starting from 1, or adopt a convention of using the entity’s initial as a prefix.\nOnce the transitions have been defined we can define the activities and events. Usually these are presented in two tables, one for the activities and one for the events. For each event (either standalone or as part of an activity) the table should include:\n\nThe participant(s);\nThe type – either scheduled or controlled;\nThe state changes that occur when the event happens.\n\nThe main things that occur in state changes are:\n\nSchedule an end event – usually in the start event of an activity with a scheduled end event;\nStarting another activity/event – this usually happens in a scheduled end event where an entity is transitioning to another scheduled event;\nTrigger some logic – often in the start event of an activity with a controlled end event.\n\nThe simulation start event, and arrive events are often more complicated and involve scheduling the initial events and creating entities.\n\n\n2.5.5 Define the Logic\nThe final part of the conceptual model content is the logic. Each trigger that you drew in a behvioural path (the red squares) should correspond first to a trigger statement in the state changes of an event, and a piece of logic defined here. These pieces of logic are used to determine how the system behaves – what activity an entity should do next. It is common to have logic control the behaviour when one entity needs to wait for another, as when the first entity arrives it needs to check whether the other is free to perform an activity with it. The logic is usually presented as pseudocode, alongside the entity that triggers the logic.",
+    "crumbs": [
+      "Conceptual Modelling Labs",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>HCCM Framework</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/hccm_framework/hccm_framework.html#assumptions-and-simplifications",
+    "href": "chapters/hccm_framework/hccm_framework.html#assumptions-and-simplifications",
+    "title": "2  HCCM Framework",
+    "section": "2.6 Assumptions and Simplifications",
+    "text": "2.6 Assumptions and Simplifications\nThroughout the four phases of the HCCM framework you should document the assumptions and simplifications that you make. Assumptions are related to uncertainties about the system being modelled, and are used to fill in gaps in the information that is required for the simulation. Simplifications are changes that are made to the model to make it easier to defined or implement.",
+    "crumbs": [
+      "Conceptual Modelling Labs",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>HCCM Framework</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/cm_io_behaviour/cm_io_behaviour.html",
+    "href": "chapters/cm_io_behaviour/cm_io_behaviour.html",
+    "title": "3  Inputs, Outputs, and Behaviour",
+    "section": "",
+    "text": "3.1 Understanding of the Problem Situation\nIn the box below write a problem description for making paper cars, think about what you are trying to solve/discover by simulating this activity. You may want to look at Chapter 1 again to remind yourself about the process.",
+    "crumbs": [
+      "Conceptual Modelling Labs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Inputs, Outputs, and Behaviour</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/cm_io_behaviour/cm_io_behaviour.html#understanding-of-the-problem-situation",
+    "href": "chapters/cm_io_behaviour/cm_io_behaviour.html#understanding-of-the-problem-situation",
+    "title": "3  Inputs, Outputs, and Behaviour",
+    "section": "",
+    "text": "There are one or more people making cars from paper. They need to trace the car template on the paper, then cut the car template out of the paper. They then need to fold the car and use pieces of tape to stick it together. They either cut the pieces of tape from the tape roll at the time they need them or cut them earlier and have them ready. There are a limited number of pencils, templates, scissors, and tape rolls available for use. The goal is to make as many cars as possible in 15 mins and determine the best way to do this given the number of people and resources to hand.",
+    "crumbs": [
+      "Conceptual Modelling Labs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Inputs, Outputs, and Behaviour</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/cm_io_behaviour/cm_io_behaviour.html#modelling-objectives",
+    "href": "chapters/cm_io_behaviour/cm_io_behaviour.html#modelling-objectives",
+    "title": "3  Inputs, Outputs, and Behaviour",
+    "section": "3.2 Modelling Objectives",
+    "text": "3.2 Modelling Objectives\nIn the box below write the modelling objectives for making paper cars, i.e., what are you trying to discover using simulation?\n\n\nDetermine how many cubes we can make in 15 mins\nDetermine where the bottlenecks are\nChange task prioritization to see if we can make more cubes",
+    "crumbs": [
+      "Conceptual Modelling Labs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Inputs, Outputs, and Behaviour</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/cm_io_behaviour/cm_io_behaviour.html#general-objectives",
+    "href": "chapters/cm_io_behaviour/cm_io_behaviour.html#general-objectives",
+    "title": "3  Inputs, Outputs, and Behaviour",
+    "section": "3.3 General Objectives",
+    "text": "3.3 General Objectives\nIn the box below write the general objectives for making paper cars, i.e., what are some of the general properties you’d like your simulation to have?\n\n\nRun faster that 15 mins\nBe able to change inputs easily\nGet visualisations of outputs (could be as simple as confidence intervals or might be, e.g., distributions of # of cars made",
+    "crumbs": [
+      "Conceptual Modelling Labs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Inputs, Outputs, and Behaviour</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/cm_io_behaviour/cm_io_behaviour.html#defining-output-responses",
+    "href": "chapters/cm_io_behaviour/cm_io_behaviour.html#defining-output-responses",
+    "title": "3  Inputs, Outputs, and Behaviour",
+    "section": "3.4 Defining Output Responses",
+    "text": "3.4 Defining Output Responses\nIn the box below write the output responses for making paper cars, i.e., what are you going to measure to determine the performance of the system?\n\n\nMeasure of how many cars can be made (for various different inputs)\nWaiting times of cars at various steps (bottlenecks)\nIdle time of people (waste)",
+    "crumbs": [
+      "Conceptual Modelling Labs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Inputs, Outputs, and Behaviour</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/cm_io_behaviour/cm_io_behaviour.html#defining-input-factors",
+    "href": "chapters/cm_io_behaviour/cm_io_behaviour.html#defining-input-factors",
+    "title": "3  Inputs, Outputs, and Behaviour",
+    "section": "3.5 Defining Input Factors",
+    "text": "3.5 Defining Input Factors\nIn the box below write the input factors for making paper cars, i.e., what are you going to change to achieve the modelling objectives?\n\n\nStrategy for assigning tasks – who should be doing which task and when/for how long",
+    "crumbs": [
+      "Conceptual Modelling Labs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Inputs, Outputs, and Behaviour</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/cm_io_behaviour/cm_io_behaviour.html#identifying-entities",
+    "href": "chapters/cm_io_behaviour/cm_io_behaviour.html#identifying-entities",
+    "title": "3  Inputs, Outputs, and Behaviour",
+    "section": "3.6 Identifying Entities",
+    "text": "3.6 Identifying Entities\nIn the box below list the entities for making paper cars.\n\n\nPaper\nPencil/Template\nScissors\nTape\nTape Pieces\nPerson",
+    "crumbs": [
+      "Conceptual Modelling Labs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Inputs, Outputs, and Behaviour</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/cm_io_behaviour/cm_io_behaviour.html#drawing-behavioural-paths",
+    "href": "chapters/cm_io_behaviour/cm_io_behaviour.html#drawing-behavioural-paths",
+    "title": "3  Inputs, Outputs, and Behaviour",
+    "section": "3.7 Drawing Behavioural Paths",
+    "text": "3.7 Drawing Behavioural Paths\nThe activity diagrams for the pencil & template, and scissors are given below in Figures 3.1, and 3.2.\n\n\n\n\n\n\nFigure 3.1: Pencil Activity Diagram\n\n\n\n\n\n\n\n\n\nFigure 3.2: Scissors Activity Diagram\n\n\n\n\nIn the boxes below draw the activity diagrams for the remaining entities.\n\n\n\n\n\n\nFigure 3.3: Paper Activity Diagram\n\n\n\n\n\n\n\n\n\nFigure 3.4: Tape Activity Diagram\n\n\n\n\n\n\n\n\n\nFigure 3.5: Tape Piece Activity Diagram\n\n\n\n\n\n\n\n\n\nFigure 3.6: Person Activity Diagram",
+    "crumbs": [
+      "Conceptual Modelling Labs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Inputs, Outputs, and Behaviour</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/cm_data_structure_logic/cm_data_structure_logic.html",
+    "href": "chapters/cm_data_structure_logic/cm_data_structure_logic.html",
+    "title": "4  Data, Structure, and Logic",
+    "section": "",
+    "text": "4.1 Define the Data\nFirstly, you need to give detailed definitions of the data. You may not have collected data during car making, but complete the following table that describes the kind of data you would need to collect to simulate car making. Also add a comment on how the entry for CutTapeDuration would change if no person-by-person data was available, but an Exponential distribution that estimated the time it takes for a person to cut tape was available.",
+    "crumbs": [
+      "Conceptual Modelling Labs",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data, Structure, and Logic</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/cm_data_structure_logic/cm_data_structure_logic.html#define-the-data",
+    "href": "chapters/cm_data_structure_logic/cm_data_structure_logic.html#define-the-data",
+    "title": "4  Data, Structure, and Logic",
+    "section": "",
+    "text": "Table 4.1: List of Data Modules\n\n\n\n\n\nName\nSource\nModel\nType\nInput\nOutput\n\n\n\n\nNumPencils\nSystem info\nConstant\nDeterministic\n-\nThe number of pencils available\n\n\nNumScissors\nSystem info\nConstant\nDeterministic\n-\nThe number of scissors available\n\n\nNumTape\nSystem info\nConstant\nDeterministic\n-\nThe number of rolls of tape available\n\n\nNumPeople\nSystem info\nConstant\nDeterministic\n-\nThe number of people available\n\n\nTraceCar\nExperimental data\nLookup\nDeterministic\nPerson\nTime to trace car\n\n\nCutNet\nExperimental data\nLookup\nDeterministic\nPerson\nTime to cut the net out\n\n\nFoldCar\nExperimental data\nLookup\nDeterministic\nPerson\nTime to fold the car\n\n\nTape\nExperimental data\nLookup\nDeterministic\nPerson\nTime to tape the car together\n\n\nCutTape\nExperimental data\nLookup\nDeterministic\nPerson\nTime to cut a piece of tape\n\n\nCutTape2\nEstimate\nExponential Distribution\nStochastic\n-\nTime to cut a piece of tape",
+    "crumbs": [
+      "Conceptual Modelling Labs",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data, Structure, and Logic</span>"
+    ]
+  },
+  {
     "objectID": "chapters/clinic_3/clinic_3.html",
     "href": "chapters/clinic_3/clinic_3.html",
-    "title": "2  Using Traces and Scenarios",
+    "title": "5  Using Traces and Scenarios",
     "section": "",
-    "text": "2.1 Jaamsim Model\nTo run the simulation from a data trace we need to make some changes to the Jaamsim model. Once again create a new folder called RC3 and copy your .cfg file (and the .png files so that the graphics work) from the previous lab folder into this folder and rename it to radiology_lab_trace.cfg. First, download the RC_50_week_data.txt file from Canvas. This file contains 50 weeks of data of patients at the radiology clinic including: the time the patient arrived, the priority of the patient, the time the patient took to check in, and the time the patient took to have their scan.\nBefore we load the data in we will first change the starting date of the simulation, which defaults to 1970, to instead be 2024, so that the data read from the file is interpreted correctly. To do this go to the Simulation object and under the Options tab enter 2024-01-01 for the StartDate.\nTo use the data in Jaamsim we use a FileToMatrix object found in the Basic Objects palette. Create a FileToMatrixObject, rename it PatientData, and select the RC_50_-week_data.txt file as the DataFile.\nWe can now access the data in the file by using the Value output of the PatientData object. The first place we will use this data is in the PatientArrival object, so that patients arrive according to the data in the file, rather than the distribution used previously. We first create two CustomOutputs (under the options tab) on the PatientArrival object to make accessing the data easier. CustomOutputs are similar to attributes but they can be expressions (formulas) and are re-calculated at each time step in the simulation. The two outputs we create will correspond to the data for the patient that has just arrived (thisPatientData) and the patient that is going to arrive next (nextPatientData). We need both of these so that we can calculate the appropriate interarrival time between the patients.\nOnce we have created these outputs we use them in the InterArrivalTime, and AssignmentList of the PatientArrival.\nNote that in the AssignmentList we are assigning values from the data file to attributes on the patient entity for priority, check in time, and scan time. We will use these attributes later to determine how long those activities take (the priority attribute is already used in the PriorityBranch).\nTo avoid getting an error these attributes need to be added to the PatientEntity object. So update the AttributeDefinitionList of the PatientEntity to include checkInTime and scanTime as well as the current priority, all with a default of 0.\nWe now need to use the checkInTime and scanTime attributes to determine how long the check ins and scans take. Set the Duration of the CheckIn activity to this.CurrentParti-cipants(1).checkInTime * 1[min]. this.CurrentParticipants refers to the group of entities that have just started the activity (for check in this is a patient and a receptionist), and we use the index 1 as the patient comes first, then we access the checkInTime attribute. We then need to multiply this by 1[min] to convert the number into a time, and use minutes as the attribute is in minutes.\nSimilarly for the Scan activity set the Duration to this.CurrentParticipants(1).scanTime * 1[h], note that here we use 1[h] as the attribute is in hours.\nNow, suppose we are interested in the time that patients spend waiting for check in and for the scan. We can’t use the current PatientLogger as it only records the total time that patients are in the system for. We could add attributes for each time that we are interested in, and assign the value when the entity gets to the relevant stage, and then use the PatientLogger to log these attributes. We can instead use an EventLogger from the HCCM palette. The EventLogger records the time that an entity starts each of the activities that it participates in. So, create an EventLogger and call it PatientEventLogger.\nThen, to get the events recorded go to the PatientLeave object and under the HCCM tab enter PatientEventLogger for the EventLogger keyword. Now any entities that are sent to the patient leave will have the start times of any activities that they participated in recorded.\nWe will now configure the Simulation object to run one long replication for several scenarios. Under the Key Inputs tab enter 50w for the RunDuration, this will make the simulation run for 50 weeks. We have to run one 50 week replication rather than 50 one week replications as Jaamsim cannot read in a new file when each replication starts.\nWe want to try out four scenarios with either three or four CT machines, and either one or two receptionists. As there are two factors we are changing we use a ScenarioIndex with two numbers, the first indexes the scenarios relating to the number of CT Machines, and the second those related to the number of receptionists.\nSince there are two options for the first index and two for the second we enter 2 2 for the ScenarioIndexDefinitionList under the MultipleRuns tab of the Simulation object. We will start from scenario 1 and end at scenario 2 in both the indices so StartingScenarioNumber is 1-1 and EndingScenarioNumber is 2-2. We are going to run just one long replication for each scenario so set the NumberOfReplications to 1.\nNow Jaamsim will run 4 scenarios, but we need to make it so that the number of CT Machines and Receptionists actually changes in each of the scenarios. For the CT Machines we set the MaxNumber on the CTMachineArrival to [Simulation].ScenarioIndex(1) + 2, which gets the value of the first scenario index and adds 2 to it. For the Receptionists we can set the MaxNumber on the ReceptionistArrival to [Simulation].ScenarioIndex(2), in this case we don’t need to add one as the scenario index is the same as the number of receptionists we want to use.\nDownload and run the RadiologyLabTraceAnalysis.R file, you will have to update the directory that it reads the data from and the name of the data file used. The script splits each replication into 50 batches, each one week long, and calculates the mean across the batches and the four scenarios of the 90th percentile waiting time for both check in and scan within each of batch. No warm-up period is used, so this assumes that being empty and idle is a typical state of the system. Splitting into batches by week assumes that each week is not correlated to the preceding and following weeks. You should get the following output:",
+    "text": "5.1 Jaamsim Model\nTo run the simulation from a data trace we need to make some changes to the Jaamsim model. Once again create a new folder called RC3 and copy your .cfg file (and the .png files so that the graphics work) from the previous lab folder into this folder and rename it to radiology_lab_trace.cfg. First, download the RC_50_week_data.txt file from Canvas. This file contains 50 weeks of data of patients at the radiology clinic including: the time the patient arrived, the priority of the patient, the time the patient took to check in, and the time the patient took to have their scan.\nBefore we load the data in we will first change the starting date of the simulation, which defaults to 1970, to instead be 2024, so that the data read from the file is interpreted correctly. To do this go to the Simulation object and under the Options tab enter 2024-01-01 for the StartDate.\nTo use the data in Jaamsim we use a FileToMatrix object found in the Basic Objects palette. Create a FileToMatrixObject, rename it PatientData, and select the RC_50_-week_data.txt file as the DataFile.\nWe can now access the data in the file by using the Value output of the PatientData object. The first place we will use this data is in the PatientArrival object, so that patients arrive according to the data in the file, rather than the distribution used previously. We first create two CustomOutputs (under the options tab) on the PatientArrival object to make accessing the data easier. CustomOutputs are similar to attributes but they can be expressions (formulas) and are re-calculated at each time step in the simulation. The two outputs we create will correspond to the data for the patient that has just arrived (thisPatientData) and the patient that is going to arrive next (nextPatientData). We need both of these so that we can calculate the appropriate interarrival time between the patients.\nOnce we have created these outputs we use them in the InterArrivalTime, and AssignmentList of the PatientArrival.\nNote that in the AssignmentList we are assigning values from the data file to attributes on the patient entity for priority, check in time, and scan time. We will use these attributes later to determine how long those activities take (the priority attribute is already used in the PriorityBranch).\nTo avoid getting an error these attributes need to be added to the PatientEntity object. So update the AttributeDefinitionList of the PatientEntity to include checkInTime and scanTime as well as the current priority, all with a default of 0.\nWe now need to use the checkInTime and scanTime attributes to determine how long the check ins and scans take. Set the Duration of the CheckIn activity to this.CurrentParti-cipants(1).checkInTime * 1[min]. this.CurrentParticipants refers to the group of entities that have just started the activity (for check in this is a patient and a receptionist), and we use the index 1 as the patient comes first, then we access the checkInTime attribute. We then need to multiply this by 1[min] to convert the number into a time, and use minutes as the attribute is in minutes.\nSimilarly for the Scan activity set the Duration to this.CurrentParticipants(1).scanTime * 1[h], note that here we use 1[h] as the attribute is in hours.\nNow, suppose we are interested in the time that patients spend waiting for check in and for the scan. We can’t use the current PatientLogger as it only records the total time that patients are in the system for. We could add attributes for each time that we are interested in, and assign the value when the entity gets to the relevant stage, and then use the PatientLogger to log these attributes. We can instead use an EventLogger from the HCCM palette. The EventLogger records the time that an entity starts each of the activities that it participates in. So, create an EventLogger and call it PatientEventLogger.\nThen, to get the events recorded go to the PatientLeave object and under the HCCM tab enter PatientEventLogger for the EventLogger keyword. Now any entities that are sent to the patient leave will have the start times of any activities that they participated in recorded.\nWe will now configure the Simulation object to run one long replication for several scenarios. Under the Key Inputs tab enter 50w for the RunDuration, this will make the simulation run for 50 weeks. We have to run one 50 week replication rather than 50 one week replications as Jaamsim cannot read in a new file when each replication starts.\nWe want to try out four scenarios with either three or four CT machines, and either one or two receptionists. As there are two factors we are changing we use a ScenarioIndex with two numbers, the first indexes the scenarios relating to the number of CT Machines, and the second those related to the number of receptionists.\nSince there are two options for the first index and two for the second we enter 2 2 for the ScenarioIndexDefinitionList under the MultipleRuns tab of the Simulation object. We will start from scenario 1 and end at scenario 2 in both the indices so StartingScenarioNumber is 1-1 and EndingScenarioNumber is 2-2. We are going to run just one long replication for each scenario so set the NumberOfReplications to 1.\nNow Jaamsim will run 4 scenarios, but we need to make it so that the number of CT Machines and Receptionists actually changes in each of the scenarios. For the CT Machines we set the MaxNumber on the CTMachineArrival to [Simulation].ScenarioIndex(1) + 2, which gets the value of the first scenario index and adds 2 to it. For the Receptionists we can set the MaxNumber on the ReceptionistArrival to [Simulation].ScenarioIndex(2), in this case we don’t need to add one as the scenario index is the same as the number of receptionists we want to use.\nDownload and run the RadiologyLabTraceAnalysis.R file, you will have to update the directory that it reads the data from and the name of the data file used. The script splits each replication into 50 batches, each one week long, and calculates the mean across the batches and the four scenarios of the 90th percentile waiting time for both check in and scan within each of batch. No warm-up period is used, so this assumes that being empty and idle is a typical state of the system. Splitting into batches by week assumes that each week is not correlated to the preceding and following weeks. You should get the following output:",
     "crumbs": [
       "Jaamsim Labs",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Using Traces and Scenarios</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Using Traces and Scenarios</span>"
     ]
   },
   {
     "objectID": "chapters/clinic_3/clinic_3.html#jaamsim-model",
     "href": "chapters/clinic_3/clinic_3.html#jaamsim-model",
-    "title": "2  Using Traces and Scenarios",
+    "title": "5  Using Traces and Scenarios",
     "section": "",
-    "text": "Table 2.1: Update PatientArrival\n\n\n\n\n\nObject\nKeyword\nValue\n\n\n\n\nPatientArrival\nCustomOutputList\n{ thisPatientData ‘[PatientData].Value(this.NumberAdded + 1)’ }\n\n\n\n\n{ nextPatientData ‘[PatientData].Value(this.NumberAdded + 2)’ }\n\n\n\nFirstArrivalTime\n[PatientData].Value(2)(2)\n\n\n\nInterArrivalTime\n‘this.nextPatientData(2) - this.thisPatientData(2)’\n\n\n\nAssignmentList\n{ ‘this.obj.priority= this.thisPatientData(3)’ }\n\n\n\n\n{ ‘this.obj.checkInTime= this.thisPatientData(4)’ }\n\n\n\n\n{ ‘this.obj.scanTime= this.thisPatientData(5)’ }",
+    "text": "Table 5.1: Update PatientArrival\n\n\n\n\n\nObject\nKeyword\nValue\n\n\n\n\nPatientArrival\nCustomOutputList\n{ thisPatientData ‘[PatientData].Value(this.NumberAdded + 1)’ }\n\n\n\n\n{ nextPatientData ‘[PatientData].Value(this.NumberAdded + 2)’ }\n\n\n\nFirstArrivalTime\n[PatientData].Value(2)(2)\n\n\n\nInterArrivalTime\n‘this.nextPatientData(2) - this.thisPatientData(2)’\n\n\n\nAssignmentList\n{ ‘this.obj.priority= this.thisPatientData(3)’ }\n\n\n\n\n{ ‘this.obj.checkInTime= this.thisPatientData(4)’ }\n\n\n\n\n{ ‘this.obj.scanTime= this.thisPatientData(5)’ }",
     "crumbs": [
       "Jaamsim Labs",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Using Traces and Scenarios</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/paper_car_cm/paper_car_cm.html",
-    "href": "chapters/paper_car_cm/paper_car_cm.html",
-    "title": "3  Making Paper Cars Conceptual Model",
-    "section": "",
-    "text": "3.1 Understanding of the Problem Situation\nIn the box below write a problem description for making paper cars, think about what you are trying to solve/discover by simulating this activity. You may want to look at Chapter 1 again to remind yourself about the process.",
-    "crumbs": [
-      "Conceptual Models",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making Paper Cars Conceptual Model</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/paper_car_cm/paper_car_cm.html#modelling-objectives",
-    "href": "chapters/paper_car_cm/paper_car_cm.html#modelling-objectives",
-    "title": "3  Making Paper Cars Conceptual Model",
-    "section": "3.2 Modelling Objectives",
-    "text": "3.2 Modelling Objectives\nIn the box below write the modelling objectives for making paper cars, i.e., what are you trying to discover using simulation?",
-    "crumbs": [
-      "Conceptual Models",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making Paper Cars Conceptual Model</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/paper_car_cm/paper_car_cm.html#general-objectives",
-    "href": "chapters/paper_car_cm/paper_car_cm.html#general-objectives",
-    "title": "3  Making Paper Cars Conceptual Model",
-    "section": "3.3 General Objectives",
-    "text": "3.3 General Objectives\nIn the box below write the general objectives for making paper cars, i.e., what are some of the general properties you’d like your simulation to have?",
-    "crumbs": [
-      "Conceptual Models",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making Paper Cars Conceptual Model</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/paper_car_cm/paper_car_cm.html#defining-output-responses",
-    "href": "chapters/paper_car_cm/paper_car_cm.html#defining-output-responses",
-    "title": "3  Making Paper Cars Conceptual Model",
-    "section": "3.4 Defining Output Responses",
-    "text": "3.4 Defining Output Responses\nIn the box below write the output responses for making paper cars, i.e., what are you going to measure to determine the performance of the system?",
-    "crumbs": [
-      "Conceptual Models",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making Paper Cars Conceptual Model</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/paper_car_cm/paper_car_cm.html#defining-input-factors",
-    "href": "chapters/paper_car_cm/paper_car_cm.html#defining-input-factors",
-    "title": "3  Making Paper Cars Conceptual Model",
-    "section": "3.5 Defining Input Factors",
-    "text": "3.5 Defining Input Factors\nIn the box below write the input factors for making paper cars, i.e., what are you going to change to achieve the modelling objectives?",
-    "crumbs": [
-      "Conceptual Models",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making Paper Cars Conceptual Model</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/paper_car_cm/paper_car_cm.html#identifying-entities",
-    "href": "chapters/paper_car_cm/paper_car_cm.html#identifying-entities",
-    "title": "3  Making Paper Cars Conceptual Model",
-    "section": "3.6 Identifying Entities",
-    "text": "3.6 Identifying Entities\nIn the box below list the entities for making paper cars.",
-    "crumbs": [
-      "Conceptual Models",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making Paper Cars Conceptual Model</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/paper_car_cm/paper_car_cm.html#drawing-behavioural-paths",
-    "href": "chapters/paper_car_cm/paper_car_cm.html#drawing-behavioural-paths",
-    "title": "3  Making Paper Cars Conceptual Model",
-    "section": "3.7 Drawing Behavioural Paths",
-    "text": "3.7 Drawing Behavioural Paths\nThe activity diagrams for the pencil & template, and scissors are given below in Figures 3.1, and 3.2.\n\n\n\n\n\n\nFigure 3.1: Pencil Activity Diagram\n\n\n\n\n\n\n\n\n\nFigure 3.2: Scissors Activity Diagram\n\n\n\n\nIn the boxes below draw the activity diagrams for the remaining entities.",
-    "crumbs": [
-      "Conceptual Models",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making Paper Cars Conceptual Model</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Using Traces and Scenarios</span>"
     ]
   },
   {
     "objectID": "chapters/clinic_1_cm/clinic_1_cm.html",
     "href": "chapters/clinic_1_cm/clinic_1_cm.html",
-    "title": "4  Radiology Clinic",
+    "title": "6  Radiology Clinic",
     "section": "",
-    "text": "4.1 Data",
+    "text": "6.1 Data",
     "crumbs": [
       "Conceptual Models",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Radiology Clinic</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Radiology Clinic</span>"
     ]
   },
   {
     "objectID": "chapters/clinic_1_cm/clinic_1_cm.html#data",
     "href": "chapters/clinic_1_cm/clinic_1_cm.html#data",
-    "title": "4  Radiology Clinic",
+    "title": "6  Radiology Clinic",
     "section": "",
-    "text": "Table 4.1: List of Global Variables\n\n\n\n\n\nName\nDescription\nInitial Value\n\n\n\n\nNextPatIdNum\nThe Id number that will be assigned to the next patient\n1\n\n\nNextReceptionistIdNum\nThe Id number that will be assigned to the next receptionist\n1\n\n\nNextCTMachineIdNum\nThe Id number that will be assigned to the next CT Machine\n1\n\n\n\\(P\\)\nThe set of all patients\n\\(\\emptyset\\)\n\n\n\\(R\\)\nThe set of all receptionists\n\\(\\emptyset\\)\n\n\n\\(C\\)\nThe set of all CT Machines\n\\(\\emptyset\\)\n\n\n\n\n\n\n\n\n\nTable 4.2: List of Data Modules\n\n\n\n\n\nName\nSource\nIdentification\nInput\nOutput\n\n\n\n\nPatientInterarrivalTime\nPoisson Process\nParameter\nMean interarrival time\nSample from Distribution\n\n\nNumReceptionists\nConstant\nParameter\nN/A\nValue\n\n\nNumCTMachines\nConstant\nParameter\nN/A\nValue\n\n\nCheckInTime\nUniform Distribution\nParameter\nMin and max time\nSample from Distribution\n\n\nScanTime\nLog-normal Distribution\nParameter\nMean and std. dev.\nSample from Distribution",
+    "text": "Table 6.1: List of Global Variables\n\n\n\n\n\nName\nDescription\nInitial Value\n\n\n\n\nNextPatIdNum\nThe Id number that will be assigned to the next patient\n1\n\n\nNextReceptionistIdNum\nThe Id number that will be assigned to the next receptionist\n1\n\n\nNextCTMachineIdNum\nThe Id number that will be assigned to the next CT Machine\n1\n\n\n\\(P\\)\nThe set of all patients\n\\(\\emptyset\\)\n\n\n\\(R\\)\nThe set of all receptionists\n\\(\\emptyset\\)\n\n\n\\(C\\)\nThe set of all CT Machines\n\\(\\emptyset\\)\n\n\n\n\n\n\n\n\n\nTable 6.2: List of Data Modules\n\n\n\n\n\nName\nSource\nIdentification\nInput\nOutput\n\n\n\n\nPatientInterarrivalTime\nPoisson Process\nParameter\nMean interarrival time\nSample from Distribution\n\n\nNumReceptionists\nConstant\nParameter\nN/A\nValue\n\n\nNumCTMachines\nConstant\nParameter\nN/A\nValue\n\n\nCheckInTime\nUniform Distribution\nParameter\nMin and max time\nSample from Distribution\n\n\nScanTime\nLog-normal Distribution\nParameter\nMean and std. dev.\nSample from Distribution",
     "crumbs": [
       "Conceptual Models",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Radiology Clinic</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Radiology Clinic</span>"
     ]
   },
   {
     "objectID": "chapters/clinic_1_cm/clinic_1_cm.html#components",
     "href": "chapters/clinic_1_cm/clinic_1_cm.html#components",
-    "title": "4  Radiology Clinic",
-    "section": "4.2 Components",
-    "text": "4.2 Components\n\n\n\nTable 4.3: List of Entities\n\n\n\n\n\nEntity\nAttributes\n\n\n\n\nPatient\nID\n\n\n\nState\n\n\n\nStateTimes\n\n\n\n\n\n\nReceptionist\nID\n\n\n\nState\n\n\n\nStateTimes\n\n\n\n\n\n\nCT Machine\nID\n\n\n\nState\n\n\n\nStateTimes\n\n\n\n\n\n\n\n\n\nTable 4.4: List of Transitions\n\n\n\n\n\nNo.\nParticipant\nFrom Event\nTo Event\n\n\n\n\n1\nPatient\nArrive(P)\nWait for check in.Start\n\n\n2\nPatient\nWait for check in.End\nCheck in.Start\n\n\n3\nPatient\nCheck in.End\nWait for scan.Start\n\n\n4\nPatient\nWait for scan.End\nScan.Start\n\n\n5\nPatient\nScan.End\nLeave(P)\n\n\n6\nReceptionist\nArrive(R)\nWait for task(R).Start\n\n\n7\nReceptionist\nWait for task(R).End\nCheck in.Start\n\n\n8\nReceptionist\nCheck in.End\nWait for task(R).Start\n\n\n9\nReceptionist\nWait for task(R).End\nLeave(R)\n\n\n10\nCT Machine\nArrive(CT)\nWait for task(CT).Start\n\n\n11\nCT Machine\nWait for task(CT).End\nScan.Start\n\n\n12\nCT Machine\nScan.End\nWait for task(CT).Start\n\n\n13\nCT Machine\nWait for task(CT).End\nLeave(CT)\n\n\n\n\n\n\n\n\n\nTable 4.5: Activities\n\n\n\n\n\nActivity\nParticipants\nEvent\nType\nState Change\n\n\n\n\nWait for Check In\nPatient (p)\nStart\nScheduled\nTRIGGER OnStartWaitForCheckIn WITH p\n\n\n\n\nEnd\nControlled\n\n\n\nCheck In\nPatient (p), Receptionist (r)\nStart\nControlled\nSCHEDULE Check In.End at TIME + CheckInTime()\n\n\n\n\nEnd\nScheduled\nSTART Wait for Scan WITH p\nSTART Wait for Task (R) WITH r\n\n\nWait for Scan\nPatient (p)\nStart\nScheduled\n\n\n\n\n\nEnd\nControlled\nTRIGGER OnStartWaitForScan WITH p\n\n\nScan\nPatient (p), CTMachine (c)\nStart\nControlled\nSCHEDULE Scan.End at TIME + ScanTime()\n\n\n\n\nEnd\nScheduled\nSTART Leave (P) WITH p\nSTART Wait for Task (CT) WITH c\n\n\nWait for Task (R)\nReceptionist (r)\nStart\nScheduled\nTRIGGER OnStartWaitForTaskR WITH r\n\n\n\n\nEnd\nControlled\n\n\n\nWait for Task (CT)\nCTMachine (c)\nStart\nScheduled\nTRIGGER OnStartWaitForTaskCT WITH c\n\n\n\n\nEnd\nControlled\n\n\n\n\n\n\n\n\n\n\nTable 4.6: Events\n\n\n\n\n\nActivity\nParticipants\nType\nState Change\n\n\n\n\nSimulation Start\n-\nScheduled\nSCHEDULE Arrival (R) at TIME\nSCHEDULE Arrival (CT) at TIME\nSCHEDULE Arrival (P) at TIME + PatientInterArrival()\n\n\nArrival (P)\nPatient (p)\nScheduled\np.ID = NextPatIDNum\np.Priority = PatientPriority()\nNextPatIDNum = NextPatIDNum + 1\nSCHEDULE Arrival (P) at TIME + PatientInterArrival()\nSTART Wait for Check In WITH p\n\n\nLeave (P)\nPatient (p)\nScheduled\nCalculate statistics for p\n\n\nArrival (R)\nReceptionist (r)\nScheduled\nr.ID = NextReceptionistIDNum\nNextReceptionistIDNum = NextReceptionistIDNum + 1\nIF NextReceptionistIDNum &lt;= NumReceptionists THEN\n    SCHEDULE Arrival (R) at TIME\nEND IF\nSTART Wait for Task (R) WITH r\n\n\nLeave (R)\nReceptionist (r)\nScheduled\nCalculate statistics for r\n\n\nArrival (CT)\nCTMachine (c)\nScheduled\nc.ID = NextCTMachineIDNum\nNextCTMachineIDNum = NextCTMachineIDNum + 1\nIF NextCTMachineIDNum &lt;= NumCTMachines THEN\n    SCHEDULE Arrival (CT) at TIME\nEND IF\nSTART Wait for Task (CT) WITH c\n\n\nLeave (P)\nCTMachine (c)\nScheduled\nCalculate statistics for c",
+    "title": "6  Radiology Clinic",
+    "section": "6.2 Components",
+    "text": "6.2 Components\n\n\n\nTable 6.3: List of Entities\n\n\n\n\n\nEntity\nAttributes\n\n\n\n\nPatient\nID\n\n\n\nState\n\n\n\nStateTimes\n\n\n\n\n\n\nReceptionist\nID\n\n\n\nState\n\n\n\nStateTimes\n\n\n\n\n\n\nCT Machine\nID\n\n\n\nState\n\n\n\nStateTimes\n\n\n\n\n\n\n\n\n\nTable 6.4: List of Transitions\n\n\n\n\n\nNo.\nParticipant\nFrom Event\nTo Event\n\n\n\n\n1\nPatient\nArrive(P)\nWait for check in.Start\n\n\n2\nPatient\nWait for check in.End\nCheck in.Start\n\n\n3\nPatient\nCheck in.End\nWait for scan.Start\n\n\n4\nPatient\nWait for scan.End\nScan.Start\n\n\n5\nPatient\nScan.End\nLeave(P)\n\n\n6\nReceptionist\nArrive(R)\nWait for task(R).Start\n\n\n7\nReceptionist\nWait for task(R).End\nCheck in.Start\n\n\n8\nReceptionist\nCheck in.End\nWait for task(R).Start\n\n\n9\nReceptionist\nWait for task(R).End\nLeave(R)\n\n\n10\nCT Machine\nArrive(CT)\nWait for task(CT).Start\n\n\n11\nCT Machine\nWait for task(CT).End\nScan.Start\n\n\n12\nCT Machine\nScan.End\nWait for task(CT).Start\n\n\n13\nCT Machine\nWait for task(CT).End\nLeave(CT)\n\n\n\n\n\n\n\n\n\nTable 6.5: Activities\n\n\n\n\n\nActivity\nParticipants\nEvent\nType\nState Change\n\n\n\n\nWait for Check In\nPatient (p)\nStart\nScheduled\nTRIGGER OnStartWaitForCheckIn WITH p\n\n\n\n\nEnd\nControlled\n\n\n\nCheck In\nPatient (p), Receptionist (r)\nStart\nControlled\nSCHEDULE Check In.End at TIME + CheckInTime()\n\n\n\n\nEnd\nScheduled\nSTART Wait for Scan WITH p\nSTART Wait for Task (R) WITH r\n\n\nWait for Scan\nPatient (p)\nStart\nScheduled\n\n\n\n\n\nEnd\nControlled\nTRIGGER OnStartWaitForScan WITH p\n\n\nScan\nPatient (p), CTMachine (c)\nStart\nControlled\nSCHEDULE Scan.End at TIME + ScanTime()\n\n\n\n\nEnd\nScheduled\nSTART Leave (P) WITH p\nSTART Wait for Task (CT) WITH c\n\n\nWait for Task (R)\nReceptionist (r)\nStart\nScheduled\nTRIGGER OnStartWaitForTaskR WITH r\n\n\n\n\nEnd\nControlled\n\n\n\nWait for Task (CT)\nCTMachine (c)\nStart\nScheduled\nTRIGGER OnStartWaitForTaskCT WITH c\n\n\n\n\nEnd\nControlled\n\n\n\n\n\n\n\n\n\n\nTable 6.6: Events\n\n\n\n\n\nActivity\nParticipants\nType\nState Change\n\n\n\n\nSimulation Start\n-\nScheduled\nSCHEDULE Arrival (R) at TIME\nSCHEDULE Arrival (CT) at TIME\nSCHEDULE Arrival (P) at TIME + PatientInterArrival()\n\n\nArrival (P)\nPatient (p)\nScheduled\np.ID = NextPatIDNum\np.Priority = PatientPriority()\nNextPatIDNum = NextPatIDNum + 1\nSCHEDULE Arrival (P) at TIME + PatientInterArrival()\nSTART Wait for Check In WITH p\n\n\nLeave (P)\nPatient (p)\nScheduled\nCalculate statistics for p\n\n\nArrival (R)\nReceptionist (r)\nScheduled\nr.ID = NextReceptionistIDNum\nNextReceptionistIDNum = NextReceptionistIDNum + 1\nIF NextReceptionistIDNum &lt;= NumReceptionists THEN\n    SCHEDULE Arrival (R) at TIME\nEND IF\nSTART Wait for Task (R) WITH r\n\n\nLeave (R)\nReceptionist (r)\nScheduled\nCalculate statistics for r\n\n\nArrival (CT)\nCTMachine (c)\nScheduled\nc.ID = NextCTMachineIDNum\nNextCTMachineIDNum = NextCTMachineIDNum + 1\nIF NextCTMachineIDNum &lt;= NumCTMachines THEN\n    SCHEDULE Arrival (CT) at TIME\nEND IF\nSTART Wait for Task (CT) WITH c\n\n\nLeave (P)\nCTMachine (c)\nScheduled\nCalculate statistics for c",
     "crumbs": [
       "Conceptual Models",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Radiology Clinic</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Radiology Clinic</span>"
     ]
   },
   {
     "objectID": "chapters/clinic_1_cm/clinic_1_cm.html#activity-diagrams",
     "href": "chapters/clinic_1_cm/clinic_1_cm.html#activity-diagrams",
-    "title": "4  Radiology Clinic",
-    "section": "4.3 Activity Diagrams",
-    "text": "4.3 Activity Diagrams\n\n\n\n\n\n\nFigure 4.1: Patient Activity Diagram\n\n\n\n\n\n\n\n\n\nFigure 4.2: Receptionist Activity Diagram\n\n\n\n\n\n\n\n\n\nFigure 4.3: CT Activity Diagram",
+    "title": "6  Radiology Clinic",
+    "section": "6.3 Activity Diagrams",
+    "text": "6.3 Activity Diagrams\n\n\n\n\n\n\nFigure 6.1: Patient Activity Diagram\n\n\n\n\n\n\n\n\n\nFigure 6.2: Receptionist Activity Diagram\n\n\n\n\n\n\n\n\n\nFigure 6.3: CT Activity Diagram",
     "crumbs": [
       "Conceptual Models",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Radiology Clinic</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Radiology Clinic</span>"
     ]
   },
   {
     "objectID": "chapters/clinic_1_cm/clinic_1_cm.html#control-policies",
     "href": "chapters/clinic_1_cm/clinic_1_cm.html#control-policies",
-    "title": "4  Radiology Clinic",
-    "section": "4.4 Control Policies",
-    "text": "4.4 Control Policies\n\n\n\nTable 4.7: OnStartWaitForCheckIn\n\n\n\n\n\n\nTriggered by: Patient p\n\n\n\n\n\nreceps = {r FOR r IN R IF r.State = \"Wait for task (R)\"}\nIF receps IS NOT empty THEN \n    r_hat = argmin{r.CurrentStart FOR r IN receps}\n    START Check In WITH p, r_hat\nEND IF\n\n\n\n\n\n\n\n\n\nTable 4.8: OnStartWaitForScan\n\n\n\n\n\n\nTriggered by: Patient p\n\n\n\n\n\ncts = {c FOR c IN C IF c.State = \"Wait for task (C)\"}\nIF cts IS NOT empty THEN \n    c_hat = argmin{c.CurrentStart FOR c IN cts}\n    START Scan WITH p, r_hat\nEND IF\n\n\n\n\n\n\n\n\n\nTable 4.9: OnStartWaitForTaskR\n\n\n\n\n\n\nTriggered by: Receptionist r\n\n\n\n\n\npatients = {p FOR p IN P IF p.State = \"Wait for Check In\"}\nIF patients IS NOT empty THEN \n    p_hat = argmin{p.CurrentStart FOR p IN patients}\n    START Check In WITH p, r_hat\nEND IF\n\n\n\n\n\n\n\n\n\nTable 4.10: OnStartWaitForTaskCT\n\n\n\n\n\n\nTriggered by: CTMachine c\n\n\n\n\n\npatients = {p FOR p IN P IF p.State = \"Wait for Scan\"}\nIF patients IS NOT empty THEN \n    p_hat = argmin{p.CurrentStart FOR p IN patients}\n    START Scan WITH p, r_hat\nEND IF",
+    "title": "6  Radiology Clinic",
+    "section": "6.4 Control Policies",
+    "text": "6.4 Control Policies\n\n\n\nTable 6.7: OnStartWaitForCheckIn\n\n\n\n\n\n\nTriggered by: Patient p\n\n\n\n\n\nreceps = {r FOR r IN R IF r.State = \"Wait for task (R)\"}\nIF receps IS NOT empty THEN \n    r_hat = argmin{r.CurrentStart FOR r IN receps}\n    START Check In WITH p, r_hat\nEND IF\n\n\n\n\n\n\n\n\n\nTable 6.8: OnStartWaitForScan\n\n\n\n\n\n\nTriggered by: Patient p\n\n\n\n\n\ncts = {c FOR c IN C IF c.State = \"Wait for task (C)\"}\nIF cts IS NOT empty THEN \n    c_hat = argmin{c.CurrentStart FOR c IN cts}\n    START Scan WITH p, r_hat\nEND IF\n\n\n\n\n\n\n\n\n\nTable 6.9: OnStartWaitForTaskR\n\n\n\n\n\n\nTriggered by: Receptionist r\n\n\n\n\n\npatients = {p FOR p IN P IF p.State = \"Wait for Check In\"}\nIF patients IS NOT empty THEN \n    p_hat = argmin{p.CurrentStart FOR p IN patients}\n    START Check In WITH p, r_hat\nEND IF\n\n\n\n\n\n\n\n\n\nTable 6.10: OnStartWaitForTaskCT\n\n\n\n\n\n\nTriggered by: CTMachine c\n\n\n\n\n\npatients = {p FOR p IN P IF p.State = \"Wait for Scan\"}\nIF patients IS NOT empty THEN \n    p_hat = argmin{p.CurrentStart FOR p IN patients}\n    START Scan WITH p, r_hat\nEND IF",
     "crumbs": [
       "Conceptual Models",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Radiology Clinic</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Radiology Clinic</span>"
     ]
   }
 ]

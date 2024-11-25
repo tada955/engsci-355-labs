@@ -1,4 +1,6 @@
-# Making Paper Cars Conceptual Model
+# Inputs, Outputs, and Behaviour
+
+In this lab you will complete the first three Phases of the HCCM framework, and part of the fourth, with your group.
 
 ## Understanding of the Problem Situation
 
@@ -8,8 +10,6 @@ You may want to look at @sec-hands-on-sim again to remind yourself about the pro
 :::{.mdframed options="innerbottommargin=3cm" .column-page-right} 
 
 ::: {.content-visible unless-profile="answers"}
-
-&nbsp;
 
 &nbsp;
 
@@ -49,8 +49,6 @@ In the box below write the modelling objectives for making paper cars, i.e., wha
 :::{.mdframed options="innerbottommargin=3cm" .column-page-right} 
 
 ::: {.content-visible unless-profile="answers"}
-
-&nbsp;
 
 &nbsp;
 

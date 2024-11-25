@@ -1,0 +1,17 @@
+\begin{tabular}{p{0.6cm}>{\raggedright\arraybackslash}p{2.4cm}>{\raggedright\arraybackslash}p{5.9cm}>{\raggedright\arraybackslash}p{5.9cm}}
+\toprule
+No. & Participant & From Event & To Event       \\ \midrule
+1 & Patient  & Arrive(P) & Wait for check in.Start \\
+2 & Patient & Wait for check in.End & Check in.Start\\
+3 & Patient & Check in.End & Wait for scan.Start\\
+4 & Patient & Wait for scan.End & Scan.Start\\
+5 & Patient & Scan.End & Leave(P)\\
+6 & Receptionist  & Arrive(R)& Wait for task(R).Start\\
+7 & Receptionist  & Wait for task(R).End & Check in.Start\\
+8 & Receptionist  & Check in.End & Wait for task(R).Start\\
+9 & Receptionist  & Wait for task(R).End& Leave(R)\\
+10& CT Machine  & Arrive(CT)& Wait for task(CT).Start\\
+11& CT Machine  & Wait for task(CT).End & Scan.Start\\
+12& CT Machine & Scan.End & Wait for task(CT).Start\\
+13& CT Machine  & Wait for task(CT).End& Leave(CT)\\\bottomrule
+\end{tabular}
