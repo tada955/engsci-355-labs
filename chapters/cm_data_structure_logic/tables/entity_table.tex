@@ -1,15 +1,19 @@
 \begin{tabular}{ll}
 \toprule
 Entity  & Attributes        \\ \midrule
-Patient & ID                \\
-        & State             \\
-        & StateTimes       \\
-        &                   \\
-Receptionist   & ID                \\
-        & State             \\
-        & StateTimes       \\
-        &                   \\
-CT Machine  & ID                \\
-        & State             \\
-        & StateTimes       \\ \bottomrule
+Paper   & WaitForTrace[0.0]    \\
+        & WaitForCutShape[0.0] \\
+        & WaitForFold[0.0]     \\
+        & WaitForTapeCube[0.0] \\
+        &                      \\
+Pencil  & WaitForTrace[0.0]    \\
+        &                      \\
+Scissors& WaitForTask[0.0]     \\
+        &                      \\
+Tape    & WaitForCut[0.0]      \\
+        &                      \\
+TapePieces  & WaitForTape[0.0] \\
+        & ArrivalTime[0.0]     \\
+        & LeavingTime[0.0]     \\
+Person  & WaitForTask[0.0]     \\ \bottomrule
 \end{tabular}

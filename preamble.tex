@@ -12,6 +12,9 @@
 %\usepackage[xcharter, vvarbb, scaled=1.07]{newtxmath}
 \usepackage{xcolor}
 \definecolor{CodeBackground}{HTML}{F0F0F0}
+\definecolor{CodeString}{HTML}{008080}
+\definecolor{CodeComment}{HTML}{008000}
+\usepackage{layout}
 
 \usepackage{fvextra}
 \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
@@ -20,13 +23,16 @@
 
 \def\fps@table{htbp}
 \usepackage{listings}
-\lstset{breaklines=true, columns=flexible}
+\lstset{breaklines=true, columns=flexible, aboveskip=-8pt, belowskip=-10pt, showlines}
 \lstdefinelanguage{CMPseudo}{%
   language     = Python,
-  morekeywords = {zeros, TRANSITION, TRIGGER, WITH, SCHEDULE, TIME, FOR, IN, WITH, IF, THEN, END, IS, NOT, empty, START},
+  morekeywords = {zeros, TRANSITION, TRIGGER, WITH, SCHEDULE, TIME, FOR, IN, WITH, IF, THEN, END, IS, NOT, empty, START, CREATE},
   numbers=left,
   numberstyle=\footnotesize,
   basicstyle = \small \ttfamily,
+  keywordstyle = \color{blue},
+  stringstyle = \color{CodeString},
+  commentstyle=\color{CodeComment},
   showstringspaces = false,
   backgroundcolor=\color{CodeBackground},
 }

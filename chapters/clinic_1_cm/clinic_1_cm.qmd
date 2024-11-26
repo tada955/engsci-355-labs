@@ -48,9 +48,11 @@ List of Transitions
 
 ::: {#tbl-activities_lab1 .sm .column-page-right .borderless}
 
-```{=latex}
+:::{.longtable}
+
 {{< include tables/activity_table.tex >}}
-```
+
+:::
 
 Activities
 
@@ -58,9 +60,11 @@ Activities
 
 ::: {#tbl-events_lab1 .sm .column-page-right .borderless}
 
-```{=latex}
+:::{.longtable}
+
 {{< include tables/event_table.tex >}}
-```
+
+:::
 
 Events
 

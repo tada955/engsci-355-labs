@@ -15,11 +15,11 @@ Pencil & PEN.1 & Pencil/Template Created & Pencil Wait for Trace.Start \\
        & PEN.2 & Pencil Wait for Trace.End & Trace Car.Start \\
        & PEN.3 & Trace Car.End & Pencil Wait for Trace.Start \\
        &      &              &              \\
-Scissors & S.1 & Scissors Created             &              \\
-       & S.2   &              &              \\
-       & S.3   &              &              \\
-       & S.4   &              &              \\
-       & S.5   &              &              \\
+Scissors & S.1 & Scissors Created & Scissors Wait for Task.Start \\
+       & S.2   & Scissors Wait for Task.End & Cut Car Net.Start \\
+       & S.3   & Cut Car Net.End & Scissors Wait for Task.Start \\
+       & S.4   & Scissors Wait for Task.End & Cut Tape.Start             \\
+       & S.5   & CutTape.End & Scissors Wait for Task.Start \\
        &      &              &              \\
 Tape   & T.1 & Tape Created & Tape Wait for Cut.Start \\
        & T.2 & Tape Wait for Cut.End & Cut Tape.Start \\

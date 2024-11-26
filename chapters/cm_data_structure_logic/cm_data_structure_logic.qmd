@@ -4,7 +4,7 @@ In this lab you will complete the remainder of the fourth phase of the HCCM fram
 
 ## Define the Data
 
-Firstly, you need to give detailed definitions of the data.
+Firstly, you need to give detailed definitions of the data modules.
 You may not have collected data during car making, but complete the following table that describes the kind of data you would need to collect to simulate car making.
 Also add a comment on how the entry for CutTapeDuration would change if no person-by-person data was available, but an Exponential distribution that estimated the time it takes for a person to cut tape was available.
 
@@ -31,6 +31,88 @@ List of Data Modules
 ```
 
 List of Data Modules
+
+:::
+
+:::
+
+## Define the Structure
+
+The first part of the structure to define is the entities.
+@tbl-entities_pc lists the entities again, but adds attributes that the entities will need to capture the performance of the system, e.g., waiting time until the cube was cut.
+It is assumed that all entities have the three attributes: ID, CurrentActivity, and CurrentStart.
+These are omitted in the table to prevent repitition.
+
+::: {#tbl-entities_pc .sm .borderless}
+
+```{=latex}
+{{< include tables/entity_table.tex >}}
+```
+
+List of Entities
+
+:::
+
+The next part of the structure is the transitions, which describe how entities move between activites and events.
+@tbl-transitions_pc lists the transitions for making paper cars.
+These transitions are prefixed by entity of the behavioural pathway they come from.
+Complete the transitions for the Scissors pathway.
+
+::: {.content-visible unless-profile="answers"}
+
+::: {#tbl-transitions_pc tbl-pos="H" .sm .column-page-right .borderless}
+
+```{=latex}
+{{< include tables/transition_table.tex >}}
+```
+
+List of Transitions
+
+:::
+
+:::
+
+::: {.content-visible when-profile="answers"}
+
+::: {#tbl-transitions_pc tbl-pos="H" .sm .column-page-right .borderless}
+
+```{=latex}
+{{< include tables/transition_table_ans.tex >}}
+```
+
+List of Transitions
+
+:::
+
+:::
+
+::: {.content-visible unless-profile="answers"}
+
+::: {#tbl-activities_pc .sm .column-page-right .borderless}
+
+:::{.longtable}
+
+{{< include tables/activity_table.tex >}}
+
+:::
+
+Activities
+
+:::
+
+:::
+
+::: {.content-visible when-profile="answers"}
+
+::: {#tbl-activities_pc .sm .column-page-right .borderless}
+
+:::{.longtable}
+
+{{< include tables/activity_table_ans.tex >}}
+
+:::
+
+Activities
 
 :::
 

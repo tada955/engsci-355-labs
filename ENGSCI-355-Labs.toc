@@ -1,0 +1,38 @@
+\contentsline {chapter}{Preface}{4}{chapter*.2}%
+\contentsline {part}{\numberline {I}Practical Lab}{5}{part.1}%
+\contentsline {chapter}{\numberline {1}Operations System in Practice}{6}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Making Paper Cars}{6}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Reflections}{7}{section.1.2}%
+\contentsline {part}{\numberline {II}Conceptual Modelling Labs}{8}{part.2}%
+\contentsline {chapter}{\numberline {2}HCCM Framework}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Understanding of the Problem Situation}{9}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Identification of Modelling and General Objectives}{10}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Defining Output Responses}{10}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Defining Input Factors}{10}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Model Content}{10}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Identifying Entities}{11}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Drawing Behavioural Paths}{11}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Define the Data}{11}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}Define the Structure}{12}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.5.5}Define the Logic}{13}{subsection.2.5.5}%
+\contentsline {section}{\numberline {2.6}Assumptions and Simplifications}{13}{section.2.6}%
+\contentsline {chapter}{\numberline {3}Inputs, Outputs, and Behaviour}{14}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Understanding of the Problem Situation}{14}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Modelling Objectives}{14}{section.3.2}%
+\contentsline {section}{\numberline {3.3}General Objectives}{15}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Defining Output Responses}{15}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Defining Input Factors}{16}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Identifying Entities}{16}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Drawing Behavioural Paths}{17}{section.3.7}%
+\contentsline {chapter}{\numberline {4}Data, Structure, and Logic}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Define the Data}{21}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Define the Structure}{21}{section.4.2}%
+\contentsline {part}{\numberline {III}Jaamsim Labs}{25}{part.3}%
+\contentsline {chapter}{\numberline {5}Using Traces and Scenarios}{26}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Jaamsim Model}{26}{section.5.1}%
+\contentsline {part}{\numberline {IV}Conceptual Models}{29}{part.4}%
+\contentsline {chapter}{\numberline {6}Radiology Clinic}{30}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Data}{30}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Components}{31}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Activity Diagrams}{33}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Control Policies}{34}{section.6.4}%

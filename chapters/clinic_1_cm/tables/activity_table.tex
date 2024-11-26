@@ -1,6 +1,7 @@
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}p{0.9cm}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{8cm}@{}}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{1.8cm}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}p{0.9cm}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{8cm}@{}}
   \toprule
   Activity          & Participants & Event & Type       & State Change \\ \midrule
+  \endhead
   Wait for Check In & Patient (p)  & Start & Scheduled  & 
   \vspace{-12pt}
   \begin{lstlisting}[language=CMPseudo]
@@ -60,4 +61,4 @@ TRIGGER OnStartWaitForTaskCT WITH c
   \\[-12pt] \cmidrule{3-5}
                     &              & End   & Controlled &
   \\ \bottomrule
-  \end{tabular}
+  \end{longtable}

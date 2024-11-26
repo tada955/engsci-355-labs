@@ -23,11 +23,11 @@ START Paper Wait for Cut Net WITH P # TRANSITION PAP.3
 START Person Wait for Task WITH H # TRANSITION PER.3
 START Pencil Wait for Trace WITH N # TRANSITION PEN.3
 \end{lstlisting}              \\ \midrule
-  Paper Wait for Cut Net    &                                & Start &   & 
+  Paper Wait for Cut Net    & Paper (P)                               & Start & Scheduled  & 
 \begin{lstlisting}[language=CMPseudo]
 TRIGGER OnStartPaperWaitForCutNet WITH P
 \end{lstlisting}              \\
-  &                                                          & End   &  & 
+  &                                                          & End   & Controlled & 
 \begin{lstlisting}[language=CMPseudo]
 P.WaitForCutNet = TIME - P.CurrentStart
 # TRANSITION PAP.4 in logic
@@ -60,24 +60,24 @@ SCHEDULE END at TIME + FoldCar(H)
 START Car Wait for Tape Car WITH P # TRANSITION PAP.7
 START Person Wait for Task WITH H # TRANSITION PER.7
 \end{lstlisting}             \\ \midrule
-  \textcolor{red}{Car Wait for Tape Car}     &                                & Start &   & 
+  Car Wait for Tape Car     & Paper (P)                               & Start & Scheduled  & 
 \begin{lstlisting}[language=CMPseudo]
- 
+TRIGGER OnStartCarWaitForTapeCar WITH P
 \end{lstlisting}             \\
-  &                                                          & End   &  & 
+  &                                                          & End   & Controlled & 
 \begin{lstlisting}[language=CMPseudo]
- 
- 
+P.WaitForTapeCar = TIME - P.CurrentStart
+# TRANSITION PAP.8 in logic
 \end{lstlisting}             \\ \midrule
-  \textcolor{red}{Tape Car}                  &  & Start &   & 
+  Tape Car                  & Paper (P), Person (H), Tape Pieces (TP) & Start & Controlled  & 
 \begin{lstlisting}[language=CMPseudo]
- 
+SCHEDULE END at TIME + Tape(H)
 \end{lstlisting}             \\
-  &                                                          & End   &  &
+  &                                                          & End   & Scheduled &
 \begin{lstlisting}[language=CMPseudo]
- 
- 
- 
+START Car Finished WITH P # TRANSITION PAP.9
+START Person Wait for Task WITH H # TRANSITION PER.11
+START Tape Pieces Leave WITH TP # TRANSITION TP.3
 \end{lstlisting}              \\ \midrule
   Pencil Wait for Trace    & Pencil (N)                             & Start & Scheduled  & 
 \begin{lstlisting}[language=CMPseudo]
@@ -127,13 +127,13 @@ TRIGGER OnStartTapePiecesWaitForTape WITH TP
 TP.WaitForTape = TP.WaitForTape + TIME - TP.CurrentStart
 # TRANSITION TP.2 in logic
 \end{lstlisting}             \\ \midrule
-  \textcolor{red}{Person Wait for Task}      &                              & Start &   & 
+  Person Wait for Task      & Person (H)                              & Start & Scheduled  & 
 \begin{lstlisting}[language=CMPseudo]
- 
+TRIGGER OnStartPersonWaitForTask WITH H
 \end{lstlisting}             \\
-  &                                                          & End   &  & 
+  &                                                          & End   & Controlled & 
 \begin{lstlisting}[language=CMPseudo]
- 
- 
+H.WaitForTask = H.WaitForTask + TIME - H.CurrentStart
+# TRANSITION H.2, H.4, H.6, H.8, or H.10 in logic
 \end{lstlisting}             \\ \bottomrule
   \end{longtable}
