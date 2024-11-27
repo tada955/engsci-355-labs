@@ -1,16 +1,15 @@
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{10cm}@{}}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{10cm}@{}}
   \toprule
-  Activity          & Participants & Type       & State Change \\ \midrule
-  Simulation Start & -  & Scheduled  & 
-  \vspace{-12pt}
+  Event          & Participants & Type       & State Change \\ \midrule
+  \endhead
+  Simulation Start & None  & Scheduled  & 
   \begin{lstlisting}[language=CMPseudo]
 SCHEDULE Arrival (R) at TIME
 SCHEDULE Arrival (CT) at TIME
 SCHEDULE Arrival (P) at TIME + PatientInterArrival()
   \end{lstlisting}
   \\ \midrule
-  Arrival (P) & Patient (p)  & Scheduled  & 
-  \vspace{-12pt}
+  Paper Created & PaPer (P)  & Scheduled  & 
   \begin{lstlisting}[language=CMPseudo]
 p.ID = NextPatIDNum
 p.Priority = PatientPriority()
@@ -19,14 +18,12 @@ SCHEDULE Arrival (P) at TIME + PatientInterArrival()
 START Wait for Check In WITH p
   \end{lstlisting}
   \\ \midrule
-  Leave (P) & Patient (p)  & Scheduled  & 
-  \vspace{-12pt}
+  Car Finished & PaPer (P)  & Scheduled  & 
   \begin{lstlisting}[language=CMPseudo]
 Calculate statistics for p
   \end{lstlisting}
   \\ \midrule
-  Arrival (R) & Receptionist (r)  & Scheduled  & 
-  \vspace{-12pt}
+  Pencil/Template Created & Pencil (N)  & Scheduled  & 
   \begin{lstlisting}[language=CMPseudo]
 r.ID = NextReceptionistIDNum
 NextReceptionistIDNum = NextReceptionistIDNum + 1
@@ -36,14 +33,12 @@ END IF
 START Wait for Task (R) WITH r
   \end{lstlisting}
   \\ \midrule
-  Leave (R) & Receptionist (r)  & Scheduled  & 
-  \vspace{-12pt}
+  Scissors Created & Scissors (S)  & Scheduled  & 
   \begin{lstlisting}[language=CMPseudo]
 Calculate statistics for r
   \end{lstlisting}
   \\ \midrule
-  Arrival (CT) & CTMachine (c)  & Scheduled  & 
-  \vspace{-12pt}
+  Tape Created & Tape (T)  & Scheduled  & 
   \begin{lstlisting}[language=CMPseudo]
 c.ID = NextCTMachineIDNum
 NextCTMachineIDNum = NextCTMachineIDNum + 1
@@ -53,10 +48,24 @@ END IF
 START Wait for Task (CT) WITH c
   \end{lstlisting}
   \\ \midrule
-  Leave (P) & CTMachine (c)  & Scheduled  & 
-  \vspace{-12pt}
+  Tape Pieces Created & Tape Pieces (TP)  & Scheduled  & 
+  \begin{lstlisting}[language=CMPseudo]
+Calculate statistics for c
+  \end{lstlisting}
+  \\ \midrule
+  Tape Pieces Leave & Tape Pieces (TP)  & Scheduled  & 
+  \begin{lstlisting}[language=CMPseudo]
+Calculate statistics for c
+  \end{lstlisting}
+  \\ \midrule
+  Person Created & Person (H)  & Scheduled  & 
+  \begin{lstlisting}[language=CMPseudo]
+Calculate statistics for c
+  \end{lstlisting}
+  \\ \midrule
+  Simulation Finish & None  & Scheduled  & 
   \begin{lstlisting}[language=CMPseudo]
 Calculate statistics for c
   \end{lstlisting}
   \\ \bottomrule
-  \end{tabular}
+  \end{longtable}

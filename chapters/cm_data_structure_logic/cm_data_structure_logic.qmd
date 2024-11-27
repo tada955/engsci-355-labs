@@ -62,29 +62,41 @@ Complete the transitions for the Scissors pathway.
 
 ::: {#tbl-transitions_pc tbl-pos="H" .sm .column-page-right .borderless}
 
-```{=latex}
+:::{.longtable}
+
 {{< include tables/transition_table.tex >}}
-```
+
+:::
 
 List of Transitions
 
 :::
 
 :::
+
 
 ::: {.content-visible when-profile="answers"}
 
 ::: {#tbl-transitions_pc tbl-pos="H" .sm .column-page-right .borderless}
 
-```{=latex}
+:::{.longtable}
+
 {{< include tables/transition_table_ans.tex >}}
-```
+
+:::
 
 List of Transitions
 
 :::
 
 :::
+
+@tbl-activities_pc lists the activities from the behavioural pathway diagrams along with the state changes for the start and end event of each activity.
+Complete the activities for:
+
+- Car Wait for Tape Car
+- Tape Car
+- Person Wait for Task (*Hint* look at Scissors Wait for Task)
 
 ::: {.content-visible unless-profile="answers"}
 
@@ -109,6 +121,28 @@ Activities
 :::{.longtable}
 
 {{< include tables/activity_table_ans.tex >}}
+
+:::
+
+Activities
+
+:::
+
+:::
+
+XXTableXX lists the events to start and finish the simulation along with the events from the behavioural pathway diagrams along with the state changes for each event.
+Complete the activities for:
+
+- Tape Pieces Created
+- Person Created
+
+::: {.content-visible when-profile="answers"}
+
+::: {#tbl-events_pc .sm .column-page-right .borderless}
+
+:::{.longtable}
+
+{{< include tables/event_table_ans.tex >}}
 
 :::
 

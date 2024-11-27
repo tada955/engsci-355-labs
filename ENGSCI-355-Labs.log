@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.10.17)  26 NOV 2024 16:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.10.17)  27 NOV 2024 12:19
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1120,6 +1120,10 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 \c@mdf@env@ii=\count316
 \c@mdf@zref@counter=\count317
 Package zref Info: New property: mdf@pagevalue on input line 895.
+) (/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+\everycr=\toks43
+\minrowclearance=\skip150
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/layout.sty
 Package: layout 2014/10/28 v1.2c Show layout parameters
 \oneinch=\count318
@@ -1166,7 +1170,7 @@ Package: fancyvrb 2020/01/13 v3.5 verbatim text (tvz,hv)
 ) (/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \linenopenalty=\count352
-\output=\toks43
+\output=\toks44
 \linenoprevgraf=\count353
 \linenumbersep=\dimen285
 \linenumberwidth=\dimen286
@@ -1184,7 +1188,7 @@ LaTeX Info: Redefining \\ on input line 3056.
 \c@FV@TrueTabGroupLevel=\count359
 \c@FV@TrueTabCounter=\count360
 \FV@TabBox@Group=\box77
-\FV@TmpLength=\skip150
+\FV@TmpLength=\skip151
 \c@FV@HighlightLinesStart=\count361
 \c@FV@HighlightLinesStop=\count362
 \FV@LoopCount=\count363
@@ -1206,7 +1210,7 @@ LaTeX Info: Redefining \\ on input line 3056.
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count370
 \lst@gtempboxa=\box81
-\lst@token=\toks44
+\lst@token=\toks45
 \lst@length=\count371
 \lst@currlwidth=\dimen296
 \lst@column=\count372
@@ -1225,8 +1229,8 @@ File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 File: listings.cfg 2019/09/10 1.8c listings configuration
 ))
 Package: listings 2019/09/10 1.8c (Carsten Heinz)
-\lastcol=\skip151
-\@float@every@cntrlplcy=\toks45
+\lastcol=\skip152
+\@float@every@cntrlplcy=\toks46
 \c@cntrlplcy=\count378
  (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2019/12/03 v1.28 PDF bookmarks (HO)
@@ -1308,7 +1312,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
-\Hy@SectionHShift=\skip152
+\Hy@SectionHShift=\skip153
 ) (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2019/12/03 v1.28 bookmark driver for pdfTeX (HO)
 \BKM@id=\count391
@@ -1336,7 +1340,7 @@ Package caption Info: longtable package is loaded.
  (/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2018/08/26 v1.4a longtable captions (AR)
 ))
-\@float@every@codelisting=\toks46
+\@float@every@codelisting=\toks47
 \c@codelisting=\count394
  (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
@@ -1360,7 +1364,7 @@ Package: changepage 2009/10/20 v1.0c check page and change page layout
 ) (/usr/share/texlive/texmf-dist/tex/latex/xurl/xurl.sty
 Package: xurl 2020/01/24 v 0.09 modify URL breaks
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 233.
+Package hyperref Info: Option `colorlinks' set `true' on input line 235.
 
 
 LaTeX Warning: Unused global option(s):
@@ -1369,6 +1373,9 @@ LaTeX Warning: Unused global option(s):
 (./ENGSCI-355-Labs.aux
 
 LaTeX Warning: Label `tbl-activities_pc' multiply defined.
+
+
+LaTeX Warning: Label `tbl-events_pc' multiply defined.
 
 
 LaTeX Warning: Label `tbl-start_wait_check_in' multiply defined.
@@ -1382,47 +1389,47 @@ LaTeX Warning: Label `tbl-start_wait_check_in' multiply defined.
 )
 \openout1 = `ENGSCI-355-Labs.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 240.
-LaTeX Font Info:    ... okay on input line 240.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 240.
-LaTeX Font Info:    ... okay on input line 240.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 240.
-LaTeX Font Info:    ... okay on input line 240.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 240.
-LaTeX Font Info:    ... okay on input line 240.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 240.
-LaTeX Font Info:    ... okay on input line 240.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 240.
-LaTeX Font Info:    ... okay on input line 240.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 240.
-LaTeX Font Info:    ... okay on input line 240.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 240.
-LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 240.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 242.
+LaTeX Font Info:    ... okay on input line 242.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 242.
+LaTeX Font Info:    ... okay on input line 242.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 242.
+LaTeX Font Info:    ... okay on input line 242.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 242.
+LaTeX Font Info:    ... okay on input line 242.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 242.
+LaTeX Font Info:    ... okay on input line 242.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 242.
+LaTeX Font Info:    ... okay on input line 242.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 242.
+LaTeX Font Info:    ... okay on input line 242.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 242.
+LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 242.
  (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmr.fd
 File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
-LaTeX Font Info:    ... okay on input line 240.
-LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 240.
-LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 240.
+LaTeX Font Info:    ... okay on input line 242.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 242.
+LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 242.
  (/usr/share/texlive/texmf-dist/tex/latex/ly1/ly1ptm.fd
 File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
 )
-LaTeX Font Info:    ... okay on input line 240.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 240.
-LaTeX Font Info:    ... okay on input line 240.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 240.
-LaTeX Font Info:    ... okay on input line 240.
-Package scrbase Info: activating english \contentsname on input line 240.
-Package scrbase Info: activating english \listfigurename on input line 240.
-Package scrbase Info: activating english \listtablename on input line 240.
-LaTeX Info: Redefining \microtypecontext on input line 240.
+LaTeX Font Info:    ... okay on input line 242.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 242.
+LaTeX Font Info:    ... okay on input line 242.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 242.
+LaTeX Font Info:    ... okay on input line 242.
+Package scrbase Info: activating english \contentsname on input line 242.
+Package scrbase Info: activating english \listfigurename on input line 242.
+Package scrbase Info: activating english \listtablename on input line 242.
+LaTeX Info: Redefining \microtypecontext on input line 242.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `basictext'.
-LaTeX Info: Redefining \showhyphens on input line 240.
+LaTeX Info: Redefining \showhyphens on input line 242.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1435,12 +1442,12 @@ File: mt-bch.cfg 2007/03/03 v1.5 microtype config. file: Bitstream Charter (RS)
 \scratchbox=\box85
 \nofMPsegments=\count402
 \nofMParguments=\count403
-\everyMPshowfont=\toks47
+\everyMPshowfont=\toks48
 \MPscratchCnt=\count404
 \MPscratchDim=\dimen312
 \MPnumerator=\count405
 \makeMPintoPDFobject=\count406
-\everyMPtoPDFconversion=\toks48
+\everyMPtoPDFconversion=\toks49
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -1486,7 +1493,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box86
 \c@lstlisting=\count409
-Package hyperref Info: Link coloring ON on input line 240.
+Package hyperref Info: Link coloring ON on input line 242.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1496,61 +1503,61 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count410
 )
-LaTeX Info: Redefining \ref on input line 240.
-LaTeX Info: Redefining \pageref on input line 240.
-LaTeX Info: Redefining \nameref on input line 240.
+LaTeX Info: Redefining \ref on input line 242.
+LaTeX Info: Redefining \pageref on input line 242.
+LaTeX Info: Redefining \nameref on input line 242.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-\@sidenotes@extrawidth=\skip153
-LaTeX Font Info:    Trying to load font information for T1+Cabin-TLF on input line 242.
+\@sidenotes@extrawidth=\skip154
+LaTeX Font Info:    Trying to load font information for T1+Cabin-TLF on input line 244.
  (/usr/share/texlive/texmf-dist/tex/latex/cabin/T1Cabin-TLF.fd
 File: T1Cabin-TLF.fd 2019/10/21 (autoinst) Font definitions for T1/Cabin-TLF.
 )
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/m/n' in size <10> not available
-(Font)              Font shape `T1/Cabin-TLF/regular/n' tried instead on input line 242.
+(Font)              Font shape `T1/Cabin-TLF/regular/n' tried instead on input line 244.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/regular/n' will be
-(Font)              scaled to size 10.0pt on input line 242.
+(Font)              scaled to size 10.0pt on input line 244.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/b/n' in size <10> not available
-(Font)              Font shape `T1/Cabin-TLF/bold/n' tried instead on input line 242.
+(Font)              Font shape `T1/Cabin-TLF/bold/n' tried instead on input line 244.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/n' will be
-(Font)              scaled to size 10.0pt on input line 242.
+(Font)              scaled to size 10.0pt on input line 244.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/b/n' in size <20.74> not available
-(Font)              Font shape `T1/Cabin-TLF/bold/n' tried instead on input line 242.
+(Font)              Font shape `T1/Cabin-TLF/bold/n' tried instead on input line 244.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/n' will be
-(Font)              scaled to size 20.74pt on input line 242.
+(Font)              scaled to size 20.74pt on input line 244.
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
-(Font)              scaled to size 14.11192pt on input line 242.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 242.
+(Font)              scaled to size 14.11192pt on input line 244.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 244.
  (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 242.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 244.
  (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 242.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 244.
  (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 242.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 244.
  (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 242.
+(Font)              <14.4> on input line 244.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 242.
+(Font)              <10> on input line 244.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 242.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 242.
+(Font)              <7> on input line 244.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 244.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 242.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 244.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
@@ -1560,7 +1567,7 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Package tocbasic Info: character protrusion at toc deactivated on input line 247.
+Package tocbasic Info: character protrusion at toc deactivated on input line 249.
  (./ENGSCI-355-Labs.toc
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/b/n' in size <12> not available
 (Font)              Font shape `T1/Cabin-TLF/bold/n' tried instead on input line 2.
@@ -1582,11 +1589,11 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 part I.
 Package scrkbase Info: You've told me to use the font selection of the element
 (scrkbase)             `partprefix' that is an alias of element `partnumber'
-(scrkbase)              on input line 262.
+(scrkbase)              on input line 264.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/b/n' in size <24.88> not available
-(Font)              Font shape `T1/Cabin-TLF/bold/n' tried instead on input line 262.
+(Font)              Font shape `T1/Cabin-TLF/bold/n' tried instead on input line 264.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/n' will be
-(Font)              scaled to size 24.88pt on input line 262.
+(Font)              scaled to size 24.88pt on input line 264.
 [5
 
 ]
@@ -1606,27 +1613,27 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              a package that still implements the
 (scrreprt)              deprecated \float@addtolist interface .
 
-LaTeX Font Info:    Trying to load font information for TS1+XCharter-TLF on input line 274.
+LaTeX Font Info:    Trying to load font information for TS1+XCharter-TLF on input line 276.
 (/usr/share/texlive/texmf-dist/tex/latex/xcharter/TS1XCharter-TLF.fd
 File: TS1XCharter-TLF.fd 2017/06/25 (autoinst) Font definitions for TS1/XCharter-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/XCharter-TLF/m/n' will be
-(Font)              scaled to size 9.79996pt on input line 274.
+(Font)              scaled to size 9.79996pt on input line 276.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/b/n' in size <14.4> not available
-(Font)              Font shape `T1/Cabin-TLF/bold/n' tried instead on input line 284.
+(Font)              Font shape `T1/Cabin-TLF/bold/n' tried instead on input line 286.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/n' will be
-(Font)              scaled to size 14.4pt on input line 284.
+(Font)              scaled to size 14.4pt on input line 286.
 <chapters/hands_on_production/figures/Car_Net_Blank.png, id=108, 542.025pt x 661.9932pt>
 File: chapters/hands_on_production/figures/Car_Net_Blank.png Graphic file (type png)
 <use chapters/hands_on_production/figures/Car_Net_Blank.png>
-Package pdftex.def Info: chapters/hands_on_production/figures/Car_Net_Blank.png  used on input line 294.
+Package pdftex.def Info: chapters/hands_on_production/figures/Car_Net_Blank.png  used on input line 296.
 (pdftex.def)             Requested size: 156.48848pt x 191.1246pt.
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
-(Font)              scaled to size 7.83997pt on input line 298.
+(Font)              scaled to size 7.83997pt on input line 300.
 <chapters/hands_on_production/figures/Car_Complete.jpg, id=111, 4095.3pt x 2304.61pt>
 File: chapters/hands_on_production/figures/Car_Complete.jpg Graphic file (type jpg)
 <use chapters/hands_on_production/figures/Car_Complete.jpg>
-Package pdftex.def Info: chapters/hands_on_production/figures/Car_Complete.jpg  used on input line 322.
+Package pdftex.def Info: chapters/hands_on_production/figures/Car_Complete.jpg  used on input line 324.
 (pdftex.def)             Requested size: 156.47287pt x 88.05434pt.
 
 
@@ -1638,7 +1645,7 @@ LaTeX Warning: Marginpar on page 6 moved.
 part II.
 Package scrkbase Info: You've told me to use the font selection of the element
 (scrkbase)             `partprefix' that is an alias of element `partnumber'
-(scrkbase)              on input line 411.
+(scrkbase)              on input line 413.
 [8
 
 ]
@@ -1646,84 +1653,101 @@ chapter 2.
 <chapters/hccm_framework/figures/cm_phases.pdf, id=142, 367.15268pt x 299.15364pt>
 File: chapters/hccm_framework/figures/cm_phases.pdf Graphic file (type pdf)
 <use chapters/hccm_framework/figures/cm_phases.pdf>
-Package pdftex.def Info: chapters/hccm_framework/figures/cm_phases.pdf  used on input line 433.
+Package pdftex.def Info: chapters/hccm_framework/figures/cm_phases.pdf  used on input line 435.
 (pdftex.def)             Requested size: 367.06213pt x 299.07986pt.
 [9
 
  <./chapters/hccm_framework/figures/cm_phases.pdf>] [10]
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 524.
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 526.
  (/usr/share/texlive/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.39993pt on input line 524.
+(Font)              scaled to size 10.39993pt on input line 526.
  [11] [12] [13]
 chapter 3.
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 712.
+ mdframed uses option nobreak mdframed on input line 708.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 712.
+ mdframed uses option nobreak mdframed on input line 708.
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 741.
+ mdframed uses option nobreak mdframed on input line 731.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 741.
+ mdframed uses option nobreak mdframed on input line 731.
 [14
 
 ]
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 777.
+ mdframed uses option nobreak mdframed on input line 758.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 777.
+ mdframed uses option nobreak mdframed on input line 758.
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 811.
+ mdframed uses option nobreak mdframed on input line 782.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 811.
+ mdframed uses option nobreak mdframed on input line 782.
  [15]
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 846.
+ mdframed uses option nobreak mdframed on input line 804.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 846.
+ mdframed uses option nobreak mdframed on input line 804.
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 878.
+ mdframed uses option nobreak mdframed on input line 832.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 878.
+ mdframed uses option nobreak mdframed on input line 832.
  [16]
 <chapters/cm_io_behaviour/figures/pencil-activity.pdf, id=209, 204.35345pt x 129.38237pt>
 File: chapters/cm_io_behaviour/figures/pencil-activity.pdf Graphic file (type pdf)
 <use chapters/cm_io_behaviour/figures/pencil-activity.pdf>
-Package pdftex.def Info: chapters/cm_io_behaviour/figures/pencil-activity.pdf  used on input line 893.
+Package pdftex.def Info: chapters/cm_io_behaviour/figures/pencil-activity.pdf  used on input line 847.
 (pdftex.def)             Requested size: 204.86745pt x 129.7078pt.
 <chapters/cm_io_behaviour/figures/scissors-activity.pdf, id=210, 284.6133pt x 127.5676pt>
 File: chapters/cm_io_behaviour/figures/scissors-activity.pdf Graphic file (type pdf)
 <use chapters/cm_io_behaviour/figures/scissors-activity.pdf>
-Package pdftex.def Info: chapters/cm_io_behaviour/figures/scissors-activity.pdf  used on input line 905.
+Package pdftex.def Info: chapters/cm_io_behaviour/figures/scissors-activity.pdf  used on input line 859.
 (pdftex.def)             Requested size: 284.5431pt x 127.5361pt.
  [17 <./chapters/cm_io_behaviour/figures/pencil-activity.pdf> <./chapters/cm_io_behaviour/figures/scissors-activity.pdf>]
-Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 973.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 973.
-Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 1008.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 1008.
-Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 1043.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 1043.
-Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 1084.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 1084.
- [18] [19] [20]
+<chapters/cm_io_behaviour/figures/paper-activity.pdf, id=225, 208.92654pt x 471.28773pt>
+File: chapters/cm_io_behaviour/figures/paper-activity.pdf Graphic file (type pdf)
+<use chapters/cm_io_behaviour/figures/paper-activity.pdf>
+Package pdftex.def Info: chapters/cm_io_behaviour/figures/paper-activity.pdf  used on input line 876.
+(pdftex.def)             Requested size: 207.7082pt x 468.5395pt.
+<chapters/cm_io_behaviour/figures/tape-activity.pdf, id=226, 201.05113pt x 127.46922pt>
+File: chapters/cm_io_behaviour/figures/tape-activity.pdf Graphic file (type pdf)
+<use chapters/cm_io_behaviour/figures/tape-activity.pdf>
+Package pdftex.def Info: chapters/cm_io_behaviour/figures/tape-activity.pdf  used on input line 888.
+(pdftex.def)             Requested size: 202.01697pt x 128.08157pt.
+<chapters/cm_io_behaviour/figures/tape-piece-activity.pdf, id=227, 338.70139pt x 193.71371pt>
+File: chapters/cm_io_behaviour/figures/tape-piece-activity.pdf Graphic file (type pdf)
+<use chapters/cm_io_behaviour/figures/tape-piece-activity.pdf>
+Package pdftex.def Info: chapters/cm_io_behaviour/figures/tape-piece-activity.pdf  used on input line 900.
+(pdftex.def)             Requested size: 338.59718pt x 193.65411pt.
+
+Overfull \hbox (25.61679pt too wide) in paragraph at lines 900--901
+ [][] 
+ []
+
+<chapters/cm_io_behaviour/figures/person-activity.pdf, id=228, 312.96724pt x 235.23483pt>
+File: chapters/cm_io_behaviour/figures/person-activity.pdf Graphic file (type pdf)
+<use chapters/cm_io_behaviour/figures/person-activity.pdf>
+Package pdftex.def Info: chapters/cm_io_behaviour/figures/person-activity.pdf  used on input line 912.
+(pdftex.def)             Requested size: 313.00467pt x 235.26295pt.
+[18 <./chapters/cm_io_behaviour/figures/paper-activity.pdf>] [19 <./chapters/cm_io_behaviour/figures/tape-activity.pdf> <./chapters/cm_io_behaviour/figures/tape-piece-activity.pdf> <./chapters/cm_io_behaviour/figures/person-activity.pdf>]
 chapter 4.
-[21
+
+Overfull \hbox (52.01941pt too wide) in paragraph at lines 941--955
+ [] 
+ []
+
+[20
 
 ]
 Overfull \vbox (50.99455pt too high) has occurred while \output is active []
 
- [22]
-Overfull \hbox (183.15047pt too wide) in alignment at lines 1232--1240
+ [21]
+LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/it' will be
+(Font)              scaled to size 9.79996pt on input line 1071.
+
+Overfull \hbox (183.15047pt too wide) in alignment at lines 1074--1082
  [] [] [] [] [] 
  []
 
@@ -1731,34 +1755,59 @@ Overfull \hbox (183.15047pt too wide) in alignment at lines 1232--1240
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
-(Font)              scaled to size 8.81996pt on input line 1242.
+(Font)              scaled to size 8.81996pt on input line 1084.
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 9.35994pt on input line 1242.
+(Font)              scaled to size 9.35994pt on input line 1084.
 
-Overfull \hbox (183.15047pt too wide) in alignment at lines 1240--1335
+Overfull \hbox (183.15047pt too wide) in alignment at lines 1082--1177
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (183.15047pt too wide) in alignment at lines 1335--1377
+Overfull \hbox (183.15047pt too wide) in alignment at lines 1177--1219
  [] [] [] [] [] 
+ []
+
+[22]
+Overfull \hbox (172.5732pt too wide) in alignment at lines 1233--1241
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (2.58519pt too wide) in paragraph at lines 1242--1242
+[]|\T1/XCharter-TLF/m/n/10 (-20) Simulation 
+ []
+
+
+Overfull \hbox (25.59666pt too wide) in paragraph at lines 1263--1263
+[]|\T1/XCharter-TLF/m/n/10 (-20) Pencil/Template 
+ []
+
+
+Overfull \hbox (2.58519pt too wide) in paragraph at lines 1303--1303
+[]|\T1/XCharter-TLF/m/n/10 (-20) Simulation 
+ []
+
+
+Overfull \hbox (172.5732pt too wide) in alignment at lines 1241--1310
+ [] [] [] [] 
  []
 
 [23] [24]
 part III.
 Package scrkbase Info: You've told me to use the font selection of the element
 (scrkbase)             `partprefix' that is an alias of element `partnumber'
-(scrkbase)              on input line 1379.
+(scrkbase)              on input line 1312.
 [25
 
 ]
 chapter 5.
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
-(Font)              scaled to size 9.79996pt on input line 1399.
+(Font)              scaled to size 9.79996pt on input line 1332.
 [26
 
 ]
-Overfull \hbox (55.21121pt too wide) in paragraph at lines 1479--1482
+Overfull \hbox (55.21121pt too wide) in paragraph at lines 1412--1415
 []\T1/XCharter-TLF/m/n/10 (-20) Similarly for the Scan ac-tiv-ity set the Du-ra-tion to \T1/XCharter-TLF/b/n/10 this.CurrentParticipants(1).scanTime
  []
 
@@ -1766,88 +1815,88 @@ Overfull \hbox (55.21121pt too wide) in paragraph at lines 1479--1482
 part IV.
 Package scrkbase Info: You've told me to use the font selection of the element
 (scrkbase)             `partprefix' that is an alias of element `partnumber'
-(scrkbase)              on input line 1540.
+(scrkbase)              on input line 1473.
 [29
 
 ]
 chapter 6.
 
-Overfull \hbox (23.40862pt too wide) in paragraph at lines 1573--1582
+Overfull \hbox (23.40854pt too wide) in paragraph at lines 1506--1515
  [] 
  []
 
 [30
 
 ]
-Overfull \hbox (161.8109pt too wide) in alignment at lines 1645--1653
+Overfull \hbox (161.8109pt too wide) in alignment at lines 1578--1586
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (161.8109pt too wide) in alignment at lines 1653--1715
+Overfull \hbox (161.8109pt too wide) in alignment at lines 1586--1648
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (172.5732pt too wide) in alignment at lines 1717--1725
+Overfull \hbox (172.5732pt too wide) in alignment at lines 1650--1658
  [] [] [] [] 
  []
 
 
-Overfull \hbox (2.58519pt too wide) in paragraph at lines 1726--1726
+Overfull \hbox (2.58519pt too wide) in paragraph at lines 1659--1659
 []|\T1/XCharter-TLF/m/n/10 (-20) Simulation 
  []
 
 
-Overfull \hbox (172.5732pt too wide) in alignment at lines 1725--1786
+Overfull \hbox (172.5732pt too wide) in alignment at lines 1658--1719
  [] [] [] [] 
  []
 
 [31] [32]
-<chapters/clinic_1_cm/figures/patient_activity.pdf, id=436, 441.05377pt x 39.9904pt>
+<chapters/clinic_1_cm/figures/patient_activity.pdf, id=496, 441.05377pt x 39.9904pt>
 File: chapters/clinic_1_cm/figures/patient_activity.pdf Graphic file (type pdf)
 <use chapters/clinic_1_cm/figures/patient_activity.pdf>
-Package pdftex.def Info: chapters/clinic_1_cm/figures/patient_activity.pdf  used on input line 1796.
+Package pdftex.def Info: chapters/clinic_1_cm/figures/patient_activity.pdf  used on input line 1729.
 (pdftex.def)             Requested size: 441.03249pt x 39.98846pt.
 
-Overfull \hbox (128.0521pt too wide) in paragraph at lines 1796--1797
+Overfull \hbox (128.0521pt too wide) in paragraph at lines 1729--1730
  [][] 
  []
 
-<chapters/clinic_1_cm/figures/receptionist_activity.pdf, id=437, 217.4022pt x 115.85483pt>
+<chapters/clinic_1_cm/figures/receptionist_activity.pdf, id=497, 217.4022pt x 115.85483pt>
 File: chapters/clinic_1_cm/figures/receptionist_activity.pdf Graphic file (type pdf)
 <use chapters/clinic_1_cm/figures/receptionist_activity.pdf>
-Package pdftex.def Info: chapters/clinic_1_cm/figures/receptionist_activity.pdf  used on input line 1808.
+Package pdftex.def Info: chapters/clinic_1_cm/figures/receptionist_activity.pdf  used on input line 1741.
 (pdftex.def)             Requested size: 216.25056pt x 115.2411pt.
-<chapters/clinic_1_cm/figures/CT_activity.pdf, id=438, 217.4022pt x 115.85483pt>
+<chapters/clinic_1_cm/figures/CT_activity.pdf, id=498, 217.4022pt x 115.85483pt>
 File: chapters/clinic_1_cm/figures/CT_activity.pdf Graphic file (type pdf)
 <use chapters/clinic_1_cm/figures/CT_activity.pdf>
-Package pdftex.def Info: chapters/clinic_1_cm/figures/CT_activity.pdf  used on input line 1820.
+Package pdftex.def Info: chapters/clinic_1_cm/figures/CT_activity.pdf  used on input line 1753.
 (pdftex.def)             Requested size: 216.25056pt x 115.2411pt.
 [33 <./chapters/clinic_1_cm/figures/patient_activity.pdf> <./chapters/clinic_1_cm/figures/receptionist_activity.pdf> <./chapters/clinic_1_cm/figures/CT_activity.pdf>] [34]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1935.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1935.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1868.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1868.
  (./ENGSCI-355-Labs.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1935.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1935.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1868.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1868.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 34935 strings out of 481239
- 630886 string characters out of 5920376
- 1411600 words of memory out of 5000000
- 49124 multiletter control sequences out of 15000+600000
- 676576 words of font info for 162 fonts, out of 8000000 for 9000
+ 35070 strings out of 481239
+ 633966 string characters out of 5920376
+ 1458680 words of memory out of 5000000
+ 49204 multiletter control sequences out of 15000+600000
+ 683708 words of font info for 168 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,13n,106p,10181b,1833s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/xcharter/xch_uy5hgr.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-5.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/xcharter/xch_q7u3cc.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cabin/cbn_i3ioen.enc}</usr/share/texlive/texmf-dist/fonts/type1/impallari/cabin/Cabin-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xcharter/XCharter-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xcharter/XCharter-Roman.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on ENGSCI-355-Labs.pdf (34 pages, 2659432 bytes).
+ 64i,14n,106p,10181b,1846s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/xcharter/xch_uy5hgr.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-5.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/xcharter/xch_q7u3cc.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cabin/cbn_i3ioen.enc}</usr/share/texlive/texmf-dist/fonts/type1/impallari/cabin/Cabin-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xcharter/XCharter-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xcharter/XCharter-Italic.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xcharter/XCharter-Roman.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
+Output written on ENGSCI-355-Labs.pdf (34 pages, 2708768 bytes).
 PDF statistics:
- 697 PDF objects out of 1000 (max. 8388607)
- 638 compressed objects within 7 object streams
- 281 named destinations out of 1000 (max. 500000)
- 12645 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 767 PDF objects out of 1000 (max. 8388607)
+ 702 compressed objects within 8 object streams
+ 318 named destinations out of 1000 (max. 500000)
+ 16761 words of extra memory for PDF output out of 17280 (max. 10000000)
 

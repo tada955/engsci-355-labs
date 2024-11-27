@@ -24,9 +24,9 @@
 \contentsline {section}{\numberline {3.5}Defining Input Factors}{16}{section.3.5}%
 \contentsline {section}{\numberline {3.6}Identifying Entities}{16}{section.3.6}%
 \contentsline {section}{\numberline {3.7}Drawing Behavioural Paths}{17}{section.3.7}%
-\contentsline {chapter}{\numberline {4}Data, Structure, and Logic}{21}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Define the Data}{21}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Define the Structure}{21}{section.4.2}%
+\contentsline {chapter}{\numberline {4}Data, Structure, and Logic}{20}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Define the Data}{20}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Define the Structure}{20}{section.4.2}%
 \contentsline {part}{\numberline {III}Jaamsim Labs}{25}{part.3}%
 \contentsline {chapter}{\numberline {5}Using Traces and Scenarios}{26}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Jaamsim Model}{26}{section.5.1}%
