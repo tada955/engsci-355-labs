@@ -3,62 +3,54 @@
   Activity          & Participants & Event & Type       & State Change \\ \midrule
   \endhead
   Wait for Check In & Patient (p)  & Start & Scheduled  & 
-  \vspace{-12pt}
   \begin{lstlisting}[language=CMPseudo]
 TRIGGER OnStartWaitForCheckIn WITH p
   \end{lstlisting}
-  \\[-12pt] \cmidrule{3-5}
+  \\ \cmidrule{3-5}
                     &              & End   & Controlled &
   
   \\ \midrule
   Check In & Patient (p), Receptionist (r)  & Start & Controlled  & 
-  \vspace{-12pt}
   \begin{lstlisting}[language=CMPseudo]
 SCHEDULE Check In.End at TIME + CheckInTime()
   \end{lstlisting}
-  \\[-12pt] \cmidrule{3-5}
+  \\ \cmidrule{3-5}
                     &              & End   & Scheduled &
-  \vspace{-12pt}
   \begin{lstlisting}[language=CMPseudo]
 START Wait for Scan WITH p
 START Wait for Task (R) WITH r
   \end{lstlisting}          
-  \\[-12pt] \midrule
+  \\ \midrule
   Wait for Scan & Patient (p)  & Start & Scheduled  &              \\ \cmidrule{3-5}
                 &              & End   & Controlled &
-  \vspace{-12pt}
   \begin{lstlisting}[language=CMPseudo]
 TRIGGER OnStartWaitForScan WITH p
   \end{lstlisting}
-  \\[-12pt] \midrule
+  \\ \midrule
   Scan & Patient (p), CTMachine (c)  & Start & Controlled  & 
-  \vspace{-12pt}
   \begin{lstlisting}[language=CMPseudo]
 SCHEDULE Scan.End at TIME + ScanTime()
   \end{lstlisting}
-  \\[-12pt] \cmidrule{3-5}
+  \\ \cmidrule{3-5}
                     &              & End   & Scheduled &
-  \vspace{-12pt}
   \begin{lstlisting}[language=CMPseudo]
 START Leave (P) WITH p
 START Wait for Task (CT) WITH c
   \end{lstlisting}          
-  \\[-12pt] \midrule
+  \\ \midrule
   Wait for Task (R) & Receptionist (r)  & Start & Scheduled  &
-  \vspace{-12pt}
   \begin{lstlisting}[language=CMPseudo]
 TRIGGER OnStartWaitForTaskR WITH r
   \end{lstlisting}
-  \\[-12pt] \cmidrule{3-5}
+  \\ \cmidrule{3-5}
                     &              & End   & Controlled &
   
   \\ \midrule
   Wait for Task (CT) & CTMachine (c)  & Start & Scheduled  &
-  \vspace{-12pt}
   \begin{lstlisting}[language=CMPseudo]
 TRIGGER OnStartWaitForTaskCT WITH c
   \end{lstlisting}
-  \\[-12pt] \cmidrule{3-5}
+  \\ \cmidrule{3-5}
                     &              & End   & Controlled &
   \\ \bottomrule
   \end{longtable}

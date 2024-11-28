@@ -24,15 +24,41 @@
 \contentsline {section}{\numberline {3.5}Defining Input Factors}{16}{section.3.5}%
 \contentsline {section}{\numberline {3.6}Identifying Entities}{16}{section.3.6}%
 \contentsline {section}{\numberline {3.7}Drawing Behavioural Paths}{17}{section.3.7}%
-\contentsline {chapter}{\numberline {4}Data, Structure, and Logic}{20}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Define the Data}{20}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Define the Structure}{20}{section.4.2}%
-\contentsline {part}{\numberline {III}Jaamsim Labs}{25}{part.3}%
-\contentsline {chapter}{\numberline {5}Using Traces and Scenarios}{26}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Jaamsim Model}{26}{section.5.1}%
-\contentsline {part}{\numberline {IV}Conceptual Models}{29}{part.4}%
-\contentsline {chapter}{\numberline {6}Radiology Clinic}{30}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Data}{30}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Components}{31}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Activity Diagrams}{33}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Control Policies}{34}{section.6.4}%
+\contentsline {chapter}{\numberline {4}Data, Structure, and Logic}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Define the Data}{21}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Define the Structure}{21}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Define the Logic}{25}{section.4.3}%
+\contentsline {part}{\numberline {III}Jaamsim Labs}{27}{part.3}%
+\contentsline {chapter}{\numberline {5}Setting Up VSCode and Java}{28}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Setting Up JaamSim and HCCM}{29}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Prerequisites}{29}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Create the Project Folder Structure}{29}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Clone HCCM into the project folder}{29}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Create files to load HCCM and customised components}{30}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Create a VSCode Java Project}{30}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Configure Source Folders}{30}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Configure JDK}{31}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Configure Libraries}{31}{section.6.8}%
+\contentsline {section}{\numberline {6.9}Integrate with JaamSim}{31}{section.6.9}%
+\contentsline {section}{\numberline {6.10}Run Custom JaamSim}{31}{section.6.10}%
+\contentsline {section}{\numberline {6.11}Running an HCCM Model}{32}{section.6.11}%
+\contentsline {chapter}{\numberline {7}Radiology Clinic}{33}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Experiments}{33}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Jaamsim Model}{33}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Creating Model Objects}{33}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Configuring Objects}{35}{subsection.7.2.2}%
+\contentsline {section}{\numberline {7.3}Model Logic -- Java}{38}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Model Output}{43}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Task}{44}{section.7.5}%
+\contentsline {chapter}{\numberline {8}Extended Radiology Clinic}{45}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Experiments}{45}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Jaamsim Model}{45}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Task}{50}{section.8.3}%
+\contentsline {chapter}{\numberline {9}Using Traces and Scenarios}{51}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Jaamsim Model}{51}{section.9.1}%
+\contentsline {part}{\numberline {IV}Conceptual Models}{54}{part.4}%
+\contentsline {chapter}{\numberline {10}Radiology Clinic}{55}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Data}{55}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Components}{56}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Activity Diagrams}{58}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Logic}{59}{section.10.4}%

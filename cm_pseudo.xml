@@ -90,6 +90,8 @@
 			<item>IS</item>
 			<item>NOT</item>
 			<item>START</item>
+			<item>CREATE</item>
+			<item>DO</item>
 			<item>empty</item>
 		</list>
 		<list name="flow">
@@ -100,7 +102,7 @@
 			<item>else</item>
 			<item>except</item>
 			<item>finally</item>
-			<item>for</item>
+			<!-- <item>for</item> -->
 			<item>if</item>
 			<item>pass</item>
 			<item>raise</item>

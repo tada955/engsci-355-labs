@@ -97,7 +97,7 @@ CT Activity Diagram
 
 {{< pagebreak >}}
 
-## Control Policies
+## Logic
 
 ::: {#tbl-start_wait_check_in .sm .column-page-right .borderless}
 

@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../chapters/clinic_3/clinic_3.html" rel="next">
+<link href="../../chapters/vscode_java_setup/vscode_java_setup.html" rel="next">
 <link href="../../chapters/cm_io_behaviour/cm_io_behaviour.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -207,8 +207,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../chapters/vscode_java_setup/vscode_java_setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Setting Up VSCode and Java</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/jaamsim_setup/jaamsim_setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Setting Up JaamSim and HCCM</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/clinic_1/clinic_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Radiology Clinic</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/clinic_2/clinic_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Extended Radiology Clinic</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../chapters/clinic_3/clinic_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Using Traces and Scenarios</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Using Traces and Scenarios</span></span></a>
   </div>
 </li>
       </ul>
@@ -225,7 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../chapters/clinic_1_cm/clinic_1_cm.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Radiology Clinic</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Radiology Clinic</span></span></a>
   </div>
 </li>
       </ul>
@@ -242,6 +266,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#define-the-data" id="toc-define-the-data" class="nav-link active" data-scroll-target="#define-the-data"><span class="header-section-number">4.1</span> Define the Data</a></li>
   <li><a href="#define-the-structure" id="toc-define-the-structure" class="nav-link" data-scroll-target="#define-the-structure"><span class="header-section-number">4.2</span> Define the Structure</a></li>
+  <li><a href="#define-the-logic" id="toc-define-the-logic" class="nav-link" data-scroll-target="#define-the-logic"><span class="header-section-number">4.3</span> Define the Logic</a></li>
   </ul>
 </nav>
     </div>
@@ -314,14 +339,22 @@ Table&nbsp;4.1: List of Data Modules
 <td style="text-align: left;">The number of rolls of tape available</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">NumPeople</td>
+<td style="text-align: left;">Num</td>
 <td style="text-align: left;">System info</td>
 <td style="text-align: left;">Constant</td>
 <td style="text-align: left;">Deterministic</td>
 <td style="text-align: left;">-</td>
-<td style="text-align: left;">The number of people available</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">TraceCar</td>
 <td style="text-align: left;">Experimental data</td>
 <td style="text-align: left;">Lookup</td>
@@ -329,7 +362,7 @@ Table&nbsp;4.1: List of Data Modules
 <td style="text-align: left;">Person</td>
 <td style="text-align: left;">Time to trace car</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CutNet</td>
 <td style="text-align: left;">Experimental data</td>
 <td style="text-align: left;">Lookup</td>
@@ -337,36 +370,60 @@ Table&nbsp;4.1: List of Data Modules
 <td style="text-align: left;">Person</td>
 <td style="text-align: left;">Time to cut the net out</td>
 </tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
 <tr class="odd">
-<td style="text-align: left;">FoldCar</td>
-<td style="text-align: left;">Experimental data</td>
-<td style="text-align: left;">Lookup</td>
-<td style="text-align: left;">Deterministic</td>
-<td style="text-align: left;">Person</td>
-<td style="text-align: left;">Time to fold the car</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Tape</td>
-<td style="text-align: left;">Experimental data</td>
-<td style="text-align: left;">Lookup</td>
-<td style="text-align: left;">Deterministic</td>
-<td style="text-align: left;">Person</td>
-<td style="text-align: left;">Time to tape the car together</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">CutTape</td>
 <td style="text-align: left;">Experimental data</td>
 <td style="text-align: left;">Lookup</td>
 <td style="text-align: left;">Deterministic</td>
 <td style="text-align: left;">Person</td>
-<td style="text-align: left;">Time to cut a piece of tape</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">CutTape2</td>
-<td style="text-align: left;">Estimate</td>
-<td style="text-align: left;">Exponential Distribution</td>
-<td style="text-align: left;">Stochastic</td>
-<td style="text-align: left;">-</td>
 <td style="text-align: left;">Time to cut a piece of tape</td>
 </tr>
 </tbody>
@@ -377,7 +434,7 @@ Table&nbsp;4.1: List of Data Modules
 </section>
 <section id="define-the-structure" class="level2 page-columns page-full" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="define-the-structure"><span class="header-section-number">4.2</span> Define the Structure</h2>
-<p>The first part of the structure to define is the entities. <a href="#tbl-entities_pc" class="quarto-xref">Table&nbsp;<span>4.2</span></a> lists the entities again, but adds attributes that the entities will need to capture the performance of the system, e.g., waiting time until the cube was cut. It is assumed that all entities have the three attributes: ID, CurrentActivity, and CurrentStart. These are omitted in the table to prevent repitition.</p>
+<p>The first part of the structure to define is the entities. <a href="#tbl-entities_pc" class="quarto-xref">Table&nbsp;<span>4.2</span></a> lists the entities again, but adds attributes that the entities will need to capture the performance of the system, e.g., waiting time until the cube was cut. It is assumed that all entities have the three attributes: ID, CurrentActivity, and CurrentStart. These are omitted in the table to prevent repetition.</p>
 <div id="tbl-entities_pc" class="sm borderless quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-entities_pc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -457,7 +514,7 @@ Table&nbsp;4.2: List of Entities
 </div>
 </figure>
 </div>
-<p>The next part of the structure is the transitions, which describe how entities move between activites and events. <a href="#tbl-transitions_pc" class="quarto-xref">Table&nbsp;<span>4.3</span></a> lists the transitions for making paper cars. These transitions are prefixed by entity of the behavioural pathway they come from. Complete the transitions for the Scissors pathway.</p>
+<p>The next part of the structure is the transitions, which describe how entities move between activities and events. <a href="#tbl-transitions_pc" class="quarto-xref">Table&nbsp;<span>4.3</span></a> lists the transitions for making paper cars. These transitions are prefixed by entity of the behavioural pathway they come from. Complete the transitions for the Scissors pathway.</p>
 <div id="tbl-transitions_pc" class="sm column-page-right borderless quarto-float quarto-figure quarto-figure-center anchored" data-tbl-pos="H">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-transitions_pc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -563,31 +620,31 @@ Table&nbsp;4.3: List of Transitions
 <td style="text-align: left;">Scissors</td>
 <td style="text-align: left;">S.1</td>
 <td style="text-align: left;">Scissors Created</td>
-<td style="text-align: left;">Scissors Wait for Task.Start</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">S.2</td>
-<td style="text-align: left;">Scissors Wait for Task.End</td>
-<td style="text-align: left;">Cut Car Net.Start</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">S.3</td>
-<td style="text-align: left;">Cut Car Net.End</td>
-<td style="text-align: left;">Scissors Wait for Task.Start</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">S.4</td>
-<td style="text-align: left;">Scissors Wait for Task.End</td>
-<td style="text-align: left;">Cut Tape.Start</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">S.5</td>
-<td style="text-align: left;">CutTape.End</td>
-<td style="text-align: left;">Scissors Wait for Task.Start</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
@@ -768,22 +825,22 @@ Table&nbsp;4.4: Activities
 <td style="text-align: left;"></td>
 <td style="text-align: left;">End</td>
 <td style="text-align: left;">Scheduled</td>
-<td style="text-align: left;"><div class="sourceCode" id="cb4" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">START</span> Paper Wait <span class="cf">for</span> Cut Net <span class="kw">WITH</span> P <span class="co"># TRANSITION PAP.3</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="kw">START</span> Person Wait <span class="cf">for</span> Task <span class="kw">WITH</span> H <span class="co"># TRANSITION PER.3</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="kw">START</span> Pencil Wait <span class="cf">for</span> Trace <span class="kw">WITH</span> N <span class="co"># TRANSITION PEN.3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb4" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">START</span> Paper Wait for Cut Net <span class="kw">WITH</span> P <span class="co"># TRANSITION PAP.3</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="kw">START</span> Person Wait for Task <span class="kw">WITH</span> H <span class="co"># TRANSITION PER.3</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="kw">START</span> Pencil Wait for Trace <span class="kw">WITH</span> N <span class="co"># TRANSITION PEN.3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Paper Wait for Cut Net</td>
-<td style="text-align: left;">Paper (P)</td>
+<td style="text-align: left;"></td>
 <td style="text-align: left;">Start</td>
-<td style="text-align: left;">Scheduled</td>
+<td style="text-align: left;"></td>
 <td style="text-align: left;"><div class="sourceCode" id="cb5" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">TRIGGER</span> OnStartPaperWaitForCutNet <span class="kw">WITH</span> P</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">End</td>
-<td style="text-align: left;">Controlled</td>
+<td style="text-align: left;"></td>
 <td style="text-align: left;"><div class="sourceCode" id="cb6" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb6-1"><a href="#cb6-1"></a>P.WaitForCutNet <span class="op">=</span> <span class="kw">TIME</span> <span class="op">-</span> P.CurrentStart</span>
 <span id="cb6-2"><a href="#cb6-2"></a><span class="co"># TRANSITION PAP.4 in logic</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
@@ -799,9 +856,9 @@ Table&nbsp;4.4: Activities
 <td style="text-align: left;"></td>
 <td style="text-align: left;">End</td>
 <td style="text-align: left;">Scheduled</td>
-<td style="text-align: left;"><div class="sourceCode" id="cb8" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">START</span> Car Wait <span class="cf">for</span> Fold <span class="kw">WITH</span> P <span class="co"># TRANSITION PAP.5</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="kw">START</span> Person Wait <span class="cf">for</span> Task <span class="kw">WITH</span> H <span class="co"># TRANSITION PER.5</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="kw">START</span> Scissors Wait <span class="cf">for</span> Task <span class="kw">WITH</span> S <span class="co"># TRANSITION S.3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb8" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">START</span> Car Wait for Fold <span class="kw">WITH</span> P <span class="co"># TRANSITION PAP.5</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="kw">START</span> Person Wait for Task <span class="kw">WITH</span> H <span class="co"># TRANSITION PER.5</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="kw">START</span> Scissors Wait for Task <span class="kw">WITH</span> S <span class="co"># TRANSITION S.3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Car Wait for Fold</td>
@@ -830,39 +887,39 @@ Table&nbsp;4.4: Activities
 <td style="text-align: left;"></td>
 <td style="text-align: left;">End</td>
 <td style="text-align: left;">Scheduled</td>
-<td style="text-align: left;"><div class="sourceCode" id="cb12" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw">START</span> Car Wait <span class="cf">for</span> Tape Car <span class="kw">WITH</span> P <span class="co"># TRANSITION PAP.7</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a><span class="kw">START</span> Person Wait <span class="cf">for</span> Task <span class="kw">WITH</span> H <span class="co"># TRANSITION PER.7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb12" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw">START</span> Car Wait for Tape Car <span class="kw">WITH</span> P <span class="co"># TRANSITION PAP.7</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="kw">START</span> Person Wait for Task <span class="kw">WITH</span> H <span class="co"># TRANSITION PER.7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Car Wait for Tape Car</td>
-<td style="text-align: left;">Paper (P)</td>
+<td style="text-align: left;"><span style="color: Red">Car Wait for Tape Car</span></td>
+<td style="text-align: left;"></td>
 <td style="text-align: left;">Start</td>
-<td style="text-align: left;">Scheduled</td>
-<td style="text-align: left;"><div class="sourceCode" id="cb13" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">TRIGGER</span> OnStartCarWaitForTapeCar <span class="kw">WITH</span> P</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb13" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb13-1"><a href="#cb13-1"></a> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">End</td>
-<td style="text-align: left;">Controlled</td>
-<td style="text-align: left;"><div class="sourceCode" id="cb14" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb14-1"><a href="#cb14-1"></a>P.WaitForTapeCar <span class="op">=</span> <span class="kw">TIME</span> <span class="op">-</span> P.CurrentStart</span>
-<span id="cb14-2"><a href="#cb14-2"></a><span class="co"># TRANSITION PAP.8 in logic</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb14" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb14-1"><a href="#cb14-1"></a> </span>
+<span id="cb14-2"><a href="#cb14-2"></a> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Tape Car</td>
-<td style="text-align: left;">Paper (P), Person (H), Tape Pieces (TP)</td>
+<td style="text-align: left;"><span style="color: Red">Tape Car</span></td>
+<td style="text-align: left;"></td>
 <td style="text-align: left;">Start</td>
-<td style="text-align: left;">Controlled</td>
-<td style="text-align: left;"><div class="sourceCode" id="cb15" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw">SCHEDULE</span> <span class="kw">END</span> at <span class="kw">TIME</span> <span class="op">+</span> Tape(H)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb15" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb15-1"><a href="#cb15-1"></a> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">End</td>
-<td style="text-align: left;">Scheduled</td>
-<td style="text-align: left;"><div class="sourceCode" id="cb16" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb16-1"><a href="#cb16-1"></a><span class="kw">START</span> Car Finished <span class="kw">WITH</span> P <span class="co"># TRANSITION PAP.9</span></span>
-<span id="cb16-2"><a href="#cb16-2"></a><span class="kw">START</span> Person Wait <span class="cf">for</span> Task <span class="kw">WITH</span> H <span class="co"># TRANSITION PER.11</span></span>
-<span id="cb16-3"><a href="#cb16-3"></a><span class="kw">START</span> Tape Pieces Leave <span class="kw">WITH</span> TP <span class="co"># TRANSITION TP.3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb16" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb16-1"><a href="#cb16-1"></a> </span>
+<span id="cb16-2"><a href="#cb16-2"></a> </span>
+<span id="cb16-3"><a href="#cb16-3"></a> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Pencil Wait for Trace</td>
@@ -906,10 +963,10 @@ Table&nbsp;4.4: Activities
 <td style="text-align: left;"></td>
 <td style="text-align: left;">End</td>
 <td style="text-align: left;">Scheduled</td>
-<td style="text-align: left;"><div class="sourceCode" id="cb22" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb22-1"><a href="#cb22-1"></a><span class="kw">START</span> Person Wait <span class="cf">for</span> Task <span class="kw">WITH</span> H <span class="co"># TRANSITION PER.9</span></span>
-<span id="cb22-2"><a href="#cb22-2"></a><span class="kw">START</span> Scissors Wait <span class="cf">for</span> Task <span class="kw">WITH</span> S <span class="co"># TRANSITION S.5</span></span>
-<span id="cb22-3"><a href="#cb22-3"></a><span class="kw">START</span> Tape Wait <span class="cf">for</span> Cut <span class="kw">WITH</span> T <span class="co"># TRANSITION T.3</span></span>
-<span id="cb22-4"><a href="#cb22-4"></a>CREATE Tape Pieces TP</span>
+<td style="text-align: left;"><div class="sourceCode" id="cb22" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb22-1"><a href="#cb22-1"></a><span class="kw">START</span> Person Wait for Task <span class="kw">WITH</span> H <span class="co"># TRANSITION PER.9</span></span>
+<span id="cb22-2"><a href="#cb22-2"></a><span class="kw">START</span> Scissors Wait for Task <span class="kw">WITH</span> S <span class="co"># TRANSITION S.5</span></span>
+<span id="cb22-3"><a href="#cb22-3"></a><span class="kw">START</span> Tape Wait for Cut <span class="kw">WITH</span> T <span class="co"># TRANSITION T.3</span></span>
+<span id="cb22-4"><a href="#cb22-4"></a><span class="kw">CREATE</span> Tape Pieces TP</span>
 <span id="cb22-5"><a href="#cb22-5"></a><span class="kw">START</span> Tape Pieces Created <span class="kw">WITH</span> TP</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="odd">
@@ -943,19 +1000,19 @@ Table&nbsp;4.4: Activities
 <span id="cb26-2"><a href="#cb26-2"></a><span class="co"># TRANSITION TP.2 in logic</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Person Wait for Task</td>
-<td style="text-align: left;">Person (H)</td>
+<td style="text-align: left;"><span style="color: Red">Person Wait for Task</span></td>
+<td style="text-align: left;"></td>
 <td style="text-align: left;">Start</td>
-<td style="text-align: left;">Scheduled</td>
-<td style="text-align: left;"><div class="sourceCode" id="cb27" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb27-1"><a href="#cb27-1"></a><span class="kw">TRIGGER</span> OnStartPersonWaitForTask <span class="kw">WITH</span> H</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb27" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb27-1"><a href="#cb27-1"></a> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">End</td>
-<td style="text-align: left;">Controlled</td>
-<td style="text-align: left;"><div class="sourceCode" id="cb28" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb28-1"><a href="#cb28-1"></a>H.WaitForTask <span class="op">=</span> H.WaitForTask <span class="op">+</span> <span class="kw">TIME</span> <span class="op">-</span> H.CurrentStart</span>
-<span id="cb28-2"><a href="#cb28-2"></a><span class="co"># TRANSITION H.2, H.4, H.6, H.8, or H.10 in logic</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb28" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb28-1"><a href="#cb28-1"></a> </span>
+<span id="cb28-2"><a href="#cb28-2"></a> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -963,15 +1020,15 @@ Table&nbsp;4.4: Activities
 </div>
 </figure>
 </div>
-<p>XXTableXX lists the events to start and finish the simulation along with the events from the behavioural pathway diagrams along with the state changes for each event. Complete the activities for:</p>
+<p><a href="#tbl-events_pc" class="quarto-xref">Table&nbsp;<span>4.5</span></a> lists the events to start and finish the simulation along with the events from the behavioural pathway diagrams along with the state changes for each event. Complete the activities for:</p>
 <ul>
 <li>Tape Pieces Created</li>
 <li>Person Created</li>
 </ul>
-<div id="tbl-events_pc" class="sm column-page-right borderless quarto-float quarto-figure quarto-figure-center anchored">
+<div id="tbl-events_pc" class="sm column-page borderless quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-events_pc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;4.5: Activities
+Table&nbsp;4.5: Events
 </figcaption>
 <div aria-describedby="tbl-events_pc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="longtable">
@@ -989,77 +1046,114 @@ Table&nbsp;4.5: Activities
 <td style="text-align: left;">Simulation Start</td>
 <td style="text-align: left;">None</td>
 <td style="text-align: left;">Scheduled</td>
-<td style="text-align: left;"><div class="sourceCode" id="cb29" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb29-1"><a href="#cb29-1"></a><span class="kw">SCHEDULE</span> Arrival (R) at <span class="kw">TIME</span></span>
-<span id="cb29-2"><a href="#cb29-2"></a><span class="kw">SCHEDULE</span> Arrival (CT) at <span class="kw">TIME</span></span>
-<span id="cb29-3"><a href="#cb29-3"></a><span class="kw">SCHEDULE</span> Arrival (P) at <span class="kw">TIME</span> <span class="op">+</span> PatientInterArrival()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb29" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb29-1"><a href="#cb29-1"></a><span class="kw">FOR</span> NumPaper <span class="kw">DO</span></span>
+<span id="cb29-2"><a href="#cb29-2"></a>  <span class="kw">CREATE</span> Paper P</span>
+<span id="cb29-3"><a href="#cb29-3"></a>  <span class="kw">START</span> Paper Created <span class="kw">WITH</span> P</span>
+<span id="cb29-4"><a href="#cb29-4"></a><span class="kw">END</span> <span class="kw">FOR</span></span>
+<span id="cb29-5"><a href="#cb29-5"></a><span class="kw">FOR</span> NumPencils <span class="kw">DO</span></span>
+<span id="cb29-6"><a href="#cb29-6"></a>  <span class="kw">CREATE</span> Pencil N</span>
+<span id="cb29-7"><a href="#cb29-7"></a>  <span class="kw">START</span> Pencil<span class="op">/</span>Template Created <span class="kw">WITH</span> N</span>
+<span id="cb29-8"><a href="#cb29-8"></a><span class="kw">END</span> <span class="kw">FOR</span></span>
+<span id="cb29-9"><a href="#cb29-9"></a><span class="kw">FOR</span> NumScissors <span class="kw">DO</span></span>
+<span id="cb29-10"><a href="#cb29-10"></a>  <span class="kw">CREATE</span> Scissors S</span>
+<span id="cb29-11"><a href="#cb29-11"></a>  <span class="kw">START</span> Scissors Created <span class="kw">WITH</span> S</span>
+<span id="cb29-12"><a href="#cb29-12"></a><span class="kw">END</span> <span class="kw">FOR</span></span>
+<span id="cb29-13"><a href="#cb29-13"></a><span class="kw">FOR</span> NumTape <span class="kw">DO</span></span>
+<span id="cb29-14"><a href="#cb29-14"></a>  <span class="kw">CREATE</span> Tape T</span>
+<span id="cb29-15"><a href="#cb29-15"></a>  <span class="kw">START</span> Tape Created <span class="kw">WITH</span> T</span>
+<span id="cb29-16"><a href="#cb29-16"></a><span class="kw">END</span> <span class="kw">FOR</span></span>
+<span id="cb29-17"><a href="#cb29-17"></a><span class="kw">FOR</span> NumPeople <span class="kw">DO</span></span>
+<span id="cb29-18"><a href="#cb29-18"></a>  <span class="kw">CREATE</span> Person H</span>
+<span id="cb29-19"><a href="#cb29-19"></a>  <span class="kw">START</span> Person Created <span class="kw">WITH</span> H</span>
+<span id="cb29-20"><a href="#cb29-20"></a><span class="kw">END</span> <span class="kw">FOR</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Paper Created</td>
-<td style="text-align: left;">PaPer (P)</td>
+<td style="text-align: left;">Paper (P)</td>
 <td style="text-align: left;">Scheduled</td>
-<td style="text-align: left;"><div class="sourceCode" id="cb30" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb30-1"><a href="#cb30-1"></a>p.ID <span class="op">=</span> NextPatIDNum</span>
-<span id="cb30-2"><a href="#cb30-2"></a>p.Priority <span class="op">=</span> PatientPriority()</span>
-<span id="cb30-3"><a href="#cb30-3"></a>NextPatIDNum <span class="op">=</span> NextPatIDNum <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb30-4"><a href="#cb30-4"></a><span class="kw">SCHEDULE</span> Arrival (P) at <span class="kw">TIME</span> <span class="op">+</span> PatientInterArrival()</span>
-<span id="cb30-5"><a href="#cb30-5"></a><span class="kw">START</span> Wait <span class="cf">for</span> Check In <span class="kw">WITH</span> p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb30" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb30-1"><a href="#cb30-1"></a><span class="kw">START</span> Paper Wait for Trace <span class="kw">WITH</span> P <span class="co"># TRANSITION PAP.1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Car Finished</td>
-<td style="text-align: left;">PaPer (P)</td>
+<td style="text-align: left;">Paper (P)</td>
 <td style="text-align: left;">Scheduled</td>
-<td style="text-align: left;"><div class="sourceCode" id="cb31" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb31-1"><a href="#cb31-1"></a>Calculate statistics <span class="cf">for</span> p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb31" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb31-1"><a href="#cb31-1"></a>Calculate statistics for P</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Pencil/Template Created</td>
+<td style="text-align: left;">Pencil/ Template Created</td>
 <td style="text-align: left;">Pencil (N)</td>
 <td style="text-align: left;">Scheduled</td>
-<td style="text-align: left;"><div class="sourceCode" id="cb32" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb32-1"><a href="#cb32-1"></a>r.ID <span class="op">=</span> NextReceptionistIDNum</span>
-<span id="cb32-2"><a href="#cb32-2"></a>NextReceptionistIDNum <span class="op">=</span> NextReceptionistIDNum <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb32-3"><a href="#cb32-3"></a><span class="kw">IF</span> NextReceptionistIDNum <span class="op">&lt;=</span> NumReceptionists <span class="kw">THEN</span></span>
-<span id="cb32-4"><a href="#cb32-4"></a>    <span class="kw">SCHEDULE</span> Arrival (R) at <span class="kw">TIME</span></span>
-<span id="cb32-5"><a href="#cb32-5"></a><span class="kw">END</span> <span class="kw">IF</span></span>
-<span id="cb32-6"><a href="#cb32-6"></a><span class="kw">START</span> Wait <span class="cf">for</span> Task (R) <span class="kw">WITH</span> r</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb32" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb32-1"><a href="#cb32-1"></a><span class="kw">START</span> Pencil Wait for Trace <span class="kw">WITH</span> N <span class="co"># TRANSITION PEN.1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Scissors Created</td>
 <td style="text-align: left;">Scissors (S)</td>
 <td style="text-align: left;">Scheduled</td>
-<td style="text-align: left;"><div class="sourceCode" id="cb33" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb33-1"><a href="#cb33-1"></a>Calculate statistics <span class="cf">for</span> r</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb33" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb33-1"><a href="#cb33-1"></a><span class="kw">START</span> Scissors Wait for Task <span class="kw">WITH</span> S <span class="co"># TRANSITION S.1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Tape Created</td>
 <td style="text-align: left;">Tape (T)</td>
 <td style="text-align: left;">Scheduled</td>
-<td style="text-align: left;"><div class="sourceCode" id="cb34" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb34-1"><a href="#cb34-1"></a>c.ID <span class="op">=</span> NextCTMachineIDNum</span>
-<span id="cb34-2"><a href="#cb34-2"></a>NextCTMachineIDNum <span class="op">=</span> NextCTMachineIDNum <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb34-3"><a href="#cb34-3"></a><span class="kw">IF</span> NextCTMachineIDNum <span class="op">&lt;=</span> NumCTMachines <span class="kw">THEN</span></span>
-<span id="cb34-4"><a href="#cb34-4"></a>    <span class="kw">SCHEDULE</span> Arrival (CT) at <span class="kw">TIME</span></span>
-<span id="cb34-5"><a href="#cb34-5"></a><span class="kw">END</span> <span class="kw">IF</span></span>
-<span id="cb34-6"><a href="#cb34-6"></a><span class="kw">START</span> Wait <span class="cf">for</span> Task (CT) <span class="kw">WITH</span> c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb34" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb34-1"><a href="#cb34-1"></a><span class="kw">START</span> Tape Wait for Cut <span class="kw">WITH</span> T <span class="co"># TRANSITION T.1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Tape Pieces Created</td>
-<td style="text-align: left;">Tape Pieces (TP)</td>
-<td style="text-align: left;">Scheduled</td>
-<td style="text-align: left;"><div class="sourceCode" id="cb35" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb35-1"><a href="#cb35-1"></a>Calculate statistics <span class="cf">for</span> c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td style="text-align: left;"><span style="color: Red">Tape Pieces Created</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb35" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb35-1"><a href="#cb35-1"></a>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Tape Pieces Leave</td>
 <td style="text-align: left;">Tape Pieces (TP)</td>
 <td style="text-align: left;">Scheduled</td>
-<td style="text-align: left;"><div class="sourceCode" id="cb36" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb36-1"><a href="#cb36-1"></a>Calculate statistics <span class="cf">for</span> c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb36" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb36-1"><a href="#cb36-1"></a>Calculate statistics for TP</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Person Created</td>
-<td style="text-align: left;">Person (H)</td>
-<td style="text-align: left;">Scheduled</td>
-<td style="text-align: left;"><div class="sourceCode" id="cb37" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb37-1"><a href="#cb37-1"></a>Calculate statistics <span class="cf">for</span> c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td style="text-align: left;"><span style="color: Red">Person Created</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb37" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb37-1"><a href="#cb37-1"></a> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Simulation Finish</td>
 <td style="text-align: left;">None</td>
 <td style="text-align: left;">Scheduled</td>
-<td style="text-align: left;"><div class="sourceCode" id="cb38" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb38-1"><a href="#cb38-1"></a>Calculate statistics <span class="cf">for</span> c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb38" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb38-1"><a href="#cb38-1"></a>Calculate statistics <span class="im">as</span> required for Pencils, Scissors, Tape, Person entities</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</section>
+<section id="define-the-logic" class="level2 page-columns page-full" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="define-the-logic"><span class="header-section-number">4.3</span> Define the Logic</h2>
+<p>The last part of the structure to define is the logic. You need to define the logic for each of the triggers (the red squares in the behavioural paths, and TRIGGER statements in the state changes). Tables XXX show the logic for some of the triggers. Complete the logic for: - On Tape Wait for Cut.Start - On Cube Wait for Fold.Start - the last condition of On Person Wait for Task.Start</p>
+<div id="tbl-start_wait_check_in" class="sm column-page-right borderless quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-start_wait_check_in-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.6: OnStartPencilWaitForTrace
+</figcaption>
+<div aria-describedby="tbl-start_wait_check_in-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="longtable">
+<table class="table-sm table-borderless small caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Triggered by: Pencil N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><div class="sourceCode" id="cb39" data-language="CMPseudo"><pre class="sourceCode numberSource CMPseudo number-lines code-with-copy"><code class="sourceCode cmpseudo"><span id="cb39-1"><a href="#cb39-1"></a><span class="kw">IF</span> (<span class="bu">any</span> Paper P <span class="cf">with</span> P.CurrentActivity <span class="op">=</span> Paper Wait for Trace) AND</span>
+<span id="cb39-2"><a href="#cb39-2"></a>   (<span class="bu">any</span> Person H <span class="cf">with</span> H.CurrentActivity <span class="op">=</span> Person Wait for Task) <span class="kw">THEN</span></span>
+<span id="cb39-3"><a href="#cb39-3"></a>    SELECT valid Paper P</span>
+<span id="cb39-4"><a href="#cb39-4"></a>    SELECT valid Person H</span>
+<span id="cb39-5"><a href="#cb39-5"></a>    <span class="kw">START</span> Trace Car <span class="kw">WITH</span> P, H, N</span>
+<span id="cb39-6"><a href="#cb39-6"></a><span class="kw">END</span> <span class="kw">IF</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -1499,8 +1593,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../chapters/clinic_3/clinic_3.html" class="pagination-link" aria-label="Using Traces and Scenarios">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Using Traces and Scenarios</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../chapters/vscode_java_setup/vscode_java_setup.html" class="pagination-link" aria-label="Setting Up VSCode and Java">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Setting Up VSCode and Java</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

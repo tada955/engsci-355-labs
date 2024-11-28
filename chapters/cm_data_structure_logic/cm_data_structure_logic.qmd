@@ -41,7 +41,7 @@ List of Data Modules
 The first part of the structure to define is the entities.
 @tbl-entities_pc lists the entities again, but adds attributes that the entities will need to capture the performance of the system, e.g., waiting time until the cube was cut.
 It is assumed that all entities have the three attributes: ID, CurrentActivity, and CurrentStart.
-These are omitted in the table to prevent repitition.
+These are omitted in the table to prevent repetition.
 
 ::: {#tbl-entities_pc .sm .borderless}
 
@@ -53,7 +53,7 @@ List of Entities
 
 :::
 
-The next part of the structure is the transitions, which describe how entities move between activites and events.
+The next part of the structure is the transitions, which describe how entities move between activities and events.
 @tbl-transitions_pc lists the transitions for making paper cars.
 These transitions are prefixed by entity of the behavioural pathway they come from.
 Complete the transitions for the Scissors pathway.
@@ -116,7 +116,7 @@ Activities
 
 ::: {.content-visible when-profile="answers"}
 
-::: {#tbl-activities_pc .sm .column-page-right .borderless}
+::: {#tbl-activities_pc .sm .column-page .borderless}
 
 :::{.longtable}
 
@@ -130,15 +130,33 @@ Activities
 
 :::
 
-XXTableXX lists the events to start and finish the simulation along with the events from the behavioural pathway diagrams along with the state changes for each event.
+@tbl-events_pc lists the events to start and finish the simulation along with the events from the behavioural pathway diagrams along with the state changes for each event.
 Complete the activities for:
 
 - Tape Pieces Created
 - Person Created
 
+::: {.content-visible unless-profile="answers"}
+
+::: {#tbl-events_pc .sm .column-page .borderless}
+
+:::{.longtable}
+
+{{< include tables/event_table.tex >}}
+
+:::
+
+Events
+
+:::
+
+:::
+
+
+
 ::: {.content-visible when-profile="answers"}
 
-::: {#tbl-events_pc .sm .column-page-right .borderless}
+::: {#tbl-events_pc .sm .column-page .borderless}
 
 :::{.longtable}
 
@@ -146,8 +164,28 @@ Complete the activities for:
 
 :::
 
-Activities
+Events
 
 :::
+
+:::
+
+## Define the Logic
+
+The last part of the structure to define is the logic.
+You need to define the logic for each of the triggers (the red squares in the behavioural paths, and TRIGGER statements in the state changes).
+Tables XXX show the logic for some of the triggers.
+Complete the logic for:
+- On Tape Wait for Cut.Start
+- On Cube Wait for Fold.Start
+- the last condition of On Person Wait for Task.Start
+
+::: {#tbl-start_wait_check_in .sm .column-page-right .borderless}
+
+:::{.longtable}
+{{< include tables/Logic/start_pencil_wait_trace.tex >}}
+:::
+
+OnStartPencilWaitForTrace
 
 :::

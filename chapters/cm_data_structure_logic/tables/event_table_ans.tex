@@ -4,68 +4,71 @@
   \endhead
   Simulation Start & None  & Scheduled  & 
   \begin{lstlisting}[language=CMPseudo]
-SCHEDULE Arrival (R) at TIME
-SCHEDULE Arrival (CT) at TIME
-SCHEDULE Arrival (P) at TIME + PatientInterArrival()
+FOR NumPaper DO
+  CREATE Paper P
+  START Paper Created WITH P
+END FOR
+FOR NumPencils DO
+  CREATE Pencil N
+  START Pencil/Template Created WITH N
+END FOR
+FOR NumScissors DO
+  CREATE Scissors S
+  START Scissors Created WITH S
+END FOR
+FOR NumTape DO
+  CREATE Tape T
+  START Tape Created WITH T
+END FOR
+FOR NumPeople DO
+  CREATE Person H
+  START Person Created WITH H
+END FOR
   \end{lstlisting}
   \\ \midrule
-  Paper Created & PaPer (P)  & Scheduled  & 
+  Paper Created & Paper (P)  & Scheduled  & 
   \begin{lstlisting}[language=CMPseudo]
-p.ID = NextPatIDNum
-p.Priority = PatientPriority()
-NextPatIDNum = NextPatIDNum + 1
-SCHEDULE Arrival (P) at TIME + PatientInterArrival()
-START Wait for Check In WITH p
+START Paper Wait for Trace WITH P # TRANSITION PAP.1
   \end{lstlisting}
   \\ \midrule
-  Car Finished & PaPer (P)  & Scheduled  & 
+  Car Finished & Paper (P)  & Scheduled  & 
   \begin{lstlisting}[language=CMPseudo]
-Calculate statistics for p
+Calculate statistics for P
   \end{lstlisting}
   \\ \midrule
-  Pencil/Template Created & Pencil (N)  & Scheduled  & 
+  Pencil/ Template Created & Pencil (N)  & Scheduled  & 
   \begin{lstlisting}[language=CMPseudo]
-r.ID = NextReceptionistIDNum
-NextReceptionistIDNum = NextReceptionistIDNum + 1
-IF NextReceptionistIDNum <= NumReceptionists THEN
-    SCHEDULE Arrival (R) at TIME
-END IF
-START Wait for Task (R) WITH r
+START Pencil Wait for Trace WITH N # TRANSITION PEN.1
   \end{lstlisting}
   \\ \midrule
   Scissors Created & Scissors (S)  & Scheduled  & 
   \begin{lstlisting}[language=CMPseudo]
-Calculate statistics for r
+START Scissors Wait for Task WITH S # TRANSITION S.1
   \end{lstlisting}
   \\ \midrule
   Tape Created & Tape (T)  & Scheduled  & 
   \begin{lstlisting}[language=CMPseudo]
-c.ID = NextCTMachineIDNum
-NextCTMachineIDNum = NextCTMachineIDNum + 1
-IF NextCTMachineIDNum <= NumCTMachines THEN
-    SCHEDULE Arrival (CT) at TIME
-END IF
-START Wait for Task (CT) WITH c
+START Tape Wait for Cut WITH T # TRANSITION T.1
   \end{lstlisting}
   \\ \midrule
   Tape Pieces Created & Tape Pieces (TP)  & Scheduled  & 
   \begin{lstlisting}[language=CMPseudo]
-Calculate statistics for c
+START Tape Pieces Wait for Tape WITH TP # TRANSITION TP.1
   \end{lstlisting}
   \\ \midrule
-  Tape Pieces Leave & Tape Pieces (TP)  & Scheduled  & 
+Tape Pieces Leave & Tape Pieces (TP)  & Scheduled  & 
   \begin{lstlisting}[language=CMPseudo]
-Calculate statistics for c
+Calculate statistics for TP
   \end{lstlisting}
   \\ \midrule
   Person Created & Person (H)  & Scheduled  & 
   \begin{lstlisting}[language=CMPseudo]
-Calculate statistics for c
+START Person Wait for Task WITH H # TRANSITION H.1
   \end{lstlisting}
   \\ \midrule
   Simulation Finish & None  & Scheduled  & 
   \begin{lstlisting}[language=CMPseudo]
-Calculate statistics for c
+Calculate statistics as required for Pencils, Scissors, Tape, Person entities
   \end{lstlisting}
   \\ \bottomrule
   \end{longtable}

@@ -1,6 +1,0 @@
-# Triggered by: Receptionist r
-patients = {p FOR p IN P IF p.State = "Wait for Check In"}
-IF patients IS NOT empty THEN 
-    p_hat = argmin{p.CurrentStart FOR p IN patients}
-    START Check In WITH p, r_hat
-END IF

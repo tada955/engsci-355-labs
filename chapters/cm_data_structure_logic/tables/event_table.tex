@@ -1,0 +1,74 @@
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{10cm}@{}}
+  \toprule
+  Event          & Participants & Type       & State Change \\ \midrule
+  \endhead
+  Simulation Start & None  & Scheduled  & 
+  \begin{lstlisting}[language=CMPseudo]
+FOR NumPaper DO
+  CREATE Paper P
+  START Paper Created WITH P
+END FOR
+FOR NumPencils DO
+  CREATE Pencil N
+  START Pencil/Template Created WITH N
+END FOR
+FOR NumScissors DO
+  CREATE Scissors S
+  START Scissors Created WITH S
+END FOR
+FOR NumTape DO
+  CREATE Tape T
+  START Tape Created WITH T
+END FOR
+FOR NumPeople DO
+  CREATE Person H
+  START Person Created WITH H
+END FOR
+  \end{lstlisting}
+  \\ \midrule
+  Paper Created & Paper (P)  & Scheduled  & 
+  \begin{lstlisting}[language=CMPseudo]
+START Paper Wait for Trace WITH P # TRANSITION PAP.1
+  \end{lstlisting}
+  \\ \midrule
+  Car Finished & Paper (P)  & Scheduled  & 
+  \begin{lstlisting}[language=CMPseudo]
+Calculate statistics for P
+  \end{lstlisting}
+  \\ \midrule
+  Pencil/ Template Created & Pencil (N)  & Scheduled  & 
+  \begin{lstlisting}[language=CMPseudo]
+START Pencil Wait for Trace WITH N # TRANSITION PEN.1
+  \end{lstlisting}
+  \\ \midrule
+  Scissors Created & Scissors (S)  & Scheduled  & 
+  \begin{lstlisting}[language=CMPseudo]
+START Scissors Wait for Task WITH S # TRANSITION S.1
+  \end{lstlisting}
+  \\ \midrule
+  Tape Created & Tape (T)  & Scheduled  & 
+  \begin{lstlisting}[language=CMPseudo]
+START Tape Wait for Cut WITH T # TRANSITION T.1
+  \end{lstlisting}
+  \\ \midrule
+  \textcolor{Red}{Tape Pieces Created} &   &  & 
+  \begin{lstlisting}[language=CMPseudo]
+  
+  \end{lstlisting}
+  \\ \midrule
+Tape Pieces Leave & Tape Pieces (TP)  & Scheduled  & 
+  \begin{lstlisting}[language=CMPseudo]
+Calculate statistics for TP
+  \end{lstlisting}
+  \\ \midrule
+  \textcolor{Red}{Person Created} &  &   & 
+  \begin{lstlisting}[language=CMPseudo]
+ 
+  \end{lstlisting}
+  \\ \midrule
+  Simulation Finish & None  & Scheduled  & 
+  \begin{lstlisting}[language=CMPseudo]
+Calculate statistics as required for Pencils, Scissors, Tape, Person entities
+  \end{lstlisting}
+  \\ \bottomrule
+  \end{longtable}
