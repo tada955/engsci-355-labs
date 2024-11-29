@@ -180,12 +180,92 @@ Complete the logic for:
 - On Cube Wait for Fold.Start
 - the last condition of On Person Wait for Task.Start
 
-::: {#tbl-start_wait_check_in .sm .column-page-right .borderless}
+::: {#tbl-start_pencil_wait_trace .sm .column-page-right .borderless}
 
 :::{.longtable}
 {{< include tables/Logic/start_pencil_wait_trace.tex >}}
 :::
 
 OnStartPencilWaitForTrace
+
+:::
+
+::: {#tbl-start_scissors_wait_task .sm .column-page-right .borderless}
+
+:::{.longtable}
+{{< include tables/Logic/start_scissors_wait_task.tex >}}
+:::
+
+OnStartScissorsWaitForTask
+
+:::
+
+::: {#tbl-start_tape_wait_cut .sm .column-page-right .borderless}
+
+:::{.longtable}
+{{< include tables/Logic/start_tape_wait_cut.tex >}}
+:::
+
+OnStartTapeWaitForCut
+
+:::
+
+::: {#tbl-start_tape_pieces_wait_tape .sm .column-page-right .borderless}
+
+:::{.longtable}
+{{< include tables/Logic/start_tape_pieces_wait_tape.tex >}}
+:::
+
+OnStartTapePiecesWaitForTape
+
+:::
+
+::: {#tbl-start_paper_wait_trace .sm .column-page-right .borderless}
+
+:::{.longtable}
+{{< include tables/Logic/start_paper_wait_trace.tex >}}
+:::
+
+OnStartPaperWaitForTrace
+
+:::
+
+::: {#tbl-start_paper_wait_cut .sm .column-page-right .borderless}
+
+:::{.longtable}
+{{< include tables/Logic/start_paper_wait_cut.tex >}}
+:::
+
+OnStartPaperWaitForCut
+
+:::
+
+::: {#tbl-start_paper_wait_fold .sm .column-page-right .borderless}
+
+:::{.longtable}
+{{< include tables/Logic/start_paper_wait_fold.tex >}}
+:::
+
+OnStartPaperWaitForFold
+
+:::
+
+::: {#tbl-start_paper_wait_tape .sm .column-page-right .borderless}
+
+:::{.longtable}
+{{< include tables/Logic/start_paper_wait_tape.tex >}}
+:::
+
+OnStartPaperWaitForTape
+
+:::
+
+::: {#tbl-start_person_wait_task .sm .column-page-right .borderless}
+
+:::{.longtable}
+{{< include tables/Logic/start_person_wait_task.tex >}}
+:::
+
+OnStartPersonWaitForTask
 
 :::

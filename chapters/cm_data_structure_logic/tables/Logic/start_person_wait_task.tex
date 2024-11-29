@@ -1,0 +1,34 @@
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.25cm}>{\raggedright\arraybackslash}p{13cm}@{}}
+  \toprule
+   & Triggered by: Person H\\ \midrule 
+  &
+\begin{lstlisting}[language=CMPseudo]
+# Prioritise taping, then folding, then cutting, then tracing
+IF (any Paper P with P.CurrentActivity = Paper Wait for Tape Car) AND
+   (any Tape Pieces with TP.CurrentActivity = Tape Pieces Wait for Tape) THEN
+  SELECT valid Paper P
+  SELECT valid Tape Pieces TP
+  START Tape Car WITH P, H, TP
+ELSE IF (any Paper P with P.CurrentActivity = Paper Wait for Tape Car) AND
+        (any Tape T with T.CurrentActivity = Tape Wait for Cut) AND
+        (any Scissors S with S.CurrentActivity = Scissors Wait for Task) THEN
+  # There is a car waiting to be taped, but no tape pieces
+  SELECT valid Tape T
+  SELECT valid Scissors S
+  START Cut Tape WITH T, H, S
+ELSE IF (any Paper P with P.CurrentActivity = Paper Wait for Fold)
+  SELECT valid Paper P
+  START Fold Car WITH P, H
+ELSE IF (any Paper P with P.CurrentActivity = Paper Wait for Cut Net) AND
+        (any Scissors with S.CurrentActivity = Scissors Wait for Task) THEN
+  SELECT valid Paper P
+  START Cut Car Net WITH P, H, S
+ELSE IF (any Paper P with P.CurrentActivity = Paper Wait for Trace) AND
+        (any Pencil N with N.CurrentActivity = Pencil Wait for Trace) THEN
+  SELECT valid Paper P
+  SELECT valid Pencil N
+  START Fold Car WITH P, H, N
+END IF
+\end{lstlisting}
+  \\ \bottomrule
+  \end{longtable}

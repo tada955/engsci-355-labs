@@ -1,0 +1,19 @@
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.25cm}>{\raggedright\arraybackslash}p{13cm}@{}}
+  \toprule
+   & Triggered by: Scissors S\\ \midrule 
+  &
+\begin{lstlisting}[language=CMPseudo]
+IF (any Paper P with P.CurrentActivity = Paper Wait for Cut Net) AND
+   (any Person H with H.CurrentActivity = Person Wait for Task) THEN
+  SELECT valid Paper P
+  SELECT valid Person H
+  START Cut Net WITH P, H, S
+ELSE IF (any Tape T with T.CurrentActivity = Tape Wait for Cut) AND
+        (any Person H with H.CurrentActivity = Person Wait for Task) THEN
+  SELECT valid Tape T
+  SELECT valid Person H
+  START Cut Tape WITH T, H, S
+END IF
+\end{lstlisting}
+  \\ \bottomrule
+  \end{longtable}

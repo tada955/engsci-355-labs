@@ -1,0 +1,14 @@
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.25cm}>{\raggedright\arraybackslash}p{13cm}@{}}
+  \toprule
+   & Triggered by: Paper P\\ \midrule 
+  &
+\begin{lstlisting}[language=CMPseudo]
+IF (any Tape Pieces TP with TP.CurrentActivity = Tape Pieces Wait for Tape) AND
+   (any Person H with H.CurrentActivity = Person Wait for Task) THEN
+  SELECT valid Tape Pieces TP
+  SELECT valid Person H
+  START Trace Car WITH P, H, TP
+END IF
+\end{lstlisting}
+  \\ \bottomrule
+  \end{longtable}

@@ -16,13 +16,13 @@ book:
         - chapters/hccm_framework/hccm_framework.qmd
         - chapters/cm_io_behaviour/cm_io_behaviour.qmd
         - chapters/cm_data_structure_logic/cm_data_structure_logic.qmd
-    - part: "Jaamsim Labs"
-      chapters:
-        - chapters/vscode_java_setup/vscode_java_setup.qmd
-        - chapters/jaamsim_setup/jaamsim_setup.qmd
-        - chapters/clinic_1/clinic_1.qmd
-        - chapters/clinic_2/clinic_2.qmd
-        - chapters/clinic_3/clinic_3.qmd
+    # - part: "Jaamsim Labs"
+    #   chapters:
+    #     - chapters/vscode_java_setup/vscode_java_setup.qmd
+    #     - chapters/jaamsim_setup/jaamsim_setup.qmd
+    #     - chapters/clinic_1/clinic_1.qmd
+    #     - chapters/clinic_2/clinic_2.qmd
+    #     - chapters/clinic_3/clinic_3.qmd
     - part: "Conceptual Models"
       chapters:
         - chapters/clinic_1_cm/clinic_1_cm.qmd

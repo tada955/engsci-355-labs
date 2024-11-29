@@ -5,9 +5,9 @@
 \begin{lstlisting}[language=CMPseudo]
 IF (any Paper P with P.CurrentActivity = Paper Wait for Trace) AND
    (any Person H with H.CurrentActivity = Person Wait for Task) THEN
-    SELECT valid Paper P
-    SELECT valid Person H
-    START Trace Car WITH P, H, N
+  SELECT valid Paper P
+  SELECT valid Person H
+  START Trace Car WITH P, H, N
 END IF
 \end{lstlisting}
   \\ \bottomrule

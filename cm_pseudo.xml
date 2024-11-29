@@ -92,6 +92,9 @@
 			<item>START</item>
 			<item>CREATE</item>
 			<item>DO</item>
+			<item>ELSE</item>
+			<item>AND</item>
+			<item>SELECT</item>
 			<item>empty</item>
 		</list>
 		<list name="flow">
